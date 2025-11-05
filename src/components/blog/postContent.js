@@ -72,6 +72,14 @@ const customComponents = {
       {children}
     </em>
   ),
+  img: ({ src, alt, width, height }) => (
+    <img
+      src={src}
+      alt={alt}
+      className="max-w-full h-auto rounded-sm my-6 border-1 border-gray-200 shadow-sm"
+      style={{ width: width || '100%', height: height || 'auto' }}
+    />
+  ),
 };
 
 export default function PostContent({ content }) {

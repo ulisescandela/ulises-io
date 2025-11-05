@@ -2,6 +2,7 @@
 title: "Mi aprendizaje contruyendo este blog"
 date: "2025-07-11"
 excerpt: "Algo de mi experiencia hasta ahora con la IA y el aprendizaje construyendo este blog."
+published: true
 ---
 ## Braindump de mi aprendizaje hasta hoy
 

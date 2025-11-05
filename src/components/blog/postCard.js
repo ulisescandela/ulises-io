@@ -16,8 +16,11 @@ export default function PostCard({ post }) {
             </time>
           )}
           {post.frontMatter.excerpt && (
+            //truncate to 150 characters
             <p className="text-gray-600 mt-4 leading-relaxed">
-              {post.frontMatter.excerpt}
+              {post.frontMatter.excerpt.length > 60
+                ? post.frontMatter.excerpt.substring(0, 60).trim() + '...'
+                : post.frontMatter.excerpt}
             </p>
           )}
           <div className="mt-4 text-blue-600 font-medium text-sm group-hover:text-blue-700 transition-colors">
