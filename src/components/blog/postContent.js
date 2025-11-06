@@ -48,7 +48,7 @@ const customComponents = {
     </ol>
   ),
   li: ({ children }) => (
-    <li className="text-lg leading-relaxed">
+    <li className="text-lg leading-relaxed [&>p]:inline [&>p]:m-0 mb-6">
       {children}
     </li>
   ),
