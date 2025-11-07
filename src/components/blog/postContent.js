@@ -17,6 +17,11 @@ const customComponents = {
       {children}
     </h3>
   ),
+  h3: ({ children }) => (
+    <h3 className="text-xl font-semibold text-gray-800 mb-3 mt-6">
+      {children}
+    </h3>
+  ),
   p: ({ children }) => (
     <p className="text-gray-700 leading-relaxed mb-6 text-lg">
       {children}
