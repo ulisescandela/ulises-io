@@ -3,6 +3,8 @@ title: "Las ideas no valen nada si no las ejecutas"
 date: "2025-11-06"
 excerpt: "He aprendido que las ideas no valen nada si no las ejecutas, aquí te cuento por qué."
 published: true
+readTime: "7 min"
+tags: ["Emprendimiento", "Ideas", "Productividad", "Memento Mori"]
 ---
 
 ## ¿Por qué si mi idea es buena no vale nada sin ejecutarla?

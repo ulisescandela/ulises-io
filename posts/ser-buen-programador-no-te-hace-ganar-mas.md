@@ -3,6 +3,8 @@ title: "Ser un buen programador no te hace ganar más"
 date: "2025-11-03"
 excerpt: "La cruda realidad sobre ser un buen programador y ganar más dinero."
 published: true
+readTime: "6 min"
+tags: ["Carrera", "Desarrollo Profesional", "Salarios", "Habilidades Blandas", "Software", "Programación"]
 ---
 
 ## ¿Por qué algunos programadores ganan más que otros?

@@ -3,37 +3,37 @@ import { MDXRemote } from 'next-mdx-remote/rsc';
 
 const customComponents = {
   h1: ({ children }) => (
-    <h1 className="text-4xl font-bold text-gray-900 mb-6 mt-8 pb-3">
+    <h1 className="text-4xl font-bold text-zinc-200 mb-6 mt-8 pb-3">
       {children}
     </h1>
   ),
   h2: ({ children }) => (
-    <h2 className="text-3xl font-semibold text-gray-800 mb-4 mt-8">
+    <h2 className="text-3xl font-semibold text-zinc-200 mb-4 mt-8">
       {children}
     </h2>
   ),
   h3: ({ children }) => (
-    <h3 className="text-2xl font-semibold text-gray-800 mb-3 mt-6">
+    <h3 className="text-2xl font-semibold text-zinc-200 mb-3 mt-6">
       {children}
     </h3>
   ),
   h3: ({ children }) => (
-    <h3 className="text-xl font-semibold text-gray-800 mb-3 mt-6">
+    <h3 className="text-xl font-semibold text-zinc-200 mb-3 mt-6">
       {children}
     </h3>
   ),
   p: ({ children }) => (
-    <p className="text-gray-700 leading-relaxed mb-6 text-lg">
+    <p className="text-zinc-200 leading-relaxed mb-6 text-lg">
       {children}
     </p>
   ),
   blockquote: ({ children }) => (
-    <blockquote className="border-l-4 border-blue-500 pl-6 py-2 my-6 bg-blue-50 italic text-gray-700">
+    <blockquote className="border-l-4 border-blue-500 pl-6 py-2 my-6 bg-blue-50 italic text-zinc-200">
       {children}
     </blockquote>
   ),
   code: ({ children }) => (
-    <code className="bg-gray-100 px-2 py-1 rounded text-sm font-mono text-gray-800 border">
+    <code className="bg-gray-100 px-2 py-1 rounded text-sm font-mono text-zinc-200 border">
       {children}
     </code>
   ),
@@ -43,12 +43,12 @@ const customComponents = {
     </pre>
   ),
   ul: ({ children }) => (
-    <ul className="list-disc list-inside mb-6 text-gray-700 space-y-2">
+    <ul className="list-disc list-inside mb-6 text-zinc-200 space-y-2">
       {children}
     </ul>
   ),
   ol: ({ children }) => (
-    <ol className="list-decimal list-inside mb-6 text-gray-700 space-y-2">
+    <ol className="list-decimal list-inside mb-6 text-zinc-200 space-y-2">
       {children}
     </ol>
   ),
@@ -68,12 +68,12 @@ const customComponents = {
     </a>
   ),
   strong: ({ children }) => (
-    <strong className="font-bold text-gray-900">
+    <strong className="font-bold text-zinc-200">
       {children}
     </strong>
   ),
   em: ({ children }) => (
-    <em className="italic text-gray-800">
+    <em className="italic text-zinc-200">
       {children}
     </em>
   ),

@@ -11,10 +11,13 @@ export default function HomePage() {
   return (
     <>
       <Header />
-      <main className="max-w-4xl mx-auto px-6 py-18">
+      <main 
+        className="pt-16 w-screen text-center text-white font-sans"
+        // className='bg-[#020617]'
+      >
         <Hero />
-        <About />
-        <Interests />
+        {/* <About /> */}
+        {/* <Interests /> */}
         <LatestPosts />
       </main>
     </>

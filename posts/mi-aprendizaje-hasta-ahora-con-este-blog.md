@@ -3,6 +3,8 @@ title: "Mi aprendizaje contruyendo este blog"
 date: "2025-07-11"
 excerpt: "Algo de mi experiencia hasta ahora con la IA y el aprendizaje construyendo este blog."
 published: true
+readTime: "5 min"
+tags: ["IA", "Vibe Coding", "Aprendizaje", "NextJS", "Tailwind", "Markdown"]
 ---
 ## Braindump de mi aprendizaje hasta hoy
 

@@ -3,6 +3,8 @@ title: "Razones para seguir aprendiendo sobre programación"
 date: "2025-11-05"
 excerpt: "He visto algunos post desalentadores sobre aprender a programar, aquí mis razones para seguir aprendiendo."
 published: true
+readTime: "7 min"
+tags: ["Programación", "Aprendizaje", "Carrera", "Desarrollo Profesional"]
 ---
 
 ## La Premisa
