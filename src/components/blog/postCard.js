@@ -22,7 +22,7 @@ export default function PostCard({ post }) {
 
           {excerpt && <PostExcerpt excerpt={excerpt} />}
           {tags && <PostTags tags={tags} />}
-          <ReadMore />
+          {/* <ReadMore /> */}
       </Link>
     </PostContainer>
   );
@@ -46,7 +46,7 @@ export function PostTags({ tags }) {
   return (
     <div className="flex flex-wrap gap-2 mb-4 items-center">
       {tags.map((tag) => (
-        <span key={tag} className="text-xs bg-blue-600/50 text-white px-2 py-1 rounded-full">
+        <span key={tag} className="text-xs bg-blue-600/90 text-white px-2 py-1 rounded-full">
           {tag}
         </span>
       ))}
