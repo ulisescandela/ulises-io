@@ -9,8 +9,7 @@ const cspHeader = `
     form-action 'self';
     frame-ancestors 'none';
     upgrade-insecure-requests;
-    require-trusted-types-for 'script';
-`
+`;
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
