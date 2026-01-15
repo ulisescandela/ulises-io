@@ -3,6 +3,7 @@ title: "El Estado de la Industria Tech en 2026: Cómo Sobrevivir y Destacar (Gu�
 date: "2026-01-14"
 excerpt: "Analizamos el panorama laboral de tecnología en 2026. La IA ya no es novedad, la especialización es clave y los soft skills valen más que el código. Descubre qué tecnologías aprender y cómo blindar tu carrera."
 readTime: "10 min"
+tags: ["Industria Tech", "Futuro", "Carrera", "IA", "Soft Skills"]
 coverImage: ""
 ---
 
