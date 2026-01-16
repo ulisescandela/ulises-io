@@ -33,7 +33,7 @@ const customComponents = {
     </blockquote>
   ),
   code: ({ children }) => (
-    <code className="bg-gray-100 px-2 py-1 rounded text-sm font-mono text-zinc-200 border">
+    <code className="bg-zinc-800 px-1.5 py-0.5 rounded-md text-sm font-mono text-zinc-200 border border-zinc-700">
       {children}
     </code>
   ),

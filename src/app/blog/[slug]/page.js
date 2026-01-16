@@ -8,7 +8,8 @@ import { notFound } from 'next/navigation';
 export { generateStaticParams };
 
 export async function generateMetadata({ params }) {
-  const post = getPostBySlug(params.slug);
+  const { slug } = await params;
+  const post = getPostBySlug(slug);
 
   if (!shouldShowPost(post)) {
     return {
@@ -28,7 +29,7 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function BlogPost({ params }) {
-  const slug = params.slug;
+  const { slug } = await params;
   const post = getPostBySlug(slug);
 
   if (!shouldShowPost(post)) {
