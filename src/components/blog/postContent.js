@@ -1,5 +1,41 @@
 // src/components/blog/PostContent.js
+'use client';
+
 import { MDXRemote } from 'next-mdx-remote/rsc';
+import { useState } from 'react';
+
+// Componente para bloques de código con botón de copiar
+function CodeBlock({ children }) {
+  const [copied, setCopied] = useState(false);
+  
+  const getCodeText = (children) => {
+    if (typeof children === 'string') return children;
+    if (children?.props?.children) return getCodeText(children.props.children);
+    if (Array.isArray(children)) return children.map(getCodeText).join('');
+    return '';
+  };
+
+  const handleCopy = async () => {
+    const code = getCodeText(children);
+    await navigator.clipboard.writeText(code);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
+  return (
+    <div className="relative group my-6">
+      <button
+        onClick={handleCopy}
+        className="absolute right-3 top-3 px-2 py-1 text-xs rounded bg-zinc-700 hover:bg-zinc-600 text-zinc-300 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+      >
+        {copied ? '✓ Copiado' : 'Copiar'}
+      </button>
+      <pre className="bg-zinc-900 text-zinc-100 p-4 pt-10 rounded-lg overflow-x-auto border border-zinc-700 text-sm font-mono leading-relaxed">
+        {children}
+      </pre>
+    </div>
+  );
+}
 
 const customComponents = {
   h1: ({ children }) => (
@@ -33,15 +69,11 @@ const customComponents = {
     </blockquote>
   ),
   code: ({ children }) => (
-    <code className="bg-zinc-800 px-1.5 py-0.5 rounded-md text-sm font-mono text-zinc-200 border border-zinc-700">
+    <code className="bg-zinc-800 px-1.5 py-0.5 rounded-md text-sm font-mono text-emerald-400 border border-zinc-700">
       {children}
     </code>
   ),
-  pre: ({ children }) => (
-    <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto my-6 border">
-      {children}
-    </pre>
-  ),
+  pre: ({ children }) => <CodeBlock>{children}</CodeBlock>,
   ul: ({ children }) => (
     <ul className="list-disc list-inside mb-6 text-zinc-200 space-y-2">
       {children}
