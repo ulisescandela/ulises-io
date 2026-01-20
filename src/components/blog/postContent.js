@@ -1,41 +1,6 @@
 // src/components/blog/PostContent.js
-'use client';
-
 import { MDXRemote } from 'next-mdx-remote/rsc';
-import { useState } from 'react';
-
-// Componente para bloques de código con botón de copiar
-function CodeBlock({ children }) {
-  const [copied, setCopied] = useState(false);
-  
-  const getCodeText = (children) => {
-    if (typeof children === 'string') return children;
-    if (children?.props?.children) return getCodeText(children.props.children);
-    if (Array.isArray(children)) return children.map(getCodeText).join('');
-    return '';
-  };
-
-  const handleCopy = async () => {
-    const code = getCodeText(children);
-    await navigator.clipboard.writeText(code);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
-
-  return (
-    <div className="relative group my-6">
-      <button
-        onClick={handleCopy}
-        className="absolute right-3 top-3 px-2 py-1 text-xs rounded bg-zinc-700 hover:bg-zinc-600 text-zinc-300 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
-      >
-        {copied ? '✓ Copiado' : 'Copiar'}
-      </button>
-      <pre className="bg-zinc-900 text-zinc-100 p-4 pt-10 rounded-lg overflow-x-auto border border-zinc-700 text-sm font-mono leading-relaxed">
-        {children}
-      </pre>
-    </div>
-  );
-}
+import CodeBlock from './codeBlock';
 
 const customComponents = {
   h1: ({ children }) => (
@@ -49,11 +14,6 @@ const customComponents = {
     </h2>
   ),
   h3: ({ children }) => (
-    <h3 className="text-2xl font-semibold text-zinc-200 mb-3 mt-6">
-      {children}
-    </h3>
-  ),
-  h3: ({ children }) => (
     <h3 className="text-xl font-semibold text-zinc-200 mb-3 mt-6">
       {children}
     </h3>
@@ -64,7 +24,7 @@ const customComponents = {
     </p>
   ),
   blockquote: ({ children }) => (
-    <blockquote className="border-l-4 border-blue-500 pl-6 py-2 my-6 bg-blue-50 italic text-zinc-200">
+    <blockquote className="border-l-4 border-blue-500 pl-6 py-2 my-6 bg-zinc-800/50 italic text-zinc-300">
       {children}
     </blockquote>
   ),
@@ -92,7 +52,7 @@ const customComponents = {
   a: ({ children, href }) => (
     <a
       href={href}
-      className="text-blue-600 hover:text-blue-800 underline transition-colors"
+      className="text-blue-400 hover:text-blue-300 underline transition-colors"
       target="_blank"
       rel="noopener noreferrer"
     >
