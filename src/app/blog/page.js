@@ -1,5 +1,5 @@
 // src/app/blog/page.js
-import LatestPosts from '@/components/common/latestPosts';
+import LatestPosts from '@/components/common/LatestPosts';
 import { getAllPostsData } from '../../../lib/posts';
 import PostCard from '@/components/blog/postCard';
 

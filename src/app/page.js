@@ -1,9 +1,7 @@
 // src/app/page.js
-import Hero from '@/components/common/hero';
-import About from '@/components/common/about';
-import Interests from '@/components/common/interests';
-import LatestPosts from '@/components/common/latestPosts';
-import Header from '@/components/layout/header';
+import Hero from '@/components/common/Hero';
+import LatestPosts from '@/components/common/LatestPosts';
+import Header from '@/components/layout/Header';
 
 export default function HomePage() {
 
