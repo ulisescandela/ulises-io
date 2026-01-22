@@ -1,9 +1,0 @@
-# *
-User-agent: *
-Allow: /
-
-# Host
-Host: https://ulises.io
-
-# Sitemaps
-Sitemap: https://ulises.io/sitemap.xml
