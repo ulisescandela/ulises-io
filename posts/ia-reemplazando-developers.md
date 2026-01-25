@@ -4,6 +4,7 @@ date: "2026-01-23"
 excerpt: "Análisis realista sobre cómo la Inteligencia Artificial (ChatGPT, Cursor, Claude) está automatizando empleos de programación y qué habilidades necesitas para sobrevivir y aumentar tu salario."
 readTime: "8 min"
 tags: ["IA", "Empleo Tech", "Futuro del Desarrollo", "Carrera", "Cursor IDE"]
+published: true
 coverImage: ""
 ---
 

@@ -4,6 +4,7 @@ date: "2026-01-22"
 excerpt: "Analizo por qué pocas personas llegan a trabajar en Google, Meta, Apple o Netflix, hablo sobre realismo en la carrera tech, y te muestro opciones igual de rentables (o más)."
 readTime: "8 min"
 tags: ["Carrera", "FAANG", "Startups", "Salarios", "Realismo", "Oportunidades"]
+published: true
 coverImage: ""
 ---
 

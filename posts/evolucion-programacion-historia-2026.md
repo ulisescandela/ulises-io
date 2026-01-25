@@ -4,6 +4,7 @@ date: "2026-01-24"
 excerpt: "Un viaje completo por la historia de la programación. Descubre cómo hemos pasado del código máquina y los primeros lenguajes hasta la era de la Inteligencia Artificial Generativa en 2026."
 readTime: "10 min"
 tags: ["Historia Tech", "Evolución", "IA", "Programación", "Futuro"]
+published: true
 coverImage: ""
 ---
 
