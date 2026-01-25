@@ -4,22 +4,32 @@ import path from 'path';
 
 const baseUrl = 'https://ulises.io';
 
+// Obtener fecha local en formato YYYY-MM-DD
+function getLocalDate() {
+  const now = new Date();
+  const year = now.getFullYear();
+  const month = String(now.getMonth() + 1).padStart(2, '0');
+  const day = String(now.getDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
+}
+
 function generateSitemap() {
+  const today = getLocalDate();
   // Páginas estáticas
   const staticPages = [
     {
       url: baseUrl,
-      lastModified: new Date().toISOString().split('T')[0],
+      lastModified: today,
       priority: 1,
     },
     {
       url: `${baseUrl}/blog`,
-      lastModified: new Date().toISOString().split('T')[0],
+      lastModified: today,
       priority: 0.9,
     },
     {
       url: `${baseUrl}/cv`,
-      lastModified: new Date().toISOString().split('T')[0],
+      lastModified: today,
       priority: 0.8,
     },
   ];
