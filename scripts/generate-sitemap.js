@@ -4,13 +4,9 @@ import path from 'path';
 
 const baseUrl = 'https://ulises.io';
 
-// Obtener fecha local en formato YYYY-MM-DD
+// Obtener fecha en zona horaria de México (America/Mexico_City)
 function getLocalDate() {
-  const now = new Date();
-  const year = now.getFullYear();
-  const month = String(now.getMonth() + 1).padStart(2, '0');
-  const day = String(now.getDate()).padStart(2, '0');
-  return `${year}-${month}-${day}`;
+  return new Date().toLocaleDateString('en-CA', { timeZone: 'America/Mexico_City' });
 }
 
 function generateSitemap() {
