@@ -1,5 +1,6 @@
 // src/components/blog/PostContent.js
 import { MDXRemote } from 'next-mdx-remote/rsc';
+import remarkGfm from 'remark-gfm';
 import CodeBlock from './codeBlock';
 
 const customComponents = {
@@ -69,6 +70,38 @@ const customComponents = {
       {children}
     </em>
   ),
+  table: ({ children }) => (
+    <div className="overflow-x-auto my-6">
+      <table className="min-w-full border-collapse border border-zinc-700 rounded-lg overflow-hidden">
+        {children}
+      </table>
+    </div>
+  ),
+  thead: ({ children }) => (
+    <thead className="bg-zinc-800">
+      {children}
+    </thead>
+  ),
+  tbody: ({ children }) => (
+    <tbody className="divide-y divide-zinc-700">
+      {children}
+    </tbody>
+  ),
+  tr: ({ children }) => (
+    <tr className="hover:bg-zinc-800/50 transition-colors">
+      {children}
+    </tr>
+  ),
+  th: ({ children }) => (
+    <th className="px-4 py-3 text-left text-sm font-semibold text-zinc-200 border-b border-zinc-700">
+      {children}
+    </th>
+  ),
+  td: ({ children }) => (
+    <td className="px-4 py-3 text-sm text-zinc-300 border-b border-zinc-800">
+      {children}
+    </td>
+  ),
   img: ({ src, alt, width, height }) => (
     <img
       src={src}
@@ -82,7 +115,15 @@ const customComponents = {
 export default function PostContent({ content }) {
   return (
     <article className="max-w-none">
-      <MDXRemote source={content} components={customComponents} />
+      <MDXRemote 
+        source={content} 
+        components={customComponents}
+        options={{
+          mdxOptions: {
+            remarkPlugins: [remarkGfm],
+          },
+        }}
+      />
     </article>
   );
 }
