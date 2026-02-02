@@ -14,21 +14,18 @@ export default function ContactPage() {
             </p>
             <ul className="space-y-4">
               <li>
-                <strong>Email:</strong> [Tu email aquí, por ejemplo: ulises@example.com]
+                <strong>Email:</strong> contacto@miniprofe.com
               </li>
               <li>
-                <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/tu-perfil" className="text-blue-400 hover:underline">linkedin.com/in/ulises</a>
+                <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/ulisescandela/" className="text-blue-400 hover:underline">linkedin.com/in/ulisescandela/</a>
               </li>
               <li>
-                <strong>GitHub:</strong> <a href="https://github.com/tu-usuario" className="text-blue-400 hover:underline">github.com/ulisescandela</a>
-              </li>
-              <li>
-                <strong>Twitter/X:</strong> <a href="https://twitter.com/tu-usuario" className="text-blue-400 hover:underline">@ulises</a>
+                <strong>Twitter/X:</strong> <a href="https://x.com/UlisesCandela" className="text-blue-400 hover:underline">@UlisesCandela</a>
               </li>
             </ul>
-            <p className="mt-6">
+            {/* <p className="mt-6">
               También puedes dejar un comentario en cualquiera de mis posts del blog.
-            </p>
+            </p> */}
           </div>
         </section>
       </main>
