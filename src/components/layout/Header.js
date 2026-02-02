@@ -8,6 +8,18 @@ const LINKS = [
   {
     label: 'Blog',
     href: '/blog'
+  },
+  {
+    label: 'Sobre mí',
+    href: '/about'
+  },
+  {
+    label: 'Contacto',
+    href: '/contacto'
+  },
+  {
+    label: 'Privacidad',
+    href: '/privacy'
   }
 ]
 
