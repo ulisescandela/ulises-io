@@ -1,16 +1,16 @@
 ---
-title: "La Evolución de la Programación: De las Tarjetas Perforadas a la IA en 2026"
+title: "La Evolución de la Programación: Historia Completa de los Lenguajes y Tecnologías"
 date: "2026-01-24"
-excerpt: "Un viaje completo por la historia de la programación. Descubre cómo hemos pasado del código máquina y los primeros lenguajes hasta la era de la Inteligencia Artificial Generativa en 2026."
+excerpt: "Un viaje completo por la historia de la programación. Descubre cómo hemos pasado del código máquina y los primeros lenguajes hasta la era móvil y la nube."
 readTime: "10 min"
-tags: ["Historia Tech", "Evolución", "IA", "Programación", "Futuro"]
+tags: ["Historia Tech", "Evolución", "Programación", "Lenguajes"]
 published: true
 coverImage: ""
 ---
 
-# La Evolución de la Programación: Historia Completa hasta 2026
+# La Evolución de la Programación: Historia Completa de los Lenguajes y Tecnologías
 
-La programación ha recorrido un camino extraordinario. Lo que comenzó como interruptores físicos y tarjetas de papel perforadas se ha transformado, para este año 2026, en una conversación fluida con asistentes de Inteligencia Artificial que escriben código junto a nosotros.
+La programación ha recorrido un camino extraordinario. Lo que comenzó como interruptores físicos y tarjetas de papel perforadas se ha transformado en lenguajes expresivos y plataformas en la nube que permiten crear aplicaciones complejas con relativa facilidad.
 
 Entender de dónde venimos es crucial para comprender hacia dónde vamos. En este artículo, repasaremos los hitos más importantes que han moldeado la industria del desarrollo de software tal como la conocemos hoy.
 
@@ -54,16 +54,8 @@ La web cambió las reglas del juego. El software dejó de vivir solo en disquete
 Con el lanzamiento del iPhone y Android, el foco cambió a las apps móviles. **Objective-C**, **Swift**, **Java** (para Android) y luego **Kotlin** dominaron.
 Paralelamente, la nube (AWS, Azure, Google Cloud) transformó cómo desplegamos software: de servidores físicos a contenedores (Docker) y funciones serverless.
 
-## La Era de la Inteligencia Artificial (2022 - 2026)
-
-Aquí es donde estamos ahora, y el cambio ha sido vertiginoso.
-
-*   **2022-2023:** El lanzamiento de ChatGPT y GitHub Copilot marcó un antes y un después. La IA Generativa demostró que podía escribir código boilerplate, tests y funciones complejas.
-*   **2024-2025:** La integración profunda. Herramientas como Cursor y los agentes autónomos empezaron a manejar refactorizaciones completas. El rol del programador comenzó a cambiar de "escribir código" a "arquitecto y supervisor de IA".
-*   **Actualidad (2026):** Programar es un proceso híbrido. Ya no memorizamos sintaxis oscura; nos enfocamos en la lógica, el diseño de sistemas y la resolución de problemas de alto nivel. Los lenguajes naturales (español, inglés) se han convertido, efectivamente, en una nueva capa de abstracción sobre el código.
-
 ## Conclusión: ¿Qué sigue?
 
-Mirando hacia atrás, la tendencia es clara: **cada evolución ha elevado el nivel de abstracción**. Pasamos de controlar electrones a escribir lógica de negocio, y ahora, a expresar intenciones que la IA traduce en software.
+Mirando hacia atrás, la tendencia es clara: **cada evolución ha elevado el nivel de abstracción**. Pasamos de controlar electrones a escribir lógica de negocio.
 
-Lejos de desaparecer, la programación se ha vuelto más accesible y poderosa. La historia de la programación es, en última instancia, la historia de cómo los humanos buscamos herramientas más eficientes para materializar nuestras ideas. Y en 2026, apenas estamos empezando.
+Lejos de desaparecer, la programación se ha vuelto más accesible y poderosa. La historia de la programación es, en última instancia, la historia de cómo los humanos buscamos herramientas más eficientes para materializar nuestras ideas.

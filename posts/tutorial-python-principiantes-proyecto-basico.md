@@ -1,7 +1,7 @@
 ---
-title: "Tutorial de Python para Principiantes: Lo Básico + Tu Primer Proyecto"
+title: "Tutorial de Python para Principiantes: Lo Básico + Calculadora Interactiva"
 date: "2026-01-19"
-excerpt: "Aprende Python desde cero con este tutorial práctico. Cubrimos lo esencial que necesitas saber y construimos juntos un proyecto básico que puedes agregar a tu portafolio."
+excerpt: "Aprende Python desde cero con este tutorial práctico. Cubrimos lo esencial que necesitas saber y construimos juntos una calculadora interactiva que puedes agregar a tu portafolio."
 readTime: "15 min"
 tags: ["Python", "Tutorial", "Principiantes", "Proyecto", "Programación"]
 published: true
@@ -10,9 +10,7 @@ coverImage: ""
 
 Python es uno de los mejores lenguajes para empezar a programar. Su sintaxis es limpia, legible, y te permite enfocarte en resolver problemas en lugar de pelear con el lenguaje.
 
-En este tutorial vamos a cubrir lo esencial de Python y al final construiremos un proyecto básico juntos. No necesitas experiencia previa.
-
----
+En este tutorial vamos a cubrir lo esencial de Python y al final construiremos una calculadora interactiva juntos. No necesitas experiencia previa.
 
 ## Instalación
 
@@ -333,121 +331,68 @@ with open("archivo.txt", "r") as f:
 
 ---
 
-## Proyecto: Lista de Tareas (To-Do CLI)
+## Proyecto: Calculadora Interactiva
 
-Ahora vamos a construir algo real: una aplicación de tareas en la terminal.
+Ahora vamos a construir algo útil: una calculadora que funciona en la terminal.
 
-Crea un archivo llamado `todo.py`:
+Crea un archivo llamado `calculadora.py`:
 
 ```python
-import json
-import os
+def suma(a, b):
+    return a + b
 
-ARCHIVO_TAREAS = "tareas.json"
+def resta(a, b):
+    return a - b
 
-def cargar_tareas():
-    """Carga las tareas desde el archivo JSON"""
-    if os.path.exists(ARCHIVO_TAREAS):
-        with open(ARCHIVO_TAREAS, "r") as f:
-            return json.load(f)
-    return []
+def multiplicacion(a, b):
+    return a * b
 
-def guardar_tareas(tareas):
-    """Guarda las tareas en el archivo JSON"""
-    with open(ARCHIVO_TAREAS, "w") as f:
-        json.dump(tareas, f, indent=2)
-
-def mostrar_tareas(tareas):
-    """Muestra todas las tareas"""
-    if not tareas:
-        print("\n📭 No hay tareas pendientes\n")
-        return
-    
-    print("\n📋 Tus tareas:")
-    print("-" * 40)
-    for i, tarea in enumerate(tareas, 1):
-        estado = "✅" if tarea["completada"] else "⬜"
-        print(f"{i}. {estado} {tarea['titulo']}")
-    print("-" * 40)
-    print()
-
-def agregar_tarea(tareas):
-    """Agrega una nueva tarea"""
-    titulo = input("📝 Nueva tarea: ").strip()
-    if titulo:
-        tareas.append({
-            "titulo": titulo,
-            "completada": False
-        })
-        guardar_tareas(tareas)
-        print(f"✅ Tarea '{titulo}' agregada\n")
-    else:
-        print("❌ El título no puede estar vacío\n")
-
-def completar_tarea(tareas):
-    """Marca una tarea como completada"""
-    mostrar_tareas(tareas)
-    if not tareas:
-        return
-    
-    try:
-        num = int(input("Número de tarea a completar: "))
-        if 1 <= num <= len(tareas):
-            tareas[num - 1]["completada"] = True
-            guardar_tareas(tareas)
-            print(f"✅ Tarea '{tareas[num - 1]['titulo']}' completada\n")
-        else:
-            print("❌ Número inválido\n")
-    except ValueError:
-        print("❌ Ingresa un número válido\n")
-
-def eliminar_tarea(tareas):
-    """Elimina una tarea"""
-    mostrar_tareas(tareas)
-    if not tareas:
-        return
-    
-    try:
-        num = int(input("Número de tarea a eliminar: "))
-        if 1 <= num <= len(tareas):
-            eliminada = tareas.pop(num - 1)
-            guardar_tareas(tareas)
-            print(f"🗑️ Tarea '{eliminada['titulo']}' eliminada\n")
-        else:
-            print("❌ Número inválido\n")
-    except ValueError:
-        print("❌ Ingresa un número válido\n")
+def division(a, b):
+    if b == 0:
+        return "Error: No se puede dividir por cero"
+    return a / b
 
 def main():
-    """Función principal"""
-    tareas = cargar_tareas()
-    
-    print("\n" + "=" * 40)
-    print("   📋 LISTA DE TAREAS - Python CLI")
-    print("=" * 40)
+    print("🧮 Calculadora Interactiva")
+    print("Operaciones disponibles:")
+    print("1. Suma")
+    print("2. Resta")
+    print("3. Multiplicación")
+    print("4. División")
+    print("5. Salir")
     
     while True:
-        print("1. Ver tareas")
-        print("2. Agregar tarea")
-        print("3. Completar tarea")
-        print("4. Eliminar tarea")
-        print("5. Salir")
-        
-        opcion = input("\nElige una opción: ").strip()
-        
-        if opcion == "1":
-            mostrar_tareas(tareas)
-        elif opcion == "2":
-            agregar_tarea(tareas)
-        elif opcion == "3":
-            completar_tarea(tareas)
-        elif opcion == "4":
-            eliminar_tarea(tareas)
-        elif opcion == "5":
-            print("\n👋 ¡Hasta luego!\n")
-            break
-        else:
-            print("❌ Opción inválida\n")
+        try:
+            opcion = int(input("\nElige una operación (1-5): "))
+            
+            if opcion == 5:
+                print("¡Hasta luego!")
+                break
+            
+            if opcion not in [1, 2, 3, 4]:
+                print("Opción inválida. Intenta de nuevo.")
+                continue
+            
+            num1 = float(input("Ingresa el primer número: "))
+            num2 = float(input("Ingresa el segundo número: "))
+            
+            if opcion == 1:
+                resultado = suma(num1, num2)
+                print(f"Resultado: {num1} + {num2} = {resultado}")
+            elif opcion == 2:
+                resultado = resta(num1, num2)
+                print(f"Resultado: {num1} - {num2} = {resultado}")
+            elif opcion == 3:
+                resultado = multiplicacion(num1, num2)
+                print(f"Resultado: {num1} * {num2} = {resultado}")
+            elif opcion == 4:
+                resultado = division(num1, num2)
+                print(f"Resultado: {num1} / {num2} = {resultado}")
+                
+        except ValueError:
+            print("Error: Ingresa un número válido.")
+        except Exception as e:
+            print(f"Error inesperado: {e}")
 
 if __name__ == "__main__":
     main()
@@ -456,17 +401,16 @@ if __name__ == "__main__":
 ### Ejecutar el proyecto
 
 ```bash
-python todo.py
+python calculadora.py
 ```
 
 ### ¿Qué aprendiste con este proyecto?
 
 - **Funciones** para organizar código
-- **Listas y diccionarios** para manejar datos
-- **Archivos JSON** para persistencia
-- **Loops** para el menú interactivo
 - **Condicionales** para las opciones
+- **Loops** para el menú interactivo
 - **Manejo de errores** con try/except
+- **Entrada de usuario** con input()
 
 ---
 
@@ -495,7 +439,7 @@ Una vez que domines lo básico, explora:
 
 Python es un lenguaje que escala contigo. Lo que aprendiste hoy te servirá cuando hagas web scraping, APIs, machine learning, o automatización.
 
-El secreto es practicar. No solo leas — escribe código, rompe cosas, y construye proyectos. El to-do list que hicimos es solo el inicio.
+El secreto es practicar. No solo leas — escribe código, rompe cosas, y construye proyectos. La calculadora que hicimos es solo el inicio.
 
 ¿Qué proyecto vas a construir con Python? Cuéntame en mis redes.
 
