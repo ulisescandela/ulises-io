@@ -1,5 +1,6 @@
 import { getAllPostsData } from "../../../lib/posts";
-import PostCard from "../blog/postCard";
+import PostsListClient from "@/components/common/PostsListClient";
+import TagsSection from "@/components/common/TagsSection";
 import { FcNext } from "react-icons/fc";
 
 export default function LatestPosts() {
@@ -11,17 +12,10 @@ export default function LatestPosts() {
         <FcNext />
         Últimos posts
       </h2>
-      {posts.length > 0 ? (
-        <div className="grid gap-4 sm:gap-6 md:grid-cols-1">
-          {posts.map(post => (
-            <PostCard key={post.slug} post={post} />
-          ))}
-        </div>
-      ) : (
-        <div className="text-center py-12">
-          <p className="text-gray-500 text-base sm:text-lg">No hay posts publicados aún.</p>
-        </div>
-      )}
+
+      <PostsListClient initialPosts={posts} initialCount={3} increment={2} />
+
+      <TagsSection posts={posts} />
     </section>
   );
 }
