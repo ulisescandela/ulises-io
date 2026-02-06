@@ -33,6 +33,7 @@ export default function TagsSection({ posts = [] }) {
           <Link
             key={tag}
             href={`/blog/tag/${encodeURIComponent(tag)}`}
+            aria-label={`Ver posts con la etiqueta ${tag}`}
             className="block p-4 rounded-lg bg-white/5 border border-white/6 hover:scale-101 transition h-full"
           >
             <div className="flex flex-col h-full">
