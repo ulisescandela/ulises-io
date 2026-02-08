@@ -12,6 +12,15 @@ export default function Hero() {
       <p className="text-2xl tracking-wider py-4 text-zinc-300">
         Todo en un mismo lugar
       </p>
+      <div className="mt-6">
+        <a
+          href="#posts"
+          className="inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-500 transition"
+          aria-label="Ver los últimos posts"
+        >
+          Ver posts
+        </a>
+      </div>
     </section>
     // <section className="mb-16">
     //   <h1 className="text-5xl font-bold text-gray-900 mb-6 leading-tight">

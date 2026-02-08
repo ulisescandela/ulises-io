@@ -45,7 +45,7 @@ function GlassBackground({ children }) {
 
 function Logo() {
   return (
-    <Link href="/">
+    <Link href="/" aria-label="Ir al inicio">
       <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent leading-tight">
         ulises.io
       </span>
@@ -55,7 +55,7 @@ function Logo() {
 
 function NavLinks() {
   return (
-    <nav className="flex text-white items-center space-x-6">
+    <nav aria-label="Main navigation" className="flex text-white items-center space-x-6">
       {LINKS.map((link) => (
         <Link key={link.href} href={link.href} className="hover:text-blue-600 transition-colors">
           {link.label}
