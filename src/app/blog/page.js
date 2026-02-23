@@ -3,6 +3,22 @@ import LatestPosts from '@/components/common/LatestPosts';
 import { getAllPostsData } from '../../../lib/posts';
 import PostCard from '@/components/blog/postCard';
 
+export const metadata = {
+  title: 'Blog - Ulises.io',
+  description: 'Artículos sobre programación, tecnología, desarrollo web, carrera profesional en IT y más.',
+  alternates: {
+    canonical: 'https://ulises.io/blog',
+  },
+  openGraph: {
+    title: 'Blog - Ulises.io',
+    description: 'Artículos sobre programación, tecnología, desarrollo web, carrera profesional en IT y más.',
+    url: 'https://ulises.io/blog',
+    siteName: 'Ulises.io',
+    locale: 'es_ES',
+    type: 'website',
+  },
+};
+
 export default function BlogPage() {
   const posts = getAllPostsData();
 

@@ -1,13 +1,15 @@
 const cspHeader = `
     default-src 'self';
-    script-src 'self' 'unsafe-eval' 'unsafe-inline';
+    script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://adservice.google.com https://www.google-analytics.com;
     style-src 'self' 'unsafe-inline';
-    img-src 'self' blob: data:;
+    img-src 'self' blob: data: https://*.google.com https://*.googleapis.com https://*.gstatic.com https://*.doubleclick.net;
     font-src 'self';
+    connect-src 'self' https://www.google-analytics.com https://*.google.com https://*.doubleclick.net https://pagead2.googlesyndication.com;
+    frame-src https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://*.google.com;
     object-src 'none';
     base-uri 'self';
     form-action 'self';
-    frame-ancestors 'none';
+    frame-ancestors 'self';
     upgrade-insecure-requests;
 `;
 
@@ -28,7 +30,7 @@ const nextConfig = {
           },
           {
             key: 'X-Frame-Options',
-            value: 'DENY',
+            value: 'SAMEORIGIN',
           },
           {
             key: 'X-Content-Type-Options',

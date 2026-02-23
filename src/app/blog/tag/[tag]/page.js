@@ -6,6 +6,18 @@ export async function generateStaticParams() {
   return tags.map((t) => ({ tag: encodeURIComponent(t) }));
 }
 
+export async function generateMetadata({ params }) {
+  const rawTag = params?.tag ? decodeURIComponent(params.tag) : '';
+  return {
+    title: `Posts sobre ${rawTag} - Ulises.io`,
+    description: `Artículos y posts etiquetados con "${rawTag}" en el blog de Ulises Rodríguez Candela.`,
+    robots: {
+      index: false,
+      follow: true,
+    },
+  };
+}
+
 export default function TagPage({ params }) {
   const rawTag = params?.tag ? decodeURIComponent(params.tag) : '';
   const posts = getPostsByTag(rawTag);

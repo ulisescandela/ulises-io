@@ -28,6 +28,21 @@ function generateSitemap() {
       lastModified: today,
       priority: 0.8,
     },
+    {
+      url: `${baseUrl}/about`,
+      lastModified: today,
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/contacto`,
+      lastModified: today,
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/privacy`,
+      lastModified: today,
+      priority: 0.4,
+    },
   ];
 
   // Posts del blog (dinámico)

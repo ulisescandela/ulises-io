@@ -1,6 +1,22 @@
 // src/app/contacto/page.js
 import Header from '@/components/layout/Header';
 
+export const metadata = {
+  title: 'Contacto - Ulises.io',
+  description: 'Ponte en contacto con Ulises Rodríguez Candela a través de email, LinkedIn o Twitter.',
+  alternates: {
+    canonical: 'https://ulises.io/contacto',
+  },
+  openGraph: {
+    title: 'Contacto - Ulises.io',
+    description: 'Ponte en contacto con Ulises Rodríguez Candela a través de email, LinkedIn o Twitter.',
+    url: 'https://ulises.io/contacto',
+    siteName: 'Ulises.io',
+    locale: 'es_ES',
+    type: 'website',
+  },
+};
+
 export default function ContactPage() {
   return (
     <>
