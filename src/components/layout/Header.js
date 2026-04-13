@@ -45,7 +45,7 @@ function GlassBackground({ children }) {
 
 function Logo() {
   return (
-    <Link href="/" aria-label="Ir al inicio" scroll={false}>
+    <Link href="/" scroll={false}>
       <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent leading-tight">
         ulises.io
       </span>
