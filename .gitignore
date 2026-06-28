@@ -4,6 +4,13 @@
 /node_modules
 /.pnp
 .pnp.*
+
+# pnpm (el proyecto usa npm; evitar doble lockfile)
+pnpm-lock.yaml
+pnpm-workspace.yaml
+
+# tooling local (Claude Code, preview launch config)
+.claude/
 .yarn/*
 !.yarn/patches
 !.yarn/plugins
