@@ -24,6 +24,9 @@ export const metadata = {
   creator: "Ulises Rodríguez Candela",
   alternates: {
     canonical: "https://ulises.io",
+    types: {
+      "application/rss+xml": [{ url: "/rss.xml", title: "Ulises.io — Blog" }],
+    },
   },
   openGraph: {
     title: "Ulises Rodríguez Candela - Software Engineer",
