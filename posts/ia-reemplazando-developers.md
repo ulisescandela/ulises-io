@@ -95,7 +95,7 @@ A los que solo "ponen ladrillos", sí; a los que resuelven problemas y diseñan 
 El criterio: diseño de sistemas, comunicación, entender el negocio y los [fundamentos sólidos de lógica](/blog/guia-completa-logica-estructuras-de-datos). La IA acelera el *cómo*; tú decides el *qué* y el *por qué*.
 
 **¿Debo aprender a usar IA en mi trabajo?**
-Sin duda. Quien sabe dirigir estas herramientas rinde por varios. Es una de las habilidades clave de mi [guía para destacar en tech 2026](/blog/guia-destacar-en-tech-2026-habilidades-y-negocios).
+Sin duda. Quien sabe dirigir estas herramientas rinde por varios. Es una de las habilidades clave de mi [guía para destacar en tech 2026](/blog/guia-destacar-en-tech-2026-habilidades-y-negocios). Y si quieres dar el salto completo, te explico [cómo convertirte en AI Engineer](/blog/como-convertirse-en-ai-engineer-2026), el rol que más está demandando la industria.
 
 ## Conclusión
 

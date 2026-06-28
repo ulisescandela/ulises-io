@@ -256,7 +256,7 @@ Reemplazará tareas, no a las personas que aportan criterio. Profundizo en el de
 Las que dependen de procesar información a gran escala: salud, finanzas, educación, contenido y, por supuesto, el propio desarrollo de software.
 
 **¿Cómo me preparo para un futuro con IA?**
-Aprende a dirigir estas herramientas y refuerza lo que la IA no hace bien: pensamiento crítico, comunicación y diseño. Mi [guía para destacar en tech 2026](/blog/guia-destacar-en-tech-2026-habilidades-y-negocios) traza ese plan.
+Aprende a dirigir estas herramientas y refuerza lo que la IA no hace bien: pensamiento crítico, comunicación y diseño. Mi [guía para destacar en tech 2026](/blog/guia-destacar-en-tech-2026-habilidades-y-negocios) traza ese plan. Si quieres especializarte, mira [cómo convertirte en AI Engineer](/blog/como-convertirse-en-ai-engineer-2026), el perfil más buscado del momento.
 
 ## Conclusión: El Futuro ya Llegó
 
