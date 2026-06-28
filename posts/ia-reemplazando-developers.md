@@ -1,5 +1,6 @@
 ---
 title: "IA reemplazando programadores: ¿Tu trabajo está en peligro en 2026?"
+category: "IA"
 date: "2026-01-23"
 excerpt: "Análisis realista sobre cómo la Inteligencia Artificial (ChatGPT, Cursor, Claude) está automatizando empleos de programación y qué habilidades necesitas para sobrevivir y aumentar tu salario."
 readTime: "8 min"
@@ -84,6 +85,17 @@ Mi predicción conservadora para el mercado laboral de programación:
 1.  **Colapso del salario Junior**: Habrá menos vacantes y pagarán menos, porque la barrera de entrada ha bajado.
 2.  **El auge del "AI Engineer"**: Developers especializados en integrar LLMs en productos.
 3.  **Consolidación de equipos**: Startups creadas por 1 o 2 personas técnicas haciendo el trabajo de 10.
+
+## Preguntas Frecuentes
+
+**¿La IA va a reemplazar a los programadores?**
+A los que solo "ponen ladrillos", sí; a los que resuelven problemas y diseñan sistemas, no. Lo analizo con más detalle en [el presente y futuro de la inteligencia artificial](/blog/inteligencia-artificial-presente-futuro-2026).
+
+**¿Qué habilidades me hacen "a prueba de IA"?**
+El criterio: diseño de sistemas, comunicación, entender el negocio y los [fundamentos sólidos de lógica](/blog/guia-completa-logica-estructuras-de-datos). La IA acelera el *cómo*; tú decides el *qué* y el *por qué*.
+
+**¿Debo aprender a usar IA en mi trabajo?**
+Sin duda. Quien sabe dirigir estas herramientas rinde por varios. Es una de las habilidades clave de mi [guía para destacar en tech 2026](/blog/guia-destacar-en-tech-2026-habilidades-y-negocios).
 
 ## Conclusión
 

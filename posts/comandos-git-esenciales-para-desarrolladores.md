@@ -1,5 +1,6 @@
 ---
 title: "Comandos de Git que Todo Desarrollador Debe Dominar en 2026"
+category: "Herramientas"
 date: "2026-01-17"
 excerpt: "Git es la herramienta más importante del desarrollo moderno. Aprende los comandos esenciales que usarás todos los días, desde lo básico hasta trucos que te sacarán de apuros."
 readTime: "7 min"
@@ -221,6 +222,17 @@ git undo                # Deshacer último commit
 10. `git diff` — Ver diferencias
 
 ---
+
+## Preguntas Frecuentes
+
+**¿Cuáles son los comandos de Git más importantes?**
+Los del día a día: `add`, `commit`, `push`, `pull`, `status`, `branch`, `checkout` y `merge`. Con dominar esos cubres el 90% del trabajo real.
+
+**¿Cómo deshago un cambio o un commit en Git?**
+Depende: `git restore` para descartar cambios sin guardar, `git reset` para mover el HEAD, y `git revert` para deshacer un commit ya publicado sin reescribir historia. Los cubro en la sección de comandos de rescate de arriba.
+
+**¿Necesito dominar Git para conseguir trabajo como desarrollador?**
+Sí, es innegociable. Git es una de las habilidades que doy por sentadas en mi [guía para destacar en tech en 2026](/blog/guia-destacar-en-tech-2026-habilidades-y-negocios), y va de la mano con [mejorar como programador](/blog/consejos-para-mejorar-en-programacion).
 
 ## Conclusión
 

@@ -2,7 +2,7 @@
 import Header from '@/components/layout/Header';
 
 export const metadata = {
-  title: 'Política de Privacidad - Ulises.io',
+  title: 'Política de Privacidad',
   description: 'Política de privacidad del sitio web ulises.io. Información sobre recopilación de datos, cookies y enlaces a terceros.',
   alternates: {
     canonical: 'https://ulises.io/privacy',

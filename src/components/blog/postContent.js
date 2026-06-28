@@ -1,6 +1,7 @@
 // src/components/blog/PostContent.js
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import remarkGfm from 'remark-gfm';
+import Link from 'next/link';
 import CodeBlock from './codeBlock';
 
 const customComponents = {
@@ -50,16 +51,23 @@ const customComponents = {
       {children}
     </li>
   ),
-  a: ({ children, href }) => (
-    <a
-      href={href}
-      className="text-blue-400 hover:text-blue-300 underline transition-colors"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      {children}
-    </a>
-  ),
+  a: ({ children, href }) => {
+    const isInternal = href && (href.startsWith('/') || href.startsWith('#'));
+    const className =
+      'text-blue-400 hover:text-blue-300 underline underline-offset-2 transition-colors';
+    if (isInternal) {
+      return (
+        <Link href={href} className={className}>
+          {children}
+        </Link>
+      );
+    }
+    return (
+      <a href={href} className={className} target="_blank" rel="noopener noreferrer">
+        {children}
+      </a>
+    );
+  },
   strong: ({ children }) => (
     <strong className="font-bold text-zinc-200">
       {children}

@@ -1,5 +1,6 @@
 ---
 title: "Las Habilidades Blandas son Más Importantes que el Código para Avanzar en tu Carrera"
+category: "Reflexiones"
 date: "2025-11-03"
 excerpt: "Ser un excelente programador no garantiza ascensos o mejores oportunidades. Descubre por qué las habilidades blandas como networking, liderazgo y comunicación son clave para crecer profesionalmente."
 published: true
@@ -50,3 +51,14 @@ Al igual que si quieres ser Engineering Manager, es crucial que tengas habilidad
 Ser un buen programador es importante, pero no es el único factor que determina cuánto dinero puedes ganar. La suerte, el networking, las habilidades blandas y la capacidad de adaptarse a diferentes entornos laborales también juegan un papel crucial en tu éxito profesional y financiero.
 
 Siempre vela por tu bienestar, busca un equilibrio entre trabajo y vida personal, y nunca dejes de aprender y crecer como profesional.
+
+## Preguntas Frecuentes
+
+**¿Por qué algunos programadores ganan más sin ser mejores técnicamente?**
+Porque el salario depende de más cosas que el código: negociación, visibilidad, networking y, sobre todo, [soft skills](/blog/consejos-para-incrementar-softskills). El que sabe comunicar su valor cobra más que el que solo lo tiene.
+
+**¿Cómo aumento mi salario como desarrollador?**
+Combina excelencia técnica con visibilidad y elige bien dónde trabajas. Te ayudan mi [guía para destacar en tech 2026](/blog/guia-destacar-en-tech-2026-habilidades-y-negocios) y este análisis sobre [las empresas que mejor pagan](/blog/empresas-sonadas-desarrolladores-realismo).
+
+**¿Entonces no vale la pena ser un buen programador?**
+Claro que sí: es la base. Pero es el punto de partida, no el de llegada. La técnica te mantiene en el juego; el resto de habilidades es lo que dispara tus ingresos.

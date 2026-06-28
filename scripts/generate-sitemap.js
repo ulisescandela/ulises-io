@@ -1,4 +1,4 @@
-import { getAllPostsData } from '../lib/posts.js';
+import { getAllPostsData, getAllCategories } from '../lib/posts.js';
 import fs from 'fs';
 import path from 'path';
 
@@ -53,7 +53,14 @@ function generateSitemap() {
     priority: 0.7,
   }));
 
-  const allPages = [...staticPages, ...blogPosts];
+  // Páginas de categoría (indexables, páginas pilar)
+  const categoryPages = getAllCategories().map((category) => ({
+    url: `${baseUrl}/blog/categoria/${encodeURIComponent(category)}`,
+    lastModified: today,
+    priority: 0.6,
+  }));
+
+  const allPages = [...staticPages, ...blogPosts, ...categoryPages];
 
   // Generar XML
   const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>

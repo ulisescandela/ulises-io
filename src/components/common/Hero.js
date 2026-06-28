@@ -1,37 +1,34 @@
-
+import Link from "next/link";
 
 export default function Hero() {
   return (
-    // Gradiente background with title and subtitle centered
-    <section 
-      className="py-50 px-10 lg:px-35"
-    >
-      <h1 className="font-bold md:text-7xl text-balance text-center max-w-[20ch] mx-auto md:leading-[1.16] text-5xl">
-        Aprende sobre <span className="text-blue-500">Programación y Tecnología</span>
-      </h1>
-      <p className="text-2xl tracking-wider py-4 text-zinc-300">
-        Todo en un mismo lugar
-      </p>
-      <div className="mt-6">
-        <a
-          href="#posts"
-          className="inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-500 transition"
-          aria-label="Ver los últimos posts"
-        >
-          Ver posts
-        </a>
+    <section className="relative px-6 lg:px-10 pt-28 pb-20 md:pt-36 md:pb-28">
+      {/* Glow central detrás del titular */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute left-1/2 top-24 -translate-x-1/2 h-72 w-72 md:h-96 md:w-96 rounded-full bg-blue-600/20 blur-[120px]"
+      />
+
+      <div className="relative max-w-4xl mx-auto flex flex-col items-center">
+        <h1 className="font-bold text-5xl md:text-7xl text-balance text-center max-w-[18ch] md:leading-[1.1] tracking-tight">
+          Aprende sobre{" "}
+          <span className="text-gradient">Programación y Tecnología</span>
+        </h1>
+
+        <p className="text-lg md:text-2xl py-6 text-zinc-400 max-w-[42ch] text-center">
+          Guías, consejos y reflexiones para crecer como desarrollador. Todo en un mismo lugar.
+        </p>
+
+        <div className="mt-4 flex flex-wrap items-center justify-center gap-4">
+          <Link href="/blog" className="btn-primary" aria-label="Ver el blog">
+            Explorar el blog
+            <span aria-hidden>→</span>
+          </Link>
+          <Link href="/about" className="btn-ghost" aria-label="Conocer más sobre mí">
+            Sobre mí
+          </Link>
+        </div>
       </div>
     </section>
-    // <section className="mb-16">
-    //   <h1 className="text-5xl font-bold text-gray-900 mb-6 leading-tight">
-    //     Ulises Rodríguez Candela
-    //   </h1>
-    //   <p className="text-lg text-gray-900 mb-4 leading-relaxed">
-    //     ¡Hola! 👋🏻 Soy Ulises, una persona normal con curiosidad constante sobre áreas multidisciplinarias.
-    //   </p>
-    //   <p className="text-lg text-gray-900 leading-relaxed">
-    //     Me gusta aprender y compartir lo que aprendo, por eso creo este blog.
-    //   </p>
-    // </section>
   );
 }

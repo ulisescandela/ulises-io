@@ -13,11 +13,18 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Ulises Rodríguez Candela - Software Engineer",
+  metadataBase: new URL("https://ulises.io"),
+  title: {
+    default: "Ulises Rodríguez Candela - Software Engineer",
+    template: "%s | Ulises.io",
+  },
   description: "Portfolio y blog personal de Ulises Rodríguez Candela. Especialista en desarrollo web, Python, JavaScript, Next.js y ciberseguridad.",
   keywords: ["Ulises Rodríguez", "Software Engineer", "Desarrollador", "Python", "JavaScript", "Next.js", "Portfolio"],
   authors: [{ name: "Ulises Rodríguez Candela" }],
   creator: "Ulises Rodríguez Candela",
+  alternates: {
+    canonical: "https://ulises.io",
+  },
   openGraph: {
     title: "Ulises Rodríguez Candela - Software Engineer",
     description: "Portfolio y blog personal de Ulises Rodríguez Candela",
@@ -25,6 +32,11 @@ export const metadata = {
     siteName: "Ulises.io",
     locale: "es_ES",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ulises Rodríguez Candela - Software Engineer",
+    description: "Portfolio y blog personal de Ulises Rodríguez Candela",
   },
   robots: {
     index: true,

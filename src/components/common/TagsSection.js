@@ -24,24 +24,21 @@ export default function TagsSection({ posts = [] }) {
 
   return (
     <div className="w-full py-12 text-left">
-      <h2 className="text-2xl sm:text-3xl font-bold text-zinc-200 mb-6 sm:mb-8">
-        Elegir por tags
+      <h2 className="text-2xl sm:text-3xl font-bold text-zinc-100 mb-8 flex items-center gap-3">
+        <span className="h-6 w-1.5 rounded-full bg-gradient-to-b from-cyan-400 to-blue-500" />
+        Explora por tag
       </h2>
 
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="flex flex-wrap gap-3">
         {tags.map((tag) => (
           <Link
             key={tag}
             href={`/blog/tag/${encodeURIComponent(tag)}`}
             aria-label={`Ver posts con la etiqueta ${tag}`}
-            className="block p-4 rounded-lg bg-white/5 border border-white/6 hover:scale-101 transition h-full"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-zinc-300 hover:text-white hover:border-blue-400/50 hover:bg-blue-600/10 transition"
           >
-            <div className="flex flex-col h-full">
-              <div className="flex items-center justify-between h-12">
-                <span className="text-lg font-semibold">{tag}</span>
-                <span className="text-sm text-zinc-300">{tagMap[tag].length}</span>
-              </div>
-            </div>
+            <span className="font-medium">{tag}</span>
+            <span className="text-xs text-zinc-500">{tagMap[tag].length}</span>
           </Link>
         ))}
       </div>

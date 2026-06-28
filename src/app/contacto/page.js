@@ -2,7 +2,7 @@
 import Header from '@/components/layout/Header';
 
 export const metadata = {
-  title: 'Contacto - Ulises.io',
+  title: 'Contacto',
   description: 'Ponte en contacto con Ulises Rodríguez Candela a través de email, LinkedIn o Twitter.',
   alternates: {
     canonical: 'https://ulises.io/contacto',

@@ -23,7 +23,10 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <a href="#main-content" className="sr-only focus:not-sr-only p-2 bg-white/5 text-white rounded">
+      <a
+        href="#main-content"
+        className="sr-only focus-visible:not-sr-only focus-visible:fixed focus-visible:top-3 focus-visible:left-3 focus-visible:z-[100] focus-visible:p-3 focus-visible:bg-blue-600 focus-visible:text-white focus-visible:rounded-lg focus-visible:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-300"
+      >
         Saltar al contenido
       </a>
       <Header />
@@ -34,7 +37,9 @@ export default function HomePage() {
         <Hero />
         {/* <About /> */}
         {/* <Interests /> */}
-        <LatestPosts />
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
+          <LatestPosts />
+        </div>
       </main>
     </>
   );

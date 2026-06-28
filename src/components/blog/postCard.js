@@ -6,74 +6,52 @@ export default function PostCard({ post }) {
     return null;
   }
 
-  const { title, date, excerpt, readTime, tags } = post.frontMatter;
+  const { title, category, date, excerpt, readTime, tags } = post.frontMatter;
 
   return (
-    <PostContainer>
-      <Link href={`/blog/${post.slug}`}>
-      
-          <PostTitle title={title} />
+    <article className="glass-card group p-6 sm:p-7 rounded-2xl text-left">
+      <Link href={`/blog/${post.slug}`} className="block">
+        <div className="flex flex-wrap items-center gap-3 mb-3 text-zinc-400">
+          {category && (
+            <span className="text-xs font-semibold text-blue-200 bg-blue-600/20 border border-blue-500/30 px-2.5 py-1 rounded-full">
+              {category}
+            </span>
+          )}
+          {date && <time className="text-xs italic">{formatDate(date)}</time>}
+          {readTime && (
+            <>
+              <span className="text-zinc-600">•</span>
+              <span className="text-xs">{readTime} de lectura</span>
+            </>
+          )}
+        </div>
 
-          <div className='flex flex-wrap gap-2 mb-4 items-center text-zinc-200'>
-          {date && <PostDate date={date} />}
-          <span className='leading-none'>•</span>
-          {readTime && <PostReadTime readTime={readTime} />}
+        <h3 className="text-2xl lg:text-3xl font-semibold mb-3 line-clamp-2 text-zinc-100 group-hover:text-white transition-colors">
+          {title}
+        </h3>
+
+        {excerpt && (
+          <p className="mb-4 text-zinc-400 line-clamp-2 leading-relaxed">{excerpt}</p>
+        )}
+
+        {tags && tags.length > 0 && (
+          <div className="flex flex-wrap gap-2 mb-4 items-center">
+            {tags.slice(0, 4).map((tag) => (
+              <span
+                key={tag}
+                className="text-xs text-zinc-300 bg-white/5 border border-white/10 px-2 py-1 rounded-full"
+              >
+                {tag}
+              </span>
+            ))}
           </div>
+        )}
 
-          {excerpt && <PostExcerpt excerpt={excerpt} />}
-          {tags && <PostTags tags={tags} />}
-          {/* <ReadMore /> */}
-      </Link>
-    </PostContainer>
-  );
-}
-
-function PostContainer({ children }) {
-  return (
-    <article className="p-6 h-fit mb-4 rounded-xl bg-white/5 backdrop-blur-md backdrop-saturate-125 border border-white/10 shadow-lg hover:shadow-xl transition-all duration-300 text-left hover:scale-102 hover:cursor-pointer">
-      {children}
-    </article>
-  );
-}
-
-function PostReadTime({ readTime }) {
-  return (
-      <span className="text-sm italic bg-zinc-500/20 px-2 py-1 rounded-full">{readTime} de lectura</span>
-  );
-}
-
-export function PostTags({ tags }) {
-  return (
-    <div className="flex flex-wrap gap-2 mb-4 items-center">
-      {tags.map((tag) => (
-        <span key={tag} className="text-xs bg-blue-600/90 text-white px-2 py-1 rounded-full">
-          {tag}
+        <span className="inline-flex items-center gap-1.5 text-sm font-medium text-blue-400 group-hover:gap-2.5 transition-all">
+          Leer artículo
+          <span aria-hidden>→</span>
         </span>
-      ))}
-    </div>
-  );
-}
-
-
-function PostTitle({ title }) {
-  return (
-    <h3 className='text-2xl lg:text-4xl  font-semibold lg:line-clamp-1 mb-3 line-clamp-2'>{title}</h3>
-  );
-}
-
-function PostDate({ date }) {
-  return (
-    <time className='italic text-sm'>{formatDate(date)}</time>
-  );
-}
-
-function PostExcerpt({ excerpt }) {
-  return (
-    <p className='mb-4'>{excerpt}</p>
-  );
-}
-function ReadMore() {
-  return (
-    <p className='text-blue-400 border border-blue-400 rounded-md px-2 py-1 inline-block hover:bg-white/5'>Leer más →</p>
+      </Link>
+    </article>
   );
 }

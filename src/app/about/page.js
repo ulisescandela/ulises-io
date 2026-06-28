@@ -3,7 +3,7 @@ import Header from '@/components/layout/Header';
 import About from '@/components/common/about';
 
 export const metadata = {
-  title: 'Sobre mí - Ulises.io',
+  title: 'Sobre mí',
   description: 'Conoce a Ulises Rodríguez Candela, desarrollador de software apasionado por crear soluciones innovadoras y compartir conocimientos.',
   alternates: {
     canonical: 'https://ulises.io/about',

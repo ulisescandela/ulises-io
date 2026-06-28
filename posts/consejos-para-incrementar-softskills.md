@@ -1,5 +1,6 @@
 ---
 title: "Consejos para Incrementar Soft Skills: Guía para Profesionales de IT en Perfiles Altos"
+category: "Carrera"
 date: "2026-02-01"
 excerpt: "En el mundo de la tecnología, las habilidades técnicas son esenciales, pero las soft skills son las que te diferencian en roles senior y de liderazgo. Descubre consejos prácticos para desarrollar comunicación, liderazgo y más."
 readTime: "8 min"
@@ -65,6 +66,17 @@ La tecnología evoluciona rápido; la adaptabilidad es una soft skill premium.
 - **Mantén una mentalidad de crecimiento**: Ve los fracasos como oportunidades. En IT, esto significa experimentar con nuevas tecnologías sin miedo.
 - **Aprende de manera intencional**: Dedica tiempo a leer sobre liderazgo, psicología o industrias adyacentes.
 - **Ejercicio**: Elige una nueva herramienta o metodología (ej. Agile avanzado) y aplícala en un proyecto pequeño.
+
+## Preguntas Frecuentes
+
+**¿Las soft skills importan más que las habilidades técnicas?**
+No es una competencia: se complementan. Las técnicas te abren la puerta; las soft skills te hacen ascender. De hecho, [ser un buen programador no te hace ganar más](/blog/ser-buen-programador-no-te-hace-ganar-mas) por sí solo — la comunicación y la visibilidad pesan muchísimo.
+
+**¿Cómo desarrollo soft skills si soy introvertido?**
+Empieza por lo asíncrono: escribe documentación clara, comenta PRs con empatía, comparte aprendizajes por escrito. La comunicación no es solo hablar en público.
+
+**¿Qué soft skill trabajo primero?**
+La comunicación. Es la base de todas las demás y la que más se nota en entrevistas y en el día a día. Si buscas una visión más amplia de cómo destacar, te dejo mi [guía para destacar en tech en 2026](/blog/guia-destacar-en-tech-2026-habilidades-y-negocios).
 
 ## Conclusión
 

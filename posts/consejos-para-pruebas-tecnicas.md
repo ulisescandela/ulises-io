@@ -1,5 +1,6 @@
 ---
 title: "Consejos para Pruebas Técnicas: Cómo Mejorar y Plataformas Recomendadas"
+category: "Carrera"
 date: "2026-01-31"
 excerpt: "Las pruebas técnicas son un paso crucial en el proceso de contratación. Descubre consejos prácticos para prepararte, plataformas recomendadas y por qué es esencial desarrollar tus habilidades sin atajos como la IA."
 readTime: "10 min"
@@ -48,6 +49,17 @@ Elige una o dos plataformas y sé consistente. No te disperses intentando cubrir
 Después de resolver un problema, revisa soluciones óptimas si la tuya no lo fue. Analiza el tiempo y espacio de complejidad. Con el tiempo, aprenderás a identificar patrones y optimizar tus soluciones desde el inicio.
 
 **Idea adicional:** Forma un grupo de estudio con otros desarrolladores. Compartir soluciones y discutir enfoques acelera el aprendizaje y te expone a perspectivas diferentes.
+
+## Preguntas Frecuentes
+
+**¿Qué temas entran en una prueba técnica?**
+La mayoría giran en torno a algoritmos y estructuras de datos: arrays, strings, hash tables, recursión y complejidad (Big O). Tengo una [guía completa de lógica y estructuras de datos](/blog/guia-completa-logica-estructuras-de-datos) que cubre justo eso, con un plan de estudio.
+
+**¿Cómo me preparo para una entrevista técnica desde cero?**
+Practica un problema al día, lee código ajeno y simula entrevistas con tiempo. Si aún flojeas con el lenguaje, refuerza primero las bases con [estos consejos para mejorar en programación](/blog/consejos-para-mejorar-en-programacion).
+
+**¿Está mal usar IA para resolver los retos de práctica?**
+Para *aprender*, sí: te roba el músculo de razonar bajo presión, que es justo lo que evalúan. Úsala para revisar tu solución *después* de intentarlo, no para saltarte el proceso.
 
 ## Conclusión
 

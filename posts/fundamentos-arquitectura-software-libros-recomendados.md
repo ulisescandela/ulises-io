@@ -1,5 +1,6 @@
 ---
 title: "Fundamentos de Arquitectura de Software: Guía y Libros Esenciales para 2026"
+category: "Programación"
 date: "2026-01-25"
 excerpt: "Aprende los pilares de la arquitectura de software: patrones, principios SOLID, microservicios y más. Incluye los mejores libros recomendados para dominar el tema."
 readTime: "12 min"
@@ -138,6 +139,17 @@ Si estás empezando, este es el orden que te sugiero:
 3. **Clean Architecture** → Estructura tus aplicaciones
 4. **Fundamentals of Software Architecture** → Domina los patrones
 5. **Designing Data-Intensive Applications** → Entiende los sistemas a escala
+
+## Preguntas Frecuentes
+
+**¿Qué es la arquitectura de software, en simple?**
+Son las decisiones de alto nivel sobre cómo se organiza un sistema: sus componentes, cómo se comunican y qué patrones siguen. Es la diferencia entre un proyecto que escala y uno que colapsa.
+
+**¿Necesito saber arquitectura siendo junior?**
+No de golpe, pero entender los principios SOLID temprano te ahorra años de malos hábitos. Primero asienta los [fundamentos de lógica y estructuras de datos](/blog/guia-completa-logica-estructuras-de-datos); la arquitectura llega después de forma natural.
+
+**¿Por dónde empiezo con arquitectura de software?**
+Por los principios SOLID y por escribir código simple y legible — un tema central también en mis [consejos para mejorar en programación](/blog/consejos-para-mejorar-en-programacion). La complejidad se añade solo cuando el problema la exige.
 
 ## Conclusión
 

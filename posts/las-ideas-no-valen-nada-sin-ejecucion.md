@@ -1,5 +1,6 @@
 ---
 title: "Las ideas no valen nada si no las ejecutas"
+category: "Reflexiones"
 date: "2025-11-06"
 excerpt: "He aprendido que las ideas no valen nada si no las ejecutas, aquí te cuento por qué."
 published: true
@@ -56,3 +57,11 @@ Es importante NO OLVIDAR que el éxito es meramente jugar con estadísticas, si 
 Este concepto filosófico nos recuerda la inevitabilidad de la muerte y la importancia de vivir una vida significativa. Al recordar que nuestro tiempo es limitado, podemos encontrar la motivación para actuar y ejecutar nuestras ideas en lugar de posponerlas indefinidamente.
 
 Vivir con la conciencia de nuestra mortalidad nos impulsa a aprovechar al máximo cada momento y a perseguir nuestras pasiones con determinación. Así que recuerda, el tiempo es un recurso finito, y la mejor manera de honrar nuestra existencia es ejecutando nuestras ideas y dejando una huella significativa en el mundo.
+
+## Preguntas Frecuentes
+
+**¿Por qué se dice que las ideas no valen nada sin ejecución?**
+Porque una idea sin acción es solo un pensamiento. El valor real se crea al construir, lanzar y aprender del resultado. La ejecución es lo que diferencia a quien sueña de quien logra.
+
+**¿Cómo dejo de procrastinar y empiezo a ejecutar?**
+Empieza pequeño y hoy. La motivación llega *después* de actuar, no antes. Mucho de esto es cuestión de mentalidad: lo desarrollo en [la importancia de la mentalidad de crecimiento](/blog/importancia-mentalidad-crecimiento-profesional-personal).

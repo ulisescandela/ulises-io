@@ -1,4 +1,5 @@
 // src/components/blog/PostHeader.js
+import Link from 'next/link';
 
 export function formatDate(dateString) {
   const [year, month, day] = dateString.split('-');
@@ -10,9 +11,18 @@ export function formatDate(dateString) {
   });
 }
 
-export default function PostHeader({ title, date, readTime, tags }) {
+export default function PostHeader({ title, category, date, readTime, tags }) {
   return (
     <header className="mb-8 pb-8 border-b border-gray-200">
+      {category && (
+        <Link
+          href={`/blog/categoria/${encodeURIComponent(category)}`}
+          className="inline-block mb-4 text-sm font-semibold text-blue-300 bg-blue-600/20 px-3 py-1 rounded-full hover:bg-blue-600/30 transition"
+        >
+          {category}
+        </Link>
+      )}
+
       <h1 className="text-4xl md:text-5xl font-bold text-zinc-200 mb-4 leading-tight">
         {title}
       </h1>

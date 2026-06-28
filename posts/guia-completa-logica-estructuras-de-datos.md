@@ -1,5 +1,6 @@
 ---
 title: "Guía Completa para Aprender Lógica de Programación y Estructuras de Datos"
+category: "Programación"
 date: "2026-01-27"
 excerpt: "Domina los fundamentos que separan a los buenos programadores de los excelentes. Una guía exhaustiva para aprender lógica de programación, algoritmos y estructuras de datos desde cero hasta nivel avanzado."
 readTime: "25 min"
@@ -1522,6 +1523,17 @@ def factorial(n):
 6. **No implementar desde cero:** Usa las estructuras built-in después de implementarlas tú
 
 ---
+
+## Preguntas Frecuentes
+
+**¿Necesito saber matemáticas avanzadas para esto?**
+No. Necesitas pensamiento lógico, no cálculo avanzado. Big O usa algo de notación, pero el 90% es razonar sobre cómo se comporta tu código, no resolver integrales.
+
+**¿En qué lenguaje practico la lógica y las estructuras de datos?**
+En el que quieras: los conceptos son universales. Aquí usamos Python por su legibilidad; si no lo conoces, empieza por mi [tutorial de Python para principiantes](/blog/tutorial-python-principiantes-proyecto-basico) y luego vuelve a esta guía.
+
+**¿Esto me sirve para entrevistas técnicas?**
+Muchísimo. La mayoría de entrevistas técnicas evalúan exactamente esto. Y si dudas qué stack acompañar, mira los [lenguajes](/blog/lenguajes-de-programacion-2026-y-proyectos-para-empezar) y [frameworks](/blog/frameworks-mas-usados-2026-learning-path) con más demanda en 2026.
 
 ## Conclusión
 

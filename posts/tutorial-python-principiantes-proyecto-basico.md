@@ -1,5 +1,6 @@
 ---
 title: "Tutorial de Python para Principiantes: Lo Básico + Calculadora Interactiva"
+category: "Programación"
 date: "2026-01-19"
 excerpt: "Aprende Python desde cero con este tutorial práctico. Cubrimos lo esencial que necesitas saber y construimos juntos una calculadora interactiva que puedes agregar a tu portafolio."
 readTime: "15 min"
@@ -434,6 +435,17 @@ Una vez que domines lo básico, explora:
 - [Automate the Boring Stuff](https://automatetheboringstuff.com/)
 
 ---
+
+## Preguntas Frecuentes
+
+**¿Es Python bueno para principiantes?**
+Sí, es de los mejores para empezar. Su sintaxis es cercana al inglés y te evita complejidades innecesarias mientras aprendes a pensar como programador. Si aún dudas qué aprender, mira mi comparativa de [lenguajes de programación para 2026](/blog/lenguajes-de-programacion-2026-y-proyectos-para-empezar).
+
+**¿Cuánto tardo en aprender Python?**
+Lo básico de este tutorial lo puedes asimilar en pocas semanas. Para soltura real, combina la sintaxis con los [fundamentos de lógica y estructuras de datos](/blog/guia-completa-logica-estructuras-de-datos): ahí está el verdadero salto.
+
+**¿Qué hago después de aprender lo básico?**
+Da el salto a un framework. Para web tienes Django o FastAPI, que cubro junto a otros en [los frameworks más usados en 2026](/blog/frameworks-mas-usados-2026-learning-path); o métete en ciencia de datos e IA, donde Python es el rey.
 
 ## Conclusión
 

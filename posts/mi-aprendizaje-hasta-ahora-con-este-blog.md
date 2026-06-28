@@ -1,5 +1,6 @@
 ---
 title: "Mi aprendizaje contruyendo este blog"
+category: "Reflexiones"
 date: "2025-07-11"
 excerpt: "Algo de mi experiencia hasta ahora con la IA y el aprendizaje construyendo este blog."
 published: true
@@ -27,4 +28,6 @@ En cuanto a esto, le atribuyo mucho de mi proceso de aprendizaje al construir es
 
 ## Pensamientos finales
 
-Sé que esto puede generar polémica, en especial, puede causar ruido en aquellos más experimentados que están acostumbrados a hacer las cosas de una manera, sin embargo, el *vibe coding* va más allá de dar isntrucciones y esperar a recibir el próximo *uber* (o cualquier otra aplicación), con sólo escribir una prompt.
+Sé que esto puede generar polémica, en especial, puede causar ruido en aquellos más experimentados que están acostumbrados a hacer las cosas de una manera, sin embargo, el *vibe coding* va más allá de dar instrucciones y esperar a recibir el próximo *uber* (o cualquier otra aplicación), con sólo escribir una prompt.
+
+Si te interesa este debate sobre programar con IA, te dejo dos lecturas: [el presente y futuro de la inteligencia artificial](/blog/inteligencia-artificial-presente-futuro-2026) y [¿está la IA reemplazando a los developers?](/blog/ia-reemplazando-developers).
