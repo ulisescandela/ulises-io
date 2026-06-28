@@ -30,7 +30,7 @@ export default function ContactPage() {
             </p>
             <ul className="space-y-4">
               <li>
-                <strong>Email:</strong> contacto@miniprofe.com
+                <strong>Email:</strong> <a href="mailto:contacto@ulises.io" className="text-blue-400 hover:underline">contacto@ulises.io</a>
               </li>
               <li>
                 <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/ulisescandela/" className="text-blue-400 hover:underline">linkedin.com/in/ulisescandela/</a>
