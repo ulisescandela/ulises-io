@@ -15,6 +15,23 @@ const cspHeader = `
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  async redirects() {
+    return [
+      // Canonicaliza www -> no-www (evita contenido duplicado en Google)
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'www.ulises.io' }],
+        destination: 'https://ulises.io/:path*',
+        permanent: true,
+      },
+      // URL antigua tipo /index.html -> home
+      {
+        source: '/index.html',
+        destination: '/',
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {
