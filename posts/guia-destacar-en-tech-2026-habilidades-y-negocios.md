@@ -9,7 +9,7 @@ published: true
 coverImage: ""
 ---
 
-La industria tech en 2026 es más competitiva que nunca. Ya no basta con saber programar — necesitas habilidades específicas, saber venderte, y entender cómo monetizar tu conocimiento. 
+La industria tech en 2026 es más competitiva que nunca. Ya no basta con saber programar, necesitas habilidades específicas, saber venderte, y entender cómo monetizar tu conocimiento. 
 
 En este artículo te doy consejos prácticos divididos en cuatro áreas: programación, cómo destacar, habilidades técnicas valiosas, y modelos de negocio si quieres emprender en tech.
 
@@ -47,7 +47,7 @@ En el trabajo real, pasas más tiempo leyendo código que escribiéndolo. Practi
 
 ### Tests: no son opcionales
 
-No necesitas 100% de coverage, pero sí necesitas tests para la lógica crítica. Empieza con tests de integración — dan más valor con menos esfuerzo que los unit tests puros.
+No necesitas 100% de coverage, pero sí necesitas tests para la lógica crítica. Empieza con tests de integración, dan más valor con menos esfuerzo que los unit tests puros.
 
 ```javascript
 // Un test de integración vale más que 10 unit tests triviales
@@ -88,6 +88,8 @@ Olvídate de portfolios fancy con animaciones. Los reclutadores técnicos van di
 - Commits frecuentes que muestren actividad
 - Al menos 2-3 proyectos que puedas explicar en una entrevista
 
+Y no cualquier proyecto: elige los que cuenten una historia sobre lo que sabes hacer. Te enseño a escogerlos y presentarlos en [proyectos que de verdad valen para tu CV](/blog/proyectos-valiosos-para-tu-cv-programador).
+
 ### Soft skills que importan más de lo que crees
 
 - **Comunicación escrita:** PRs, documentación, Slack. Si no sabes escribir claro, vas a sufrir.
@@ -105,7 +107,7 @@ Olvídate de portfolios fancy con animaciones. Los reclutadores técnicos van di
 
 ## Parte 3: Habilidades Técnicas Más Valiosas en 2026
 
-Estas son las tecnologías y habilidades que están pagando premium este año:
+Estas son las tecnologías y habilidades que están pagando premium este año. Si buscas la versión más estratégica y a largo plazo (las capacidades que no caducan aunque cambien las herramientas), la desarrollo en [las habilidades más valiosas en desarrollo de software para 2026 y más allá](/blog/habilidades-valiosas-desarrollo-software-2026).
 
 ### 1. Docker y Containerización
 
@@ -144,8 +146,8 @@ No necesitas ser experto, pero sí entender:
 ### 3. CI/CD Pipelines
 
 Saber automatizar deployments te hace 10x más valioso:
-- **GitHub Actions** — el estándar actual
-- **GitLab CI** — común en empresas
+- **GitHub Actions**: el estándar actual
+- **GitLab CI**: común en empresas
 - Conceptos: stages, jobs, artifacts, environments
 
 ```yaml
@@ -306,7 +308,7 @@ Elige UNA habilidad técnica y UN modelo de negocio, y profundiza. La dispersió
 
 No intentes hacer todo a la vez. Elige un área de las habilidades técnicas y profundiza. Elige un modelo de negocio y experimenta. La consistencia gana.
 
-El mercado tech en 2026 sigue siendo de los mejores para construir carrera y riqueza. Pero requiere más que saber programar — requiere estrategia, visibilidad, y habilidades que van más allá del código.
+El mercado tech en 2026 sigue siendo de los mejores para construir carrera y riqueza. Pero requiere más que saber programar, requiere estrategia, visibilidad, y habilidades que van más allá del código.
 
 ¿Por dónde vas a empezar? Cuéntame en mis redes qué habilidad vas a desarrollar este año.
 

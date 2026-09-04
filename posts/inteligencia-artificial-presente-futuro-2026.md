@@ -258,6 +258,9 @@ Las que dependen de procesar información a gran escala: salud, finanzas, educac
 **¿Cómo me preparo para un futuro con IA?**
 Aprende a dirigir estas herramientas y refuerza lo que la IA no hace bien: pensamiento crítico, comunicación y diseño. Mi [guía para destacar en tech 2026](/blog/guia-destacar-en-tech-2026-habilidades-y-negocios) traza ese plan. Si quieres especializarte, mira [cómo convertirte en AI Engineer](/blog/como-convertirse-en-ai-engineer-2026), el perfil más buscado del momento.
 
+**Si la IA lo hace todo, ¿qué me hace valioso a mí?**
+Justo la pregunta clave. Cuando escribir código se vuelve barato, el valor se mueve al criterio: decidir qué construir y por qué. Lo desarrollo en [qué es valioso ahora que todos pueden "programar" con IA](/blog/que-es-valioso-cuando-todos-pueden-programar-con-ia) y en [cómo aprender de verdad en la era de la IA](/blog/como-aprender-programacion-era-ia).
+
 ## Conclusión: El Futuro ya Llegó
 
 No estamos esperando a que la IA cambie el mundo. **Ya lo está cambiando.**

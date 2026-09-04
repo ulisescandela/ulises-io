@@ -1,9 +1,13 @@
 // src/app/blog/[slug]/page.js
 
 import { getPostBySlug, generateStaticParams, shouldShowPost, getRelatedPosts } from '../../../../lib/posts';
+import { extractHeadings } from '../../../../lib/toc';
 import PostContent from '@/components/blog/postContent';
 import PostHeader from '@/components/blog/postHeader';
 import RelatedPosts from '@/components/blog/RelatedPosts';
+import ReadingProgress from '@/components/blog/ReadingProgress';
+import TableOfContents from '@/components/blog/TableOfContents';
+import ScrollToTop from '@/components/common/ScrollToTop';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
@@ -109,9 +113,12 @@ export default async function BlogPost({ params }) {
   };
 
   const related = getRelatedPosts(slug, 3);
+  const headings = extractHeadings(post.content);
 
   return (
     <article className="max-w-3xl mx-auto px-4 sm:px-6 py-8">
+      <ReadingProgress />
+      <ScrollToTop />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -143,6 +150,8 @@ export default async function BlogPost({ params }) {
         readTime={post.frontMatter.readTime}
         tags={post.frontMatter.tags}
       />
+
+      <TableOfContents headings={headings} />
 
       <PostContent content={post.content} />
 

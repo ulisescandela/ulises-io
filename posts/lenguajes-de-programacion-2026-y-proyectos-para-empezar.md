@@ -26,9 +26,9 @@ Con esto en mente, vamos a la lista.
 
 ---
 
-## 1. JavaScript / TypeScript — El rey indiscutible del web
+## 1. JavaScript / TypeScript: El rey indiscutible del web
 
-No hay forma de evitarlo: si quieres trabajar en desarrollo web (frontend o backend), JavaScript es obligatorio. Y en 2026, **TypeScript** ya no es opcional — es el estándar en equipos profesionales.
+No hay forma de evitarlo: si quieres trabajar en desarrollo web (frontend o backend), JavaScript es obligatorio. Y en 2026, **TypeScript** ya no es opcional, es el estándar en equipos profesionales.
 
 ### ¿Por qué aprenderlo?
 
@@ -45,13 +45,13 @@ No hay forma de evitarlo: si quieres trabajar en desarrollo web (frontend o back
 
 ---
 
-## 2. Python — La navaja suiza de la programación
+## 2. Python: La navaja suiza de la programación
 
 Python sigue siendo el lenguaje más recomendado para principiantes, y con razón. Su sintaxis es limpia, es extremadamente versátil, y domina en áreas como data science, machine learning y automatización.
 
 ### ¿Por qué aprenderlo?
 
-- Curva de aprendizaje muy suave — ideal si es tu primer lenguaje.
+- Curva de aprendizaje muy suave, ideal si es tu primer lenguaje.
 - Domina en IA/ML gracias a librerías como TensorFlow, PyTorch, y scikit-learn.
 - Excelente para scripting, automatización y backend (Django, FastAPI).
 - Demanda altísima en posiciones de data y backend.
@@ -65,15 +65,15 @@ Python sigue siendo el lenguaje más recomendado para principiantes, y con razó
 
 ---
 
-## 3. Go (Golang) — El lenguaje de la infraestructura moderna
+## 3. Go (Golang): El lenguaje de la infraestructura moderna
 
 Go fue creado por Google para resolver problemas de escalabilidad y rendimiento. En 2026, es **el** lenguaje para backend de alto rendimiento, microservicios, y herramientas de DevOps.
 
 ### ¿Por qué aprenderlo?
 
 - Rendimiento cercano a C, pero mucho más fácil de escribir.
-- Concurrencia nativa con goroutines — perfecto para sistemas distribuidos.
-- Compila a un binario estático — deploy súper sencillo.
+- Concurrencia nativa con goroutines, perfecto para sistemas distribuidos.
+- Compila a un binario estático, deploy súper sencillo.
 - Docker, Kubernetes, y muchas herramientas de infraestructura están escritas en Go.
 
 ### Proyectos para empezar:
@@ -85,13 +85,13 @@ Go fue creado por Google para resolver problemas de escalabilidad y rendimiento.
 
 ---
 
-## 4. Rust — El futuro de la programación de sistemas
+## 4. Rust: El futuro de la programación de sistemas
 
 Rust lleva años siendo votado como "el lenguaje más amado" en encuestas de desarrolladores. En 2026, ya no es solo para entusiastas: empresas como Microsoft, Amazon, y Cloudflare lo usan en producción.
 
 ### ¿Por qué aprenderlo?
 
-- Seguridad de memoria sin garbage collector — adiós a los memory leaks y segfaults.
+- Seguridad de memoria sin garbage collector, adiós a los memory leaks y segfaults.
 - Rendimiento comparable a C/C++.
 - Cada vez más adoptado en WebAssembly, sistemas embebidos, y herramientas de desarrollo.
 - Te hace mejor programador al obligarte a pensar en ownership y lifetimes.
@@ -105,7 +105,7 @@ Rust lleva años siendo votado como "el lenguaje más amado" en encuestas de des
 
 ---
 
-## 5. SQL — El lenguaje que nunca pasa de moda
+## 5. SQL: El lenguaje que nunca pasa de moda
 
 SQL no es "sexy", pero es absolutamente fundamental. No importa qué stack uses, eventualmente vas a interactuar con bases de datos relacionales.
 
@@ -123,6 +123,20 @@ SQL no es "sexy", pero es absolutamente fundamental. No importa qué stack uses,
 - **Integra SQL en un proyecto real**: Cualquier proyecto de backend es mejor si usas SQL en lugar de solo guardar JSON en archivos.
 
 ---
+
+## Tabla comparativa: ¿cuál elijo?
+
+Un resumen rápido para decidir de un vistazo según tu objetivo:
+
+| Lenguaje | Ideal para | Curva de aprendizaje | Demanda en 2026 |
+|---|---|---|---|
+| JavaScript / TS | Desarrollo web (front y back) | Media | Altísima |
+| Python | Data, IA, automatización, backend | Suave | Muy alta |
+| Go | Backend de alto rendimiento, DevOps | Media | Alta y creciente |
+| Rust | Sistemas, rendimiento, WebAssembly | Alta | Creciente (nicho) |
+| SQL | Datos (transversal a todo) | Suave | Constante |
+
+Si estás empezando desde cero y aún dudas, te lo simplifico todavía más en [las mejores tecnologías para empezar a programar en 2026](/blog/mejores-tecnologias-para-empezar-a-programar-2026).
 
 ## Menciones honoríficas
 
@@ -163,7 +177,7 @@ En gran medida, sí. Por eso conviene conocer la [historia y evolución de la pr
 
 ## Conclusión: Lenguajes + Proyectos = Progreso real
 
-Aprender un lenguaje sin construir nada es como leer sobre natación sin meterte al agua. Los proyectos que mencioné no son ideas originales, y está bien — lo importante es que los construyas, los termines, y los pongas en tu GitHub.
+Aprender un lenguaje sin construir nada es como leer sobre natación sin meterte al agua. Los proyectos que mencioné no son ideas originales, y está bien, lo importante es que los construyas, los termines, y los pongas en tu GitHub. Si quieres que esos proyectos de verdad sumen en tu currículum, te enseño a elegirlos y presentarlos en [proyectos que de verdad valen para tu CV](/blog/proyectos-valiosos-para-tu-cv-programador).
 
 No necesitas dominar todos los lenguajes de esta lista. Elige uno o dos, profundiza, y construye cosas. El mercado laboral en 2026 sigue premiando a quienes demuestran lo que saben hacer, no solo lo que dicen saber.
 

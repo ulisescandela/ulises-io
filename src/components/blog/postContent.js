@@ -3,6 +3,30 @@ import { MDXRemote } from 'next-mdx-remote/rsc';
 import remarkGfm from 'remark-gfm';
 import Link from 'next/link';
 import CodeBlock from './codeBlock';
+import { slugify, nodeToText } from '../../../lib/toc';
+
+// Encabezado con id + ancla clicable. El id se calcula con el mismo slugify
+// que usa la Tabla de Contenidos, de modo que los enlaces siempre coinciden.
+function Heading({ as: Tag, className, children }) {
+  const id = slugify(nodeToText(children));
+  return (
+    <Tag id={id} className={`group scroll-mt-24 ${className}`}>
+      <a
+        href={`#${id}`}
+        className="relative no-underline"
+        aria-label="Enlace a esta sección"
+      >
+        {children}
+        <span
+          aria-hidden
+          className="ml-2 align-middle text-blue-400/70 opacity-0 group-hover:opacity-100 transition-opacity text-[0.7em]"
+        >
+          #
+        </span>
+      </a>
+    </Tag>
+  );
+}
 
 const customComponents = {
   h1: ({ children }) => (
@@ -11,14 +35,14 @@ const customComponents = {
     </h1>
   ),
   h2: ({ children }) => (
-    <h2 className="text-3xl font-semibold text-zinc-200 mb-4 mt-8">
+    <Heading as="h2" className="text-3xl font-semibold text-zinc-200 mb-4 mt-8">
       {children}
-    </h2>
+    </Heading>
   ),
   h3: ({ children }) => (
-    <h3 className="text-xl font-semibold text-zinc-200 mb-3 mt-6">
+    <Heading as="h3" className="text-xl font-semibold text-zinc-200 mb-3 mt-6">
       {children}
-    </h3>
+    </Heading>
   ),
   p: ({ children }) => (
     <p className="text-zinc-200 leading-relaxed mb-6 text-lg">

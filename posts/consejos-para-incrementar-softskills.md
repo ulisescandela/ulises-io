@@ -70,7 +70,7 @@ La tecnología evoluciona rápido; la adaptabilidad es una soft skill premium.
 ## Preguntas Frecuentes
 
 **¿Las soft skills importan más que las habilidades técnicas?**
-No es una competencia: se complementan. Las técnicas te abren la puerta; las soft skills te hacen ascender. De hecho, [ser un buen programador no te hace ganar más](/blog/ser-buen-programador-no-te-hace-ganar-mas) por sí solo — la comunicación y la visibilidad pesan muchísimo.
+No es una competencia: se complementan. Las técnicas te abren la puerta; las soft skills te hacen ascender. De hecho, [ser un buen programador no te hace ganar más](/blog/ser-buen-programador-no-te-hace-ganar-mas) por sí solo, la comunicación y la visibilidad pesan muchísimo.
 
 **¿Cómo desarrollo soft skills si soy introvertido?**
 Empieza por lo asíncrono: escribe documentación clara, comenta PRs con empatía, comparte aprendizajes por escrito. La comunicación no es solo hablar en público.

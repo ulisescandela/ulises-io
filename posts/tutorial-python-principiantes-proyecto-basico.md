@@ -419,11 +419,11 @@ python calculadora.py
 
 Una vez que domines lo básico, explora:
 
-1. **POO (Programación Orientada a Objetos)** — clases, herencia, métodos
-2. **Módulos y paquetes** — organizar código en archivos
-3. **Virtual environments** — `python -m venv env`
-4. **pip** — instalar librerías externas
-5. **Frameworks** — Flask/FastAPI para web, Pandas para datos
+1. **POO (Programación Orientada a Objetos)**: clases, herencia, métodos
+2. **Módulos y paquetes**: organizar código en archivos
+3. **Virtual environments**: `python -m venv env`
+4. **pip**: instalar librerías externas
+5. **Frameworks**: Flask/FastAPI para web, Pandas para datos
 
 ---
 
@@ -451,7 +451,7 @@ Da el salto a un framework. Para web tienes Django o FastAPI, que cubro junto a 
 
 Python es un lenguaje que escala contigo. Lo que aprendiste hoy te servirá cuando hagas web scraping, APIs, machine learning, o automatización.
 
-El secreto es practicar. No solo leas — escribe código, rompe cosas, y construye proyectos. La calculadora que hicimos es solo el inicio.
+El secreto es practicar. No solo leas, escribe código, rompe cosas, y construye proyectos. La calculadora que hicimos es solo el inicio.
 
 ¿Qué proyecto vas a construir con Python? Cuéntame en mis redes.
 

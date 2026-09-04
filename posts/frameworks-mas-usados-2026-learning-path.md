@@ -25,7 +25,7 @@ Con esto claro, vamos a los frameworks.
 
 ---
 
-## 1. React — El gigante del frontend
+## 1. React: El gigante del frontend
 
 React sigue siendo el framework frontend más demandado en 2026. Meta lo mantiene activo, el ecosistema es enorme, y la comunidad es incomparable. Si quieres trabajar en frontend, React es la apuesta segura.
 
@@ -42,7 +42,7 @@ React sigue siendo el framework frontend más demandado en 2026. Meta lo mantien
 1. Asegúrate de dominar JavaScript moderno (ES6+): destructuring, arrow functions, promises, async/await
 2. Aprende JSX y cómo React renderiza componentes
 3. Entiende props y cómo pasar datos entre componentes
-4. Domina useState y useEffect — son el 80% de lo que usarás
+4. Domina useState y useEffect, son el 80% de lo que usarás
 
 **Fase 2: Estado y patrones (2-3 semanas)**
 1. Context API para estado global simple
@@ -59,13 +59,13 @@ React sigue siendo el framework frontend más demandado en 2026. Meta lo mantien
 **Proyecto final:** Clon de Trello con drag-and-drop, autenticación y persistencia.
 
 ### Recursos recomendados
-- Documentación oficial de React (react.dev) — completamente renovada y excelente
+- Documentación oficial de React (react.dev): completamente renovada y excelente
 - "The Joy of React" de Josh W. Comeau
 - Canal de YouTube: Midudev (en español)
 
 ---
 
-## 2. Next.js — React con superpoderes
+## 2. Next.js: React con superpoderes
 
 Si React es el motor, Next.js es el auto completo. Es el meta-framework más popular para React, y en 2026 es prácticamente el estándar para aplicaciones React en producción.
 
@@ -101,13 +101,13 @@ Si React es el motor, Next.js es el auto completo. Es el meta-framework más pop
 **Proyecto final:** Blog personal con MDX, sistema de comentarios, y panel de administración.
 
 ### Recursos recomendados
-- Documentación de Next.js (nextjs.org/docs) — la mejor del ecosistema
+- Documentación de Next.js (nextjs.org/docs): la mejor del ecosistema
 - Curso gratuito de Next.js en Vercel
 - "Next.js 14" de Maximilian Schwarzmüller (Udemy)
 
 ---
 
-## 3. Vue.js — La alternativa elegante
+## 3. Vue.js: La alternativa elegante
 
 Vue tiene una comunidad leal y sigue siendo la segunda opción más popular para frontend. Es más fácil de aprender que React y tiene una sintaxis que muchos encuentran más intuitiva.
 
@@ -141,13 +141,13 @@ Vue tiene una comunidad leal y sigue siendo la segunda opción más popular para
 **Proyecto final:** Dashboard de analytics con gráficos, filtros y exportación de datos.
 
 ### Recursos recomendados
-- Documentación oficial de Vue (vuejs.org) — disponible en español
+- Documentación oficial de Vue (vuejs.org): disponible en español
 - "Vue.js 3 Fundamentals" en Vue School
 - Canal de YouTube: Fazt Code
 
 ---
 
-## 4. Django — El framework web de Python
+## 4. Django: El framework web de Python
 
 Si vienes de Python o quieres un framework "baterías incluidas", Django es tu opción. Es robusto, seguro por defecto, y te permite construir aplicaciones complejas rápidamente.
 
@@ -189,7 +189,7 @@ Si vienes de Python o quieres un framework "baterías incluidas", Django es tu o
 
 ---
 
-## 5. FastAPI — APIs modernas con Python
+## 5. FastAPI: APIs modernas con Python
 
 FastAPI ha explotado en popularidad. Es rápido, moderno, y perfecto para microservicios y APIs. Si necesitas rendimiento y documentación automática, es difícil superarlo.
 
@@ -225,13 +225,13 @@ FastAPI ha explotado en popularidad. Es rápido, moderno, y perfecto para micros
 **Proyecto final:** API para una app de finanzas personales con autenticación, categorías y reportes.
 
 ### Recursos recomendados
-- Documentación de FastAPI (fastapi.tiangolo.com) — excepcional
+- Documentación de FastAPI (fastapi.tiangolo.com): excepcional
 - Curso de FastAPI de Sebastián Ramírez (creador)
 - "Building Data Science Applications with FastAPI"
 
 ---
 
-## 6. Astro — El futuro del contenido web
+## 6. Astro: El futuro del contenido web
 
 Astro es el framework que está revolucionando sitios de contenido. Envía cero JavaScript por defecto y te permite usar React, Vue o Svelte dentro del mismo proyecto.
 
@@ -271,7 +271,7 @@ Astro es el framework que está revolucionando sitios de contenido. Envía cero 
 
 ---
 
-## 7. Tailwind CSS — El framework de CSS que domina
+## 7. Tailwind CSS: El framework de CSS que domina
 
 No es un framework de JavaScript, pero es imposible ignorarlo. Tailwind CSS cambió cómo escribimos estilos y en 2026 es prácticamente omnipresente.
 
@@ -305,7 +305,7 @@ No es un framework de JavaScript, pero es imposible ignorarlo. Tailwind CSS camb
 **Proyecto final:** Rediseña tu portafolio existente usando solo Tailwind.
 
 ### Recursos recomendados
-- Documentación de Tailwind (tailwindcss.com) — la mejor referencia
+- Documentación de Tailwind (tailwindcss.com): la mejor referencia
 - Tailwind UI para inspiración
 - "Refactoring UI" de los creadores de Tailwind
 
@@ -346,6 +346,17 @@ Mi recomendación práctica para 2026:
 - **Sitios de contenido**: Astro (rendimiento insuperable)
 - **Estilos**: Tailwind CSS (combina con cualquiera)
 
-Recuerda: el mejor framework es el que te permite **construir cosas**. No te paralices eligiendo — empieza con uno, construye algo, y ajusta tu camino según lo que descubras.
+Y de un vistazo, para que no te pierdas entre tanta opción:
+
+| Framework | Tipo | Elígelo si... |
+|---|---|---|
+| React + Next.js | Frontend / full-stack | Buscas la máxima empleabilidad |
+| Vue + Nuxt | Frontend / full-stack | Prefieres una sintaxis más limpia |
+| Django | Backend Python | Quieres "baterías incluidas" y seguridad |
+| FastAPI | Backend Python | Necesitas APIs rápidas y modernas |
+| Astro | Sitios de contenido | Priorizas rendimiento (blogs, docs) |
+| Tailwind CSS | Estilos | Siempre (combina con cualquiera) |
+
+Recuerda: el mejor framework es el que te permite **construir cosas**. No te paralices eligiendo, empieza con uno, construye algo, y ajusta tu camino según lo que descubras. Y si aún estás en tus primeros pasos, no metas frameworks demasiado pronto: primero los fundamentos, como explico en [las mejores tecnologías para empezar a programar en 2026](/blog/mejores-tecnologias-para-empezar-a-programar-2026).
 
 ¿Ya tienes claro por dónde empezar? Comparte en comentarios qué framework vas a aprender este año.

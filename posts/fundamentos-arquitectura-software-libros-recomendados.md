@@ -149,7 +149,7 @@ Son las decisiones de alto nivel sobre cómo se organiza un sistema: sus compone
 No de golpe, pero entender los principios SOLID temprano te ahorra años de malos hábitos. Primero asienta los [fundamentos de lógica y estructuras de datos](/blog/guia-completa-logica-estructuras-de-datos); la arquitectura llega después de forma natural.
 
 **¿Por dónde empiezo con arquitectura de software?**
-Por los principios SOLID y por escribir código simple y legible — un tema central también en mis [consejos para mejorar en programación](/blog/consejos-para-mejorar-en-programacion). La complejidad se añade solo cuando el problema la exige.
+Por los principios SOLID y por escribir código simple y legible, un tema central también en mis [consejos para mejorar en programación](/blog/consejos-para-mejorar-en-programacion). La complejidad se añade solo cuando el problema la exige.
 
 ## Conclusión
 

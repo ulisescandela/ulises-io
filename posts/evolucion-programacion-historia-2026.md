@@ -77,6 +77,8 @@ Si cada etapa anterior elevó el nivel de abstracción, la IA generativa lo llev
 
 ¿Significa esto el fin de los programadores? Lo analizo a fondo en [el presente y futuro de la inteligencia artificial](/blog/inteligencia-artificial-presente-futuro-2026). El patrón histórico sugiere lo contrario: cada salto de abstracción ha creado más desarrolladores, no menos.
 
+Ahora bien, si escribir código se vuelve casi gratis, cambia *qué* te hace valioso: el foco se desplaza del teclear al pensar. Lo desarrollo en [qué es valioso ahora que todos pueden "programar" con IA](/blog/que-es-valioso-cuando-todos-pueden-programar-con-ia).
+
 ## Línea de Tiempo de la Historia de la Programación
 
 Un resumen rápido de la evolución de la programación, de los orígenes a la actualidad:
@@ -102,7 +104,7 @@ Ada Lovelace, en el siglo XIX. Escribió el primer algoritmo pensado para ser ej
 FORTRAN, creado por IBM en 1957 para el cálculo científico. Fue el primero ampliamente adoptado que permitía escribir en un lenguaje más cercano al humano que al binario.
 
 **¿Qué es la programación estructurada?**
-Es un paradigma que organiza el código usando solo tres estructuras de control —secuencia, selección e iteración— eliminando los saltos `GOTO`. Surgió en los años 60 y 70 e hizo que los programas fueran legibles y mantenibles.
+Es un paradigma que organiza el código usando solo tres estructuras de control (secuencia, selección e iteración) eliminando los saltos `GOTO`. Surgió en los años 60 y 70 e hizo que los programas fueran legibles y mantenibles.
 
 **¿Por qué es importante conocer la historia de la programación?**
 Porque cada paradigma actual (POO, funcional, IA) nació para resolver un problema concreto del pasado. Entender ese contexto te ayuda a elegir mejor las herramientas y a anticipar hacia dónde va la industria.

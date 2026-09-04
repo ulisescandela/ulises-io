@@ -67,6 +67,20 @@ No terminas de entender algo hasta que puedes explicárselo a alguien más de fo
 
 Al intentar articular tus conocimientos, tu cerebro detecta inmediatamente las lagunas que aún tienes y te obliga a reforzarlas. Es la forma más rápida de consolidar el aprendizaje.
 
+## Resumen: los 7 consejos de un vistazo
+
+| # | Consejo | La idea en una frase |
+|---|---|---|
+| 1 | Escapa del *tutorial hell* | Rompe el código y constrúyelo tú |
+| 2 | Domina fundamentos | La sintaxis se olvida; la lógica no |
+| 3 | Lee más código del que escribes | Aprende de repos open source |
+| 4 | Aprende a debuggear | Breakpoints > `console.log` |
+| 5 | Escribe código para humanos | Nombres claros y funciones pequeñas |
+| 6 | Practica *deep work* | 1 hora concentrada > 4 dispersas |
+| 7 | Enseña lo que aprendes | Explicarlo revela tus lagunas |
+
+Un apunte para 2026: todos estos consejos chocan con la tentación de que la IA lo resuelva por ti. Cómo aprovecharla sin perder el aprendizaje lo detallo en [cómo aprender de verdad en la era de la IA](/blog/como-aprender-programacion-era-ia).
+
 ## Preguntas Frecuentes
 
 **¿Cómo salgo del "tutorial hell"?**

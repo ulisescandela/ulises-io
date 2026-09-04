@@ -47,6 +47,14 @@ Estás en zona roja si sigues siendo un "generalista". Tu ventaja competitiva es
 **Nivel de riesgo: Moderado.**  
 Estás seguro si aportas **visión, arquitectura y liderazgo**. Pero cuidado: el senior que ignora la IA y escribe código "a mano" por orgullo será superado por seniors que producen 10x más rápido usando herramientas.
 
+### Resumen del riesgo por nivel
+
+| Nivel | Riesgo de automatización | Qué te protege |
+|---|---|---|
+| Junior (0–2 años) | Crítico | Dejar de ser "genérico": fundamentos + un nicho |
+| Mid (3–7 años) | Alto | Contexto de negocio y sistemas distribuidos |
+| Senior (7+ años) | Moderado | Visión, arquitectura, liderazgo, y usar IA |
+
 ## No es el lenguaje de programación, es el valor que aportas
 
 Aprender un nuevo framework de moda (como Next.js o Rust) no te salvará. Lo que paga salarios altos en 2026 es resolver problemas que la IA no puede tocar (aún):
@@ -55,6 +63,8 @@ Aprender un nuevo framework de moda (como Next.js o Rust) no te salvará. Lo que
 - **Arquitectura de Software**: Diseñar sistemas escalables y resilientes.
 - **Gestión de Crisis**: Debuggear problemas de producción donde la IA alucina o no tiene contexto.
 - **Habilidades Blandas**: Comunicación, negociación y liderazgo de equipos.
+
+En el fondo, todo apunta a lo mismo: cuando escribir código deja de ser el cuello de botella, [el valor se desplaza a otro sitio](/blog/que-es-valioso-cuando-todos-pueden-programar-con-ia). Y ese sitio es exactamente donde deberías invertir tu tiempo, te dejo el mapa en [las habilidades más valiosas para 2026 y más allá](/blog/habilidades-valiosas-desarrollo-software-2026).
 
 ## Guía de supervivencia: Qué habilidades estudiar ahora
 

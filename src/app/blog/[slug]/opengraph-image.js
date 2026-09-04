@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og';
 import { getPostBySlug, generateStaticParams as postParams } from '../../../../lib/posts';
 
-export const alt = 'Ulises.io — Blog';
+export const alt = 'Ulises.io | Blog';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 

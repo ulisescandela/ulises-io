@@ -53,7 +53,7 @@ La clave: **es un rol de ingeniería de software**, no de matemáticas puras. Po
 
 Aquí viene la parte incómoda. El giro hacia la IA **no fue gratis** para todos.
 
-El rol que más lo ha notado es el **frontend engineer**. No porque el frontend desaparezca —alguien tiene que construir las interfaces—, sino porque:
+El rol que más lo ha notado es el **frontend engineer**. No porque el frontend desaparezca (alguien tiene que construir las interfaces), sino porque:
 
 - **El frontend "de plantilla" se commoditizó.** Montar una UI con un framework y Tailwind es algo que hoy la IA hace en minutos. El valor de "solo maquetar" se desplomó.
 - **Se elevó el listón.** El frontend que sigue siendo muy valioso es el que entiende producto, rendimiento, accesibilidad y… cómo integrar IA en la interfaz.

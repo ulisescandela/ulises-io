@@ -9,7 +9,7 @@ published: true
 coverImage: ""
 ---
 
-No importa si escribes Python, JavaScript, Rust o COBOL — si trabajas en software, usas Git. Es la herramienta que más vas a usar en tu carrera, y sin embargo, muchos desarrolladores solo conocen `git add .` y `git push`.
+No importa si escribes Python, JavaScript, Rust o COBOL, si trabajas en software, usas Git. Es la herramienta que más vas a usar en tu carrera, y sin embargo, muchos desarrolladores solo conocen `git add .` y `git push`.
 
 En este artículo te enseño los comandos de Git que realmente necesitas dominar, organizados de básico a avanzado, con ejemplos prácticos que puedes usar hoy mismo.
 
@@ -158,7 +158,7 @@ git reset --mixed HEAD~1            # Deshacer último commit (mantiene cambios 
 git reset --hard HEAD~1             # Deshacer último commit (BORRA todo)
 ```
 
-⚠️ **Cuidado con `--hard`** — los cambios se pierden permanentemente.
+⚠️ **Cuidado con `--hard`**: los cambios se pierden permanentemente.
 
 ### Revert: deshacer un commit de forma segura
 
@@ -210,16 +210,16 @@ git undo                # Deshacer último commit
 
 ## Resumen: Los 10 comandos que más usarás
 
-1. `git status` — Ver qué cambió
-2. `git add -p` — Agregar cambios selectivamente
-3. `git commit -m ""` — Commitear con mensaje
-4. `git push` — Subir cambios
-5. `git pull` — Traer cambios del remote
-6. `git checkout -b` — Crear y cambiar de rama
-7. `git merge` — Fusionar ramas
-8. `git stash` — Guardar cambios temporalmente
-9. `git log --oneline` — Ver historial
-10. `git diff` — Ver diferencias
+1. `git status`: Ver qué cambió
+2. `git add -p`: Agregar cambios selectivamente
+3. `git commit -m ""`: Commitear con mensaje
+4. `git push`: Subir cambios
+5. `git pull`: Traer cambios del remote
+6. `git checkout -b`: Crear y cambiar de rama
+7. `git merge`: Fusionar ramas
+8. `git stash`: Guardar cambios temporalmente
+9. `git log --oneline`: Ver historial
+10. `git diff`: Ver diferencias
 
 ---
 

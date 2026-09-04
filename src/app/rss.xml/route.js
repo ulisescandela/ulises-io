@@ -1,7 +1,7 @@
 import { getAllPostsData } from '../../../lib/posts';
 
 const SITE_URL = 'https://ulises.io';
-const SITE_TITLE = 'Ulises.io — Blog';
+const SITE_TITLE = 'Ulises.io | Blog';
 const SITE_DESCRIPTION =
   'Artículos sobre programación, tecnología, inteligencia artificial y carrera profesional en IT.';
 
