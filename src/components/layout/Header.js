@@ -26,13 +26,13 @@ const LINKS = [
   }
 ]
 
-export default function Header() {
+export default function Header({ language = "es" }) {
   return (
     <GlassBackground>
 
-      <Logo />
+      <Logo language={language} />
       
-      <NavLinks />
+      <NavLinks language={language} />
       
     </GlassBackground>
   );
@@ -41,21 +41,21 @@ export default function Header() {
 function GlassBackground({ children }) {
   return (
     <div className="fixed top-0 inset-x-0 z-50">
-      {/* Capa de cristal líquido: blur + saturación + degradado translúcido */}
-      <div className="absolute inset-0 -z-10 backdrop-blur-2xl backdrop-saturate-200 bg-gradient-to-b from-white/[0.14] to-white/[0.05] border-b border-white/15 shadow-[0_8px_32px_-12px_rgba(0,0,0,0.6)]" />
+      {/* Fondo oscuro con transparencia y desenfoque sutil. */}
+      <div className="absolute inset-0 -z-10 backdrop-blur-sm bg-[#020617]/95 border-b border-white/15 shadow-[0_8px_32px_-12px_rgba(0,0,0,0.6)]" />
       {/* Brillo superior tipo reflejo de cristal */}
       <div className="absolute inset-x-0 top-0 -z-10 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent" />
 
-      <div className="max-w-6xl mx-auto flex flex-row justify-between items-center px-4 sm:px-6 lg:px-8 py-3.5">
+      <div className="max-w-6xl mx-auto flex flex-wrap gap-3 justify-between items-center px-4 sm:px-6 lg:px-8 py-3.5">
         {children}
       </div>
     </div>
   );
 }
 
-function Logo() {
+function Logo({ language }) {
   return (
-    <Link href="/" scroll={false} className="shrink-0">
+    <Link href={language === "en" ? "/en" : "/"} scroll={false} className="shrink-0">
       <span className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent leading-tight">
         ulises.io
       </span>
@@ -63,18 +63,19 @@ function Logo() {
   );
 }
 
-function NavLinks() {
+function NavLinks({ language }) {
+  const links = language === "en" ? [{ label: "Home", href: "/en" }, { label: "Articles", href: "/en#posts" }, { label: "Start here", href: "/en/start-here" }, { label: "Contact", href: "mailto:contacto@ulises.io" }, { label: "Español", href: "/" }] : [...LINKS, { label: "English", href: "/en" }];
   const pathname = usePathname();
 
   const isActive = (href) =>
-    href === "/" ? pathname === "/" : pathname.startsWith(href);
+    href === "/" || href === "/en" ? pathname === href : pathname.startsWith(href);
 
   return (
     <nav
-      aria-label="Main navigation"
-      className="flex items-center gap-4 sm:gap-6 text-sm sm:text-base"
+      aria-label={language === "en" ? "Main navigation" : "Navegación principal"}
+      className="flex items-center flex-wrap gap-3 sm:gap-5 text-xs sm:text-sm"
     >
-      {LINKS.map((link) => {
+      {links.map((link) => {
         const active = isActive(link.href);
         return (
           <Link

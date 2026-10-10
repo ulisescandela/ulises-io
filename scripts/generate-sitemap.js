@@ -14,6 +14,7 @@ function generateSitemap() {
   const today = getLocalDate();
   // Páginas estáticas
   const staticPages = [
+    { url: `${baseUrl}/en/start-here`, lastModified: today, priority: 0.8 },
     { url: `${baseUrl}/en`, lastModified: today, priority: 0.8 },
     {
       url: `${baseUrl}/empieza-aqui`,
@@ -72,7 +73,8 @@ function generateSitemap() {
     lastModified: post.frontMatter.translated || post.frontMatter.date,
     priority: 0.7,
   }));
-  const allPages = [...staticPages, ...blogPosts, ...categoryPages, ...englishPages];
+  const englishCategories = [...new Set(getEnglishPosts().map(post => post.frontMatter.category))].map(category => ({ url: `${baseUrl}/en/category/${encodeURIComponent(category)}`, lastModified: today, priority: 0.6 }));
+  const allPages = [...staticPages, ...blogPosts, ...categoryPages, ...englishPages, ...englishCategories];
 
   // Generar XML
   const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>

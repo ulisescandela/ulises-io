@@ -114,5 +114,9 @@
   "mi-aprendizaje-hasta-ahora-con-este-blog": {
     "slug": "what-i-learned-building-this-blog",
     "title": "What I Learned Building This Blog"
+  },
+  "como-funciona-internet-al-abrir-una-web": {
+    "slug": "how-the-internet-works-when-you-open-a-website",
+    "title": "How the Internet Works When You Open a Website: DNS, HTTPS and the Browser"
   }
 }

@@ -2,6 +2,10 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { getEnglishPost, getEnglishPosts, languageAlternates } from '@lib/translations';
 import { extractHeadings } from '@lib/toc';
+import PostHeader from '@/components/blog/postHeader';
+import PostCard from '@/components/blog/postCard';
+import ReaderResources from '@/components/common/ReaderResources';
+import ScrollToTop from '@/components/common/ScrollToTop';
 import PostContent from '@/components/blog/postContent';
 import TableOfContents from '@/components/blog/TableOfContents';
 import ArticleAnalytics from '@/components/blog/ArticleAnalytics';
@@ -45,24 +49,20 @@ export default async function EnglishArticle({ params }) {
     translationOfWork: { '@type': 'BlogPosting', '@id': `https://ulises.io/blog/${post.sourceSlug}` },
   };
   return (
-    <main className="max-w-3xl mx-auto px-4 sm:px-6 py-10 text-white">
+    <main className="max-w-3xl mx-auto px-4 sm:px-6 pt-32 pb-8 text-white">
       <article>
         <ReadingProgress />
         <ArticleAnalytics sourceSlug={post.sourceSlug} language="en" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, '\\u003c') }} />
         <LanguageSwitch sourceSlug={post.sourceSlug} englishSlug={slug} language="en" />
-        <header className="mb-8 border-b border-white/10 pb-8">
-          <p className="text-blue-300 mb-3">{fm.category}</p>
-          <h1 className="text-4xl sm:text-5xl font-bold leading-tight mb-5">{fm.title}</h1>
-          <p className="text-zinc-400 text-sm">By Ulises Rodríguez Candela · <time dateTime={fm.date}>{new Date(`${fm.date}T00:00:00Z`).toLocaleDateString('en', { dateStyle: 'long', timeZone: 'UTC' })}</time> · {fm.readTime} read</p>
-        </header>
+        <ScrollToTop language="en" />
+        <nav aria-label="Breadcrumb" className="text-sm text-zinc-400 mb-8 flex gap-2"><Link href="/en#posts">Articles</Link><span>/</span><Link href={`/en/category/${encodeURIComponent(fm.category)}`}>{fm.category}</Link></nav>
+        <PostHeader {...fm} language="en" />
         <TableOfContents headings={extractHeadings(post.content)} language="en" />
         <PostContent content={post.content} />
-        <aside className="mt-12 border-t border-white/10 pt-8">
-          <h2 className="text-2xl font-bold mb-5">Keep reading</h2>
-          <ul className="space-y-4">{related.map((other) => <li key={other.slug}><Link className="text-blue-300 hover:text-white underline underline-offset-4" href={`/en/${other.slug}`}>{other.frontMatter.title}</Link></li>)}</ul>
-          <Link href="/en" className="btn-ghost mt-8">All articles</Link>
-        </aside>
+        <Link href="/en#posts" className="inline-flex mt-12 text-sm text-blue-300">← Back to articles</Link>
+        <ReaderResources language="en" portfolio={post.sourceSlug === 'proyectos-valiosos-para-tu-cv-programador'} />
+        <aside className="mt-12"><h2 className="text-2xl font-bold mb-5">Keep reading</h2><div className="grid gap-6">{related.map(other => <PostCard key={other.slug} post={other} language="en" />)}</div></aside>
       </article>
     </main>
   );

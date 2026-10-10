@@ -8,6 +8,7 @@ export default function PostsListClient({
   initialCount = 3,
   increment = 2,
   sortable = true,
+  language = "es",
 }) {
   const [visible, setVisible] = useState(initialCount);
   const [order, setOrder] = useState("recent"); // "recent" | "old"
@@ -24,7 +25,7 @@ export default function PostsListClient({
   if (!initialPosts || initialPosts.length === 0) {
     return (
       <div className="text-center py-12">
-        <p className="text-zinc-400 text-base sm:text-lg">No hay posts publicados aún.</p>
+        <p className="text-zinc-400 text-base sm:text-lg">{language === "en" ? "No articles published yet." : "No hay posts publicados aún."}</p>
       </div>
     );
   }
@@ -35,10 +36,10 @@ export default function PostsListClient({
         <div className="flex items-center justify-end mb-5">
           <div className="inline-flex p-1 rounded-full bg-white/5 border border-white/10 text-sm">
             <SortButton active={order === "recent"} onClick={() => setOrder("recent")}>
-              Recientes
+              {language === "en" ? "Newest" : "Recientes"}
             </SortButton>
             <SortButton active={order === "old"} onClick={() => setOrder("old")}>
-              Antiguos
+              {language === "en" ? "Oldest" : "Antiguos"}
             </SortButton>
           </div>
         </div>
@@ -46,14 +47,14 @@ export default function PostsListClient({
 
       <div className="grid gap-5 sm:gap-6 md:grid-cols-2">
         {sorted.slice(0, visible).map((post) => (
-          <PostCard key={post.slug} post={post} />
+          <PostCard key={post.slug} post={post} language={language} />
         ))}
       </div>
 
       {visible < sorted.length && (
         <div className="flex justify-center mt-8">
           <button onClick={handleLoadMore} className="btn-ghost">
-            Ver más artículos
+            {language === "en" ? "More articles" : "Ver más artículos"}
             <span aria-hidden>↓</span>
           </button>
         </div>

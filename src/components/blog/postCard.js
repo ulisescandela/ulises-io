@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { formatDate } from './postHeader';
 
-export default function PostCard({ post }) {
+export default function PostCard({ post, language = "es" }) {
   if (!post || !post.frontMatter) {
     return null;
   }
@@ -10,18 +10,18 @@ export default function PostCard({ post }) {
 
   return (
     <article className="glass-card group p-6 sm:p-7 rounded-2xl text-left">
-      <Link href={`/blog/${post.slug}`} className="block">
+      <Link href={`${language === "en" ? "/en" : "/blog"}/${post.slug}`} className="block">
         <div className="flex flex-wrap items-center gap-3 mb-3 text-zinc-400">
           {category && (
             <span className="text-xs font-semibold text-blue-200 bg-blue-600/20 border border-blue-500/30 px-2.5 py-1 rounded-full">
               {category}
             </span>
           )}
-          {date && <time className="text-xs italic">{formatDate(date)}</time>}
+          {date && <time className="text-xs italic">{language === "en" ? new Date(`${date}T00:00:00Z`).toLocaleDateString("en", { dateStyle: "long", timeZone: "UTC" }) : formatDate(date)}</time>}
           {readTime && (
             <>
               <span className="text-zinc-600">•</span>
-              <span className="text-xs">{readTime} de lectura</span>
+              <span className="text-xs">{readTime} {language === "en" ? "read" : "de lectura"}</span>
             </>
           )}
         </div>
@@ -48,7 +48,7 @@ export default function PostCard({ post }) {
         )}
 
         <span className="inline-flex items-center gap-1.5 text-sm font-medium text-blue-400 group-hover:gap-2.5 transition-all">
-          Leer artículo
+          {language === "en" ? "Read article" : "Leer artículo"}
           <span aria-hidden>→</span>
         </span>
       </Link>

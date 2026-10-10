@@ -11,19 +11,19 @@ export function formatDate(dateString) {
   });
 }
 
-export default function PostHeader({ title, category, date, readTime, tags }) {
+export default function PostHeader({ title, category, date, readTime, tags, language = "es" }) {
   return (
-    <header className="mb-8 pb-8 border-b border-gray-200">
+    <header className="mb-8 pb-8 border-b border-white/15">
       {category && (
         <Link
-          href={`/blog/categoria/${encodeURIComponent(category)}`}
+          href={`${language === "en" ? "/en/category" : "/blog/categoria"}/${encodeURIComponent(category)}`}
           className="inline-block mb-4 text-sm font-semibold text-blue-300 bg-blue-600/20 px-3 py-1 rounded-full hover:bg-blue-600/30 transition"
         >
           {category}
         </Link>
       )}
 
-      <p className="text-sm text-zinc-400 mb-4">Por <Link href="/about" rel="author" className="text-blue-300 hover:text-white">Ulises Rodríguez Candela</Link></p>
+      <p className="text-sm text-zinc-400 mb-4">{language === "en" ? "By" : "Por"} <Link href="/about" rel="author" className="text-blue-300 hover:text-white">Ulises Rodríguez Candela</Link></p>
 
       <h1 className="text-4xl md:text-5xl font-bold text-zinc-200 mb-4 leading-tight">
         {title}
@@ -32,7 +32,7 @@ export default function PostHeader({ title, category, date, readTime, tags }) {
       <div className="flex flex-wrap items-center gap-2 text-zinc-200">
         {date && (
           <time className="text-sm font-medium">
-            {formatDate(date)}
+            {language === "en" ? new Date(`${date}T00:00:00Z`).toLocaleDateString("en", { dateStyle: "long", timeZone: "UTC" }) : formatDate(date)}
           </time>
         )}
 
@@ -41,7 +41,7 @@ export default function PostHeader({ title, category, date, readTime, tags }) {
         {readTime && (
           <>
           <span className="text-zinc-400">•</span>
-          <span className="text-sm italic bg-zinc-700 px-2 py-1 rounded-full">{readTime} de lectura</span>
+          <span className="text-sm italic bg-zinc-700 px-2 py-1 rounded-full">{readTime} {language === "en" ? "read" : "de lectura"}</span>
           </>
         )}
 

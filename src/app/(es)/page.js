@@ -5,6 +5,8 @@ import ReaderResources from '@/components/common/ReaderResources';
 import LatestPosts from '@/components/common/LatestPosts';
 import Header from '@/components/layout/Header';
 
+export const metadata = { alternates: { canonical: 'https://ulises.io', languages: { es: 'https://ulises.io', en: 'https://ulises.io/en' } } };
+
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
