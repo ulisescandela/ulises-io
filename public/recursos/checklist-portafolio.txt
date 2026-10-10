@@ -1,0 +1,26 @@
+CHECKLIST DE PORTAFOLIO — ULISES.IO
+https://ulises.io/blog/proyectos-valiosos-para-tu-cv-programador
+
+Antes de incluir un proyecto en tu CV:
+
+[ ] Puedo explicar qué problema resuelve y para quién.
+[ ] La demo está desplegada y funciona desde una ventana privada.
+[ ] El README explica el objetivo, incluye capturas y enlaza la demo.
+[ ] Las instrucciones permiten instalar y ejecutar el proyecto.
+[ ] Incluí un archivo de variables de entorno de ejemplo, sin secretos.
+[ ] No publiqué claves, contraseñas ni datos personales.
+[ ] Puedo explicar por qué elegí estas herramientas.
+[ ] Documenté una dificultad real y cómo la resolví.
+[ ] Revisé errores, estados vacíos y la experiencia en móvil.
+[ ] Verifiqué los flujos principales y expliqué cómo comprobarlos.
+[ ] Distinguí mi trabajo del código de tutoriales o generado con IA.
+[ ] El enlace del CV apunta a un proyecto terminado y accesible.
+
+Practica este relato para tu entrevista:
+Construí ______ para ayudar a ______.
+Elegí ______ porque ______.
+El mayor problema fue ______ y lo resolví ______.
+Si lo hiciera otra vez, cambiaría ______.
+
+Siguiente paso: https://ulises.io/empieza-aqui#trabajo
+Nuevos artículos: https://ulises.io/rss.xml

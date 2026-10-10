@@ -1,5 +1,7 @@
 // src/app/page.js
 import Hero from '@/components/common/Hero';
+import ReadingPaths from '@/components/common/ReadingPaths';
+import ReaderResources from '@/components/common/ReaderResources';
 import LatestPosts from '@/components/common/LatestPosts';
 import Header from '@/components/layout/Header';
 
@@ -38,7 +40,9 @@ export default function HomePage() {
         {/* <About /> */}
         {/* <Interests /> */}
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
+          <ReadingPaths />
           <LatestPosts />
+          <ReaderResources />
         </div>
       </main>
     </>

@@ -34,3 +34,21 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Rutas y medición de lectores
+
+`/empieza-aqui` organiza los artículos en tres rutas definidas en
+`lib/readingPaths.js`. Solo aparecen artículos publicados. Las etiquetas se
+normalizan en `lib/tags.js`; las URLs antiguas redirigen a su etiqueta canónica.
+
+La checklist gratuita está en `public/recursos/checklist-portafolio.txt`.
+El seguimiento de artículos usa el RSS existente (`/rss.xml`). La suscripción
+por correo aún requiere seleccionar y configurar un proveedor.
+
+Con `NEXT_PUBLIC_GA_ID` configurado, los enlaces registran estos eventos:
+`start_here_click`, `reading_path_select`, `reading_path_article`,
+`resource_download` y `rss_subscribe_click`. Son clics, no suscripciones
+confirmadas. Compara los eventos por página de entrada en GA4; Search Console
+muestra adquisición orgánica, no estas conversiones.
+
+Validación: `node --test tests/*.test.js`, `npx eslint` y `npm run build`.

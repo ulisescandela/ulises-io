@@ -14,6 +14,11 @@ function generateSitemap() {
   // Páginas estáticas
   const staticPages = [
     {
+      url: `${baseUrl}/empieza-aqui`,
+      lastModified: today,
+      priority: 0.8,
+    },
+    {
       url: baseUrl,
       lastModified: today,
       priority: 1,
