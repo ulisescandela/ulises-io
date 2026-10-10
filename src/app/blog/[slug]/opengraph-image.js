@@ -1,5 +1,5 @@
 import { ImageResponse } from 'next/og';
-import { getPostBySlug, generateStaticParams as postParams } from '../../../../lib/posts';
+import { getPostBySlug, shouldShowPost, generateStaticParams as postParams } from '../../../../lib/posts';
 
 export const alt = 'Ulises.io | Blog';
 export const size = { width: 1200, height: 630 };
@@ -15,8 +15,10 @@ export default async function Image({ params }) {
   let category = '';
   try {
     const post = getPostBySlug(slug);
-    title = post.frontMatter.title || title;
-    category = post.frontMatter.category || '';
+    if (shouldShowPost(post)) {
+      title = post.frontMatter.title || title;
+      category = post.frontMatter.category || '';
+    }
   } catch {
     // Si el post no existe, se usa el fallback genérico.
   }

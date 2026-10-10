@@ -52,3 +52,8 @@ confirmadas. Compara los eventos por página de entrada en GA4; Search Console
 muestra adquisición orgánica, no estas conversiones.
 
 Validación: `node --test tests/*.test.js`, `npx eslint` y `npm run build`.
+
+Para comprobar las páginas reales del blog después de compilar, arranca
+`npm run start` y ejecuta `node scripts/check-blog-routes.js`. Revisa artículos,
+categorías, etiquetas, enlaces internos, redirecciones antiguas y respuestas 404.
+Puedes pasar una URL base como argumento para otro puerto o entorno.

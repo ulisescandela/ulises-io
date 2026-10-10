@@ -17,6 +17,16 @@ const cspHeader = `
 const nextConfig = {
   async redirects() {
     return [
+      // Redirect legacy tag names before rendering the dynamic page.
+      ...[
+        ['NextJS', 'Next.js'],
+        ['Inteligencia Artificial', 'IA'],
+        ['Soft Skills', 'Habilidades Blandas'],
+      ].map(([from, to]) => ({
+        source: `/blog/tag/${encodeURIComponent(from)}`,
+        destination: `/blog/tag/${encodeURIComponent(to)}`,
+        permanent: true,
+      })),
       // Canonicaliza www -> no-www (evita contenido duplicado en Google)
       {
         source: '/:path*',

@@ -1,6 +1,7 @@
 import PostsListClient from '@/components/common/PostsListClient';
 import { getAllTags, getPostsByTag } from '../../../../../lib/posts';
 import { normalizeTag } from '../../../../../lib/tags';
+import { decodeRouteParam } from '../../../../../lib/routeParams';
 import { notFound, permanentRedirect } from 'next/navigation';
 
 export function generateStaticParams() {
@@ -9,7 +10,8 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }) {
   const { tag } = await params;
-  const label = normalizeTag(tag);
+  const rawTag = decodeRouteParam(tag);
+  const label = normalizeTag(rawTag);
   return {
     title: `Posts sobre ${label}`,
     description: `Artículos sobre ${label} en el blog de Ulises Rodríguez Candela.`,
@@ -20,10 +22,11 @@ export async function generateMetadata({ params }) {
 
 export default async function TagPage({ params }) {
   const { tag } = await params;
-  const label = normalizeTag(tag);
+  const rawTag = decodeRouteParam(tag);
+  const label = normalizeTag(rawTag);
   const posts = getPostsByTag(label);
   if (!posts.length) notFound();
-  if (tag !== label) permanentRedirect(`/blog/tag/${encodeURIComponent(label)}`);
+  if (rawTag !== label) permanentRedirect(`/blog/tag/${encodeURIComponent(label)}`);
 
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-8 text-zinc-200">

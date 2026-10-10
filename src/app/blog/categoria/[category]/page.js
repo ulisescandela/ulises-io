@@ -2,16 +2,17 @@ import PostsListClient from '@/components/common/PostsListClient';
 import { getAllCategories, getPostsByCategory } from '../../../../../lib/posts';
 import { getCategoryMeta } from '@/components/common/categoryMeta';
 import Link from 'next/link';
+import { decodeRouteParam } from '../../../../../lib/routeParams';
 import { notFound } from 'next/navigation';
 
 export async function generateStaticParams() {
   const categories = getAllCategories();
-  return categories.map((c) => ({ category: encodeURIComponent(c) }));
+  return categories.map((c) => ({ category: c }));
 }
 
 export async function generateMetadata({ params }) {
   const { category } = await params;
-  const rawCategory = category ? decodeURIComponent(category) : '';
+  const rawCategory = decodeRouteParam(category);
   return {
     title: `Artículos sobre ${rawCategory}`,
     description: `Todos los artículos sobre ${rawCategory} en el blog de Ulises Rodríguez Candela: guías, consejos y experiencias para desarrolladores.`,
@@ -36,7 +37,7 @@ export async function generateMetadata({ params }) {
 
 export default async function CategoryPage({ params }) {
   const { category } = await params;
-  const rawCategory = category ? decodeURIComponent(category) : '';
+  const rawCategory = decodeRouteParam(category);
   const posts = getPostsByCategory(rawCategory);
 
   if (posts.length === 0) {
