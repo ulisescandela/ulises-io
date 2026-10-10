@@ -8,7 +8,6 @@ import RelatedPosts from '@/components/blog/RelatedPosts';
 import ReadingProgress from '@/components/blog/ReadingProgress';
 import TableOfContents from '@/components/blog/TableOfContents';
 import ScrollToTop from '@/components/common/ScrollToTop';
-import ReaderResources from '@/components/common/ReaderResources';
 import LanguageSwitch from '@/components/blog/LanguageSwitch';
 import ArticleAnalytics from '@/components/blog/ArticleAnalytics';
 
@@ -53,7 +52,7 @@ export default function ArticlePage({ post, language = 'es' }) {
     <TableOfContents headings={extractHeadings(post.content)} language={language} />
     <PostContent content={post.content} />
     <div className="mt-12"><Link href={blog} className="inline-flex items-center gap-2 text-sm font-medium text-blue-400 hover:text-blue-300 transition-colors"><span aria-hidden>←</span>{en ? 'Back to the blog' : 'Volver al blog'}</Link></div>
-    <ReaderResources portfolio={sourceSlug === 'proyectos-valiosos-para-tu-cv-programador'} language={language} />
+
     <RelatedPosts posts={related} language={language} />
   </article>;
 }

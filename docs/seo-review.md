@@ -2,7 +2,7 @@
 
 ## Hallazgos verificables
 
-- El catálogo tiene 40 artículos publicados; los borradores se mantienen fuera del índice.
+- El catálogo tiene 43 artículos publicados; los borradores se mantienen fuera del índice.
 - Las listas de artículos dependían de «Ver más» para mostrar parte del catálogo.
   Las páginas /blog y /en/blog incluyen enlaces HTML a todos los artículos publicados.
 - Algunos cuerpos repetían un H1 ya renderizado por la plantilla. El lector de

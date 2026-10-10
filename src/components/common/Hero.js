@@ -24,9 +24,6 @@ export default function Hero({ language = "es" }) {
             {language === "en" ? "Start here" : "Empieza aquí"}
             <span aria-hidden>→</span>
           </TrackedLink>
-          <TrackedLink href={language === "en" ? "/en/rss.xml" : "/rss.xml"} className="btn-ghost" eventName="rss_subscribe_click" eventLabel="hero">
-            {language === "en" ? "Follow via RSS" : "Seguir por RSS"}
-          </TrackedLink>
         </div>
       </div>
     </section>

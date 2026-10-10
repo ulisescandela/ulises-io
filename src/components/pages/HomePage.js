@@ -1,6 +1,5 @@
 import Hero from '@/components/common/Hero';
 import ReadingPaths from '@/components/common/ReadingPaths';
-import ReaderResources from '@/components/common/ReaderResources';
 import LatestPosts from '@/components/common/LatestPosts';
 import Header from '@/components/layout/Header';
 
@@ -13,7 +12,7 @@ export default function HomePage({ language = 'es' }) {
     <Header language={language} />
     <main id="main-content" className="pt-16 w-full text-center text-white font-sans">
       <Hero language={language} />
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-left"><ReadingPaths language={language} /><LatestPosts language={language} /><ReaderResources language={language} /></div>
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-left"><ReadingPaths language={language} /><LatestPosts language={language} /></div>
     </main>
   </>;
 }

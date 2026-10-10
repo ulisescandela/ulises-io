@@ -31,14 +31,20 @@ for (const source of getAllPostsData()) {
 }
 const index = await page('/en');
 for (const post of getEnglishPosts().slice(0, 4)) assert.ok(index.includes(`/en/${post.slug}`), post.slug);
-for (const path of ['/', '/about', '/cv', '/contacto', '/privacy', '/empieza-aqui', '/rss.xml', '/en/start-here', '/en/blog', '/en/about', '/en/contact', '/en/privacy', '/en/cv', '/en/rss.xml', '/recursos/portfolio-checklist.txt']) await page(path);
+for (const path of ['/', '/about', '/cv', '/contacto', '/privacy', '/empieza-aqui', '/rss.xml', '/en/start-here', '/en/blog', '/en/about', '/en/contact', '/en/privacy', '/en/cv', '/en/rss.xml']) await page(path);
 const englishBlog = await page('/en/blog');
 for (const post of getEnglishPosts()) assert.ok(englishBlog.includes(`/en/${post.slug}`), post.slug);
 for (const category of new Set(getEnglishPosts().map(post => post.frontMatter.category))) await page(`/en/category/${encodeURIComponent(category)}`);
 for (const tag of new Set(getEnglishPosts().flatMap(post => post.frontMatter.tags))) await page(`/en/tag/${encodeURIComponent(tag)}`);
-for (const text of ['grow as a developer', 'Choose your next step', 'Latest articles', 'Explore by topic', 'Download checklist']) assert.ok(index.includes(text), text);
+for (const text of ['grow as a developer', 'Choose your next step', 'Latest articles', 'Explore by topic']) assert.ok(index.includes(text), text);
 const missing = await fetch(new URL('/en/no-such-article', base));
 assert.equal(missing.status, 404);
 const sitemap = fs.readFileSync('public/sitemap.xml', 'utf8');
 for (const post of getEnglishPosts()) assert.ok(sitemap.includes(`/en/${post.slug}</loc>`), post.slug);
 console.log(`Verified ${getEnglishPosts().length} bilingual article pairs, reciprocal hreflang, canonical URLs, HTML language, H1s, index and existing Spanish pages.`);
+
+for (const path of ['/', '/en', '/empieza-aqui', '/en/start-here']) {
+  const html = await page(path);
+  assert.ok(!html.includes('rss_subscribe_click'), `Removed RSS promotion: ${path}`);
+  assert.ok(!html.includes('resource_download'), `Removed guide download: ${path}`);
+}

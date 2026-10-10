@@ -158,5 +158,17 @@
   "publicar-facebook-instagram-antrapost-sin-duplicados": {
     "slug": "publish-facebook-instagram-antrapost-without-duplicates",
     "title": "How to Publish to Facebook and Instagram with Antrapost Without Account Mix-Ups"
+  },
+  "evitar-dobles-reservas-sistema-citas": {
+    "slug": "prevent-double-bookings-appointment-system",
+    "title": "How to Prevent Double Bookings: The Engineering Behind an Appointment Calendar"
+  },
+  "disenar-pagina-reservas-negocio-servicios": {
+    "slug": "design-booking-page-service-business",
+    "title": "How to Design a Useful Booking Page for a Service Business"
+  },
+  "migrar-agenda-excel-sistema-citas-antrapro": {
+    "slug": "move-spreadsheet-calendar-appointment-software-antrapro",
+    "title": "From Spreadsheets to Appointment Software: How to Migrate Without Losing Control"
   }
 }
