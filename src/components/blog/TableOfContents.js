@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 // Tabla de contenidos plegable con "scroll-spy": resalta la sección que el
 // lector tiene en pantalla y le permite saltar a cualquier apartado. Mejora
 // mucho la navegación en artículos largos y el tiempo de permanencia.
-export default function TableOfContents({ headings = [] }) {
+export default function TableOfContents({ headings = [], language = "es" }) {
   const [activeId, setActiveId] = useState(null);
   // En móvil arranca plegada para no empujar el contenido; en escritorio abierta.
   const [open, setOpen] = useState(true);
@@ -62,7 +62,7 @@ export default function TableOfContents({ headings = [] }) {
 
   return (
     <nav
-      aria-label="Tabla de contenidos"
+      aria-label={language === "en" ? "Table of contents" : "Tabla de contenidos"}
       className="glass-card rounded-2xl p-5 my-8 not-prose"
     >
       <button
@@ -73,7 +73,7 @@ export default function TableOfContents({ headings = [] }) {
       >
         <span className="flex items-center gap-2.5 text-sm font-semibold uppercase tracking-wide text-zinc-200">
           <span className="h-4 w-1 rounded-full bg-gradient-to-b from-blue-400 to-purple-500" />
-          En este artículo
+          {language === "en" ? "In this article" : "En este artículo"}
         </span>
         <span
           className={`text-zinc-400 text-xs transition-transform duration-200 ${

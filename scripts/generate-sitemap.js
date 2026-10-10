@@ -1,4 +1,5 @@
 import { getAllPostsData, getAllCategories } from '../lib/posts.js';
+import { getEnglishPosts } from '../lib/translations.js';
 import fs from 'fs';
 import path from 'path';
 
@@ -13,6 +14,7 @@ function generateSitemap() {
   const today = getLocalDate();
   // Páginas estáticas
   const staticPages = [
+    { url: `${baseUrl}/en`, lastModified: today, priority: 0.8 },
     {
       url: `${baseUrl}/empieza-aqui`,
       lastModified: today,
@@ -54,7 +56,7 @@ function generateSitemap() {
   const posts = getAllPostsData();
   const blogPosts = posts.map((post) => ({
     url: `${baseUrl}/blog/${post.slug}`,
-    lastModified: post.frontMatter.date.split('T')[0],
+    lastModified: (post.frontMatter.updated || post.frontMatter.date).split('T')[0],
     priority: 0.7,
   }));
 
@@ -65,7 +67,12 @@ function generateSitemap() {
     priority: 0.6,
   }));
 
-  const allPages = [...staticPages, ...blogPosts, ...categoryPages];
+  const englishPages = getEnglishPosts().map((post) => ({
+    url: `${baseUrl}/en/${post.slug}`,
+    lastModified: post.frontMatter.translated || post.frontMatter.date,
+    priority: 0.7,
+  }));
+  const allPages = [...staticPages, ...blogPosts, ...categoryPages, ...englishPages];
 
   // Generar XML
   const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>

@@ -1,7 +1,7 @@
 // src/app/blog/[slug]/page.js
 
-import { getPostBySlug, generateStaticParams, shouldShowPost, getRelatedPosts } from '../../../../lib/posts';
-import { extractHeadings } from '../../../../lib/toc';
+import { getPostBySlug, generateStaticParams, shouldShowPost, getRelatedPosts } from '@lib/posts';
+import { extractHeadings } from '@lib/toc';
 import PostContent from '@/components/blog/postContent';
 import PostHeader from '@/components/blog/postHeader';
 import RelatedPosts from '@/components/blog/RelatedPosts';
@@ -11,6 +11,9 @@ import ScrollToTop from '@/components/common/ScrollToTop';
 import Link from 'next/link';
 import ReaderResources from '@/components/common/ReaderResources';
 import { notFound } from 'next/navigation';
+import { getEnglishTranslation, languageAlternates } from '@lib/translations';
+import LanguageSwitch from '@/components/blog/LanguageSwitch';
+import ArticleAnalytics from '@/components/blog/ArticleAnalytics';
 
 export { generateStaticParams };
 
@@ -28,11 +31,13 @@ export async function generateMetadata({ params }) {
     };
   }
 
+  const translation = getEnglishTranslation(slug);
   return {
     title: post.frontMatter.title,
     description: post.frontMatter.excerpt,
     alternates: {
       canonical: `https://ulises.io/blog/${slug}`,
+      ...(translation && { languages: languageAlternates(slug, translation.slug) }),
     },
     openGraph: {
       title: post.frontMatter.title,
@@ -41,6 +46,7 @@ export async function generateMetadata({ params }) {
       siteName: 'Ulises.io',
       locale: 'es_ES',
       type: 'article',
+      images: [post.frontMatter.coverImage || `https://ulises.io/blog/${slug}/opengraph-image`],
       publishedTime: post.frontMatter.date,
       authors: ['Ulises Rodriguez Candela'],
       tags: post.frontMatter.tags,
@@ -78,7 +84,7 @@ export default async function BlogPost({ params }) {
     author: {
       '@type': 'Person',
       name: 'Ulises Rodriguez Candela',
-      url: 'https://ulises.io',
+      url: 'https://ulises.io/about',
     },
     publisher: {
       '@type': 'Person',
@@ -113,12 +119,15 @@ export default async function BlogPost({ params }) {
     ],
   };
 
+  const translation = getEnglishTranslation(slug);
   const related = getRelatedPosts(slug, 3);
   const headings = extractHeadings(post.content);
 
   return (
     <article className="max-w-3xl mx-auto px-4 sm:px-6 py-8">
       <ReadingProgress />
+      <ArticleAnalytics sourceSlug={slug} language="es" />
+      {translation && <LanguageSwitch sourceSlug={slug} englishSlug={translation.slug} language="es" />}
       <ScrollToTop />
       <script
         type="application/ld+json"

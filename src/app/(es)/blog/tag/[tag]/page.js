@@ -1,7 +1,7 @@
 import PostsListClient from '@/components/common/PostsListClient';
-import { getAllTags, getPostsByTag } from '../../../../../lib/posts';
-import { normalizeTag } from '../../../../../lib/tags';
-import { decodeRouteParam } from '../../../../../lib/routeParams';
+import { getAllTags, getPostsByTag } from '@lib/posts';
+import { normalizeTag } from '@lib/tags';
+import { decodeRouteParam } from '@lib/routeParams';
 import { notFound, permanentRedirect } from 'next/navigation';
 
 export function generateStaticParams() {

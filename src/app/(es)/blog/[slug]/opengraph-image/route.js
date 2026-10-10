@@ -1,15 +1,13 @@
 import { ImageResponse } from 'next/og';
-import { getPostBySlug, shouldShowPost, generateStaticParams as postParams } from '../../../../lib/posts';
+import { getPostBySlug, shouldShowPost, generateStaticParams as postParams } from '@lib/posts';
 
-export const alt = 'Ulises.io | Blog';
-export const size = { width: 1200, height: 630 };
-export const contentType = 'image/png';
+const size = { width: 1200, height: 630 };
 
 // Prerenderiza una imagen OG estática por cada post publicado.
 export const generateStaticParams = postParams;
 
 // Imagen Open Graph generada dinámicamente por post (para compartir en redes).
-export default async function Image({ params }) {
+async function createImage({ params }) {
   const { slug } = await params;
   let title = 'Ulises.io';
   let category = '';
@@ -78,4 +76,8 @@ export default async function Image({ params }) {
     ),
     { ...size }
   );
+}
+
+export async function GET(request, context) {
+  return createImage(context);
 }

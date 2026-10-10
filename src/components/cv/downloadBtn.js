@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { HiDownload } from "react-icons/hi";
-import { getPrivateCVData } from '../../app/cv/actions';
+import { getPrivateCVData } from '@/app/(es)/cv/actions';
 
 export default function DownloadButton({ onUnlock }) {
   const [loading, setLoading] = useState(false);

@@ -2,6 +2,7 @@
 title: "Proyectos que de Verdad Valen para tu CV de Programador (2026)"
 category: "Carrera"
 date: "2026-09-03"
+updated: "2026-10-10"
 excerpt: "Otra app de to-do list no te va a conseguir trabajo. Te muestro qué tipo de proyectos destacan de verdad en un CV de programador en 2026, con ideas concretas y cómo presentarlos para que un reclutador diga 'a esta persona la quiero'."
 readTime: "12 min"
 tags: ["Carrera", "Proyectos", "Portafolio", "CV", "2026"]
@@ -64,11 +65,26 @@ Aquí destacas frente al resto demostrando **criterio de ingeniería**:
 Un buen proyecto mal presentado es un proyecto invisible. Cuida esto tanto como el código:
 
 1.  **README excelente.** Qué hace, por qué lo hiciste, capturas, cómo ejecutarlo y una **demo online**. Es lo primero (y a veces lo único) que mira un reclutador.
-2.  **Despliégalo.** Un enlace donde se pueda tocar vale diez veces más que "clona el repo y ejecútalo". Vercel, Netlify o Railway lo hacen gratis.
+2.  **Despliégalo.** Un enlace donde se pueda tocar vale diez veces más que "clona el repo y ejecútalo". Comprueba los límites y precios de la plataforma que elijas; una demo pequeña puede caber en un plan gratuito, pero no todos los servicios lo ofrecen.
 3.  **Cuenta la historia, no solo la tecnología.** "Construí esto para resolver X, me encontré con Y y lo solucioné así." Eso es lo que un reclutador recuerda.
 4.  **Calidad sobre cantidad.** Tres proyectos pulidos y explicados ganan a quince repos abandonados.
 
 Y prepárate para defenderlos: en una entrevista te preguntarán *por qué* tomaste cada decisión. Practica ese relato tanto como el código, algo que también aplica a las [pruebas técnicas](/blog/consejos-para-pruebas-tecnicas).
+
+## Ejemplo práctico: convertir un gestor de gastos en evidencia de ingeniería
+
+Un gestor de gastos puede parecer otro CRUD. La diferencia está en lo que puedes demostrar:
+
+| Decisión | Evidencia que puedes enseñar |
+|---|---|
+| Evitar que un usuario vea gastos ajenos | Autorización por usuario y una prueba de acceso denegado |
+| Importar un CSV con filas incompletas | Validación de datos y un informe de errores legible |
+| Calcular totales por moneda | Regla explícita sobre conversiones y redondeo |
+| Permitir que alguien pruebe la app | Demo con datos ficticios y sin exponer información personal |
+
+En el README explica el problema, una decisión que descartaste y el motivo. No inventes usuarios ni porcentajes de mejora: si todavía no has medido el resultado, describe qué comprobarías y cómo.
+
+Antes de enviarlo, abre la demo desde una ventana privada. Si no puedes completar el flujo principal sin tus credenciales personales, todavía no está lista para un reclutador.
 
 ## Preguntas Frecuentes
 

@@ -23,6 +23,8 @@ export default function PostHeader({ title, category, date, readTime, tags }) {
         </Link>
       )}
 
+      <p className="text-sm text-zinc-400 mb-4">Por <Link href="/about" rel="author" className="text-blue-300 hover:text-white">Ulises Rodríguez Candela</Link></p>
+
       <h1 className="text-4xl md:text-5xl font-bold text-zinc-200 mb-4 leading-tight">
         {title}
       </h1>

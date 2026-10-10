@@ -2,6 +2,7 @@
 title: "Cómo Aprender de Verdad en la Era de la IA (sin Volverte Dependiente)"
 category: "IA"
 date: "2026-08-30"
+updated: "2026-10-10"
 excerpt: "La IA puede resolverte cualquier ejercicio, y ese es justo el problema. Consejos reales para aprender a programar en la era de la IA: cuándo NO usarla, cómo usarla bien y cómo asegurarte de que el conocimiento se queda en tu cabeza."
 readTime: "12 min"
 tags: ["IA", "Aprendizaje", "Programación", "Consejos", "2026"]
@@ -72,6 +73,18 @@ Usa la IA para desbloquearte cuando estés genuinamente atascado, no para que co
 | Generar ejercicios para practicar | Que resuelva los ejercicios por ti |
 | Revisar y entender cada línea | Copiar y pegar sin leer |
 | Sesiones de práctica sin IA | Depender de la IA para todo |
+
+## Ejercicio: comprueba qué puedes hacer sin el chat
+
+Elige un problema pequeño: recibir una lista de gastos y calcular el total de cada categoría.
+
+1. Escribe los casos que debe resolver: lista vacía, una categoría repetida y un importe inválido.
+2. Intenta la solución sin IA. Si te atascas, anota exactamente qué no entiendes.
+3. Pide una pista sobre ese punto, sin solicitar la función completa.
+4. Ejecuta tus casos y explica cada línea con tus palabras.
+5. Al día siguiente, cambia el requisito: ahora necesitas el total por mes. Inténtalo desde un archivo vacío.
+
+No midas el aprendizaje por cuántos mensajes intercambiaste. Mira si puedes resolver la variante, detectar un error y explicar una decisión sin volver a copiar la respuesta anterior.
 
 ## Preguntas Frecuentes
 

@@ -57,3 +57,27 @@ Para comprobar las páginas reales del blog después de compilar, arranca
 `npm run start` y ejecuta `node scripts/check-blog-routes.js`. Revisa artículos,
 categorías, etiquetas, enlaces internos, redirecciones antiguas y respuestas 404.
 Puedes pasar una URL base como argumento para otro puerto o entorno.
+
+## Contenido bilingüe
+
+Las URLs españolas siguen en `/blog/<slug>`. El catálogo inglés está en `/en`
+y cada traducción vive en `/en/<slug-en-inglés>`, con Markdown en `posts/en`.
+`sourceSlug` enlaza con el artículo español y `lib/translation-map.json` documenta
+las parejas. No hay redirecciones automáticas por idioma o país.
+
+Cada versión tiene canonical propio, HTML `lang` e indicadores `hreflang`
+recíprocos. El sitemap incluye ambas. La misma variable `NEXT_PUBLIC_GA_ID` sigue
+midiendo el sitio; `article_view` registra `content_language` (`es`/`en`) y un
+`article_id` común, sin cambiar las URLs ni la propiedad de Analytics existente.
+
+El primer catálogo inglés se genera a partir del texto completo con un modelo de
+traducción local (ILSP/OPUS-MT, revisión `5ed6a5abeea8ff0b3e091bd3541716dd91522d8a`),
+con títulos adaptados, código preservado y enlaces localizados. No se necesita
+ese modelo ni ningún servicio de traducción para compilar o servir el sitio.
+Revisar las dos versiones cuando se actualice un artículo; no cambiar `sourceSlug`
+ni el slug público para hacer correcciones editoriales.
+
+Después de compilar y arrancar el servidor:
+`node scripts/check-blog-routes.js` y `node scripts/check-bilingual-routes.js`.
+La revisión de SEO y las hipótesis pendientes de Search Console están en
+`docs/seo-review.md`.

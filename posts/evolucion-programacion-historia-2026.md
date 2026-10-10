@@ -2,6 +2,7 @@
 title: "La Evolución de la Programación: Historia Completa de los Lenguajes y Tecnologías"
 category: "Programación"
 date: "2026-01-24"
+updated: "2026-10-10"
 excerpt: "Un viaje completo por la historia de la programación. Descubre cómo hemos pasado del código máquina y los primeros lenguajes hasta la era móvil y la nube."
 readTime: "14 min"
 tags: ["Historia Tech", "Evolución", "Programación", "Lenguajes"]
@@ -20,7 +21,7 @@ Entender de dónde venimos es crucial para comprender hacia dónde vamos. En est
 Antes de que existieran los lenguajes de programación como concepto moderno, programar significaba reconfigurar físicamente la máquina.
 
 ### Ada Lovelace y el Primer Algoritmo
-Mucho antes de las computadoras electrónicas, en el siglo XIX, **Ada Lovelace** vio el potencial de la "Máquina Analítica" de Charles Babbage. Ella escribió el primer algoritmo destinado a ser procesado por una máquina, convirtiéndose en la primera programadora de la historia. Su visión trascendía el mero cálculo numérico; imaginó que las computadoras podrían manipular cualquier símbolo, incluso componer música.
+Mucho antes de las computadoras electrónicas, en el siglo XIX, **Ada Lovelace** vio el potencial de la "Máquina Analítica" de Charles Babbage. En sus notas de 1843 publicó un procedimiento para calcular números de Bernoulli con esa máquina. Por ello suele considerarse la primera programadora; no significa que inventara los algoritmos, que existían mucho antes. Su visión trascendía el mero cálculo numérico; imaginó que las computadoras podrían manipular cualquier símbolo, incluso componer música.
 
 ### La Era de las Válvulas y el Ensamblador (1940s - 1950s)
 Con la llegada de computadoras como la ENIAC, programar era una tarea manual y tediosa de conectar cables. Luego, con la arquitectura de von Neumann, el software pudo almacenarse en memoria.
@@ -32,7 +33,7 @@ Para democratizar la computación, necesitábamos abstracción. Hablar el idioma
 
 *   **FORTRAN (1957):** Creado por IBM, revolucionó el cálculo científico. Fue el primer lenguaje de alto nivel ampliamente utilizado.
 *   **COBOL (1959):** Diseñado para negocios, permitió que la informática entrara en los bancos y empresas (y sigue corriendo en muchos mainframes hoy en día).
-*   **C (1972):** Posiblemente el lenguaje más influyente de la historia. Creado por Dennis Ritchie en los laboratorios Bell, se convirtió en la base de sistemas operativos como Unix y es el "padre" de C++, Java, Python y muchos más.
+*   **C (1972):** Posiblemente el lenguaje más influyente de la historia. Creado por Dennis Ritchie en los laboratorios Bell, se convirtió en la base de sistemas operativos como Unix y influyó en la sintaxis y en la implementación de numerosos lenguajes posteriores.
 
 Si quieres ver cómo se traduce todo esto a las opciones de hoy, te dejo mi guía de [lenguajes de programación en 2026 y proyectos para empezar](/blog/lenguajes-de-programacion-2026-y-proyectos-para-empezar).
 
@@ -85,7 +86,7 @@ Un resumen rápido de la evolución de la programación, de los orígenes a la a
 
 | Época | Hito | Aporte clave |
 |---|---|---|
-| Siglo XIX | Ada Lovelace | El primer algoritmo de la historia |
+| Siglo XIX | Ada Lovelace | Procedimiento publicado para la Máquina Analítica |
 | 1940s–50s | Ensamblador | Mnemónicos en vez de binario puro |
 | 1957 | FORTRAN | Primer lenguaje de alto nivel popular |
 | 1960s–70s | Programación estructurada | Adiós al `GOTO`, código legible |
@@ -98,7 +99,7 @@ Un resumen rápido de la evolución de la programación, de los orígenes a la a
 ## Preguntas Frecuentes sobre la Historia de la Programación
 
 **¿Quién fue el primer programador de la historia?**
-Ada Lovelace, en el siglo XIX. Escribió el primer algoritmo pensado para ser ejecutado por una máquina (la Máquina Analítica de Babbage), mucho antes de que existieran las computadoras electrónicas.
+Ada Lovelace suele recibir ese reconocimiento por sus notas de 1843 sobre la Máquina Analítica de Babbage. El Computer History Museum describe su procedimiento publicado y también señala el debate sobre su colaboración con Babbage.
 
 **¿Cuál fue el primer lenguaje de programación de alto nivel?**
 FORTRAN, creado por IBM en 1957 para el cálculo científico. Fue el primero ampliamente adoptado que permitía escribir en un lenguaje más cercano al humano que al binario.
@@ -114,3 +115,9 @@ Porque cada paradigma actual (POO, funcional, IA) nació para resolver un proble
 Mirando hacia atrás, la tendencia es clara: **cada evolución ha elevado el nivel de abstracción**. Pasamos de controlar electrones a escribir lógica de negocio.
 
 Lejos de desaparecer, la programación se ha vuelto más accesible y poderosa. La historia de la programación es, en última instancia, la historia de cómo los humanos buscamos herramientas más eficientes para materializar nuestras ideas.
+
+## Fuentes para profundizar
+
+* [Computer History Museum: Ada Lovelace y sus notas de 1843](https://www.computerhistory.org/babbage/adalovelace/).
+* [IBM: el desarrollo de Fortran y su lanzamiento en 1957](https://www.ibm.com/history/fortran).
+* [Dennis Ritchie: la historia del desarrollo del lenguaje C](https://www.nokia.com/bell-labs/about/dennis-m-ritchie/chist.html).

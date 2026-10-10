@@ -1,8 +1,8 @@
 import PostsListClient from '@/components/common/PostsListClient';
-import { getAllCategories, getPostsByCategory } from '../../../../../lib/posts';
+import { getAllCategories, getPostsByCategory } from '@lib/posts';
 import { getCategoryMeta } from '@/components/common/categoryMeta';
 import Link from 'next/link';
-import { decodeRouteParam } from '../../../../../lib/routeParams';
+import { decodeRouteParam } from '@lib/routeParams';
 import { notFound } from 'next/navigation';
 
 export async function generateStaticParams() {
