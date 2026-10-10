@@ -3,14 +3,14 @@ import { formatDate } from "./postHeader";
 
 // Lista de posts relacionados que se muestra al final de cada artículo.
 // Refuerza el enlazado interno (SEO) y la navegación.
-export default function RelatedPosts({ posts = [] }) {
+export default function RelatedPosts({ posts = [], language = "es" }) {
   if (!posts || posts.length === 0) return null;
 
   return (
     <section className="mt-16 pt-10 border-t border-white/10">
       <h2 className="text-2xl font-bold text-zinc-100 mb-6 flex items-center gap-3">
         <span className="h-6 w-1.5 rounded-full bg-gradient-to-b from-blue-400 to-purple-500" />
-        Sigue leyendo
+        {language === "en" ? "Keep reading" : "Sigue leyendo"}
       </h2>
 
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -19,7 +19,7 @@ export default function RelatedPosts({ posts = [] }) {
           return (
             <Link
               key={post.slug}
-              href={`/blog/${post.slug}`}
+              href={`${language === "en" ? "/en" : "/blog"}/${post.slug}`}
               className="glass-card group p-5 rounded-2xl flex flex-col"
             >
               {category && (
@@ -31,7 +31,7 @@ export default function RelatedPosts({ posts = [] }) {
                 {title}
               </h3>
               <div className="mt-auto flex items-center gap-2 text-xs text-zinc-400">
-                {date && <time>{formatDate(date)}</time>}
+                {date && <time>{language === "en" ? new Date(`${date}T00:00:00Z`).toLocaleDateString("en", { dateStyle: "long", timeZone: "UTC" }) : formatDate(date)}</time>}
                 {readTime && (
                   <>
                     <span className="text-zinc-600">•</span>

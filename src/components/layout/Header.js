@@ -1,30 +1,28 @@
 "use client";
 
 import Link from "next/link";
+import translationMap from "../../../lib/translation-map.json";
+import { pagePaths, translateCategory, sourceCategory, translateTag, tagTranslations } from "../../../lib/locales";
 import { usePathname } from "next/navigation";
 
 const LINKS = [
-  {
-    label: 'Home',
-    href: '/'
-  },
-  {
-    label: 'Blog',
-    href: '/blog'
-  },
-  {
-    label: 'Sobre mí',
-    href: '/about'
-  },
-  {
-    label: 'Contacto',
-    href: '/contacto'
-  },
-  {
-    label: 'Privacidad',
-    href: '/privacy'
-  }
-]
+  { label: 'Home', english: 'Home', page: 'home' },
+  { label: 'Blog', english: 'Blog', page: 'blog' },
+  { label: 'Sobre mí', english: 'About me', page: 'about' },
+  { label: 'Contacto', english: 'Contact', page: 'contact' },
+  { label: 'Privacidad', english: 'Privacy', page: 'privacy' },
+];
+
+function counterpart(pathname, language) {
+  for (const paths of Object.values(pagePaths)) if (pathname === paths[language]) return paths[language === 'en' ? 'es' : 'en'];
+  if (language === 'es' && pathname.startsWith('/blog/categoria/')) return '/en/category/' + encodeURIComponent(translateCategory(decodeURIComponent(pathname.slice('/blog/categoria/'.length))));
+  if (language === 'en' && pathname.startsWith('/en/category/')) return '/blog/categoria/' + encodeURIComponent(sourceCategory(decodeURIComponent(pathname.slice('/en/category/'.length))));
+  if (language === 'es' && pathname.startsWith('/blog/tag/')) return '/en/tag/' + encodeURIComponent(translateTag(decodeURIComponent(pathname.slice('/blog/tag/'.length))));
+  if (language === 'en' && pathname.startsWith('/en/tag/')) { const tag = decodeURIComponent(pathname.slice('/en/tag/'.length)); return '/blog/tag/' + encodeURIComponent(Object.keys(tagTranslations).find(key => tagTranslations[key] === tag) || tag); }
+  if (language === 'es' && pathname.startsWith('/blog/')) { const translated = translationMap[pathname.slice(6)]; if (translated) return `/en/${translated.slug}`; }
+  if (language === 'en' && pathname.startsWith('/en/')) { const source = Object.keys(translationMap).find(key => translationMap[key].slug === pathname.slice(4)); if (source) return `/blog/${source}`; }
+  return pagePaths.home[language === 'en' ? 'es' : 'en'];
+}
 
 export default function Header({ language = "es" }) {
   return (
@@ -64,11 +62,19 @@ function Logo({ language }) {
 }
 
 function NavLinks({ language }) {
-  const links = language === "en" ? [{ label: "Home", href: "/en" }, { label: "Articles", href: "/en#posts" }, { label: "Start here", href: "/en/start-here" }, { label: "Contact", href: "mailto:contacto@ulises.io" }, { label: "Español", href: "/" }] : [...LINKS, { label: "English", href: "/en" }];
   const pathname = usePathname();
+  const links = LINKS.map(link => ({ label: language === 'en' ? link.english : link.label, href: pagePaths[link.page][language] }));
+  links.push({ label: language === 'en' ? 'Español' : 'English', href: counterpart(pathname, language) });
 
-  const isActive = (href) =>
-    href === "/" || href === "/en" ? pathname === href : pathname.startsWith(href);
+  const englishBlogPage = language === 'en' && (
+    pathname === '/en/blog' || pathname.startsWith('/en/category/') || pathname.startsWith('/en/tag/') ||
+    Object.values(translationMap).some(post => pathname === `/en/${post.slug}`)
+  );
+  const isActive = href => {
+    if (href === '/' || href === '/en') return pathname === href;
+    if (href === '/en/blog') return englishBlogPage;
+    return pathname.startsWith(href);
+  };
 
   return (
     <nav

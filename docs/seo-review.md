@@ -2,9 +2,9 @@
 
 ## Hallazgos verificables
 
-- El catálogo tiene 29 artículos publicados; los borradores se mantienen fuera del índice.
+- El catálogo tiene 30 artículos publicados; los borradores se mantienen fuera del índice.
 - Las listas de artículos dependían de «Ver más» para mostrar parte del catálogo.
-  La página /blog ahora incluye enlaces HTML a todos los artículos publicados.
+  Las páginas /blog y /en/blog incluyen enlaces HTML a todos los artículos publicados.
 - Algunos cuerpos repetían un H1 ya renderizado por la plantilla. El lector de
   Markdown elimina ese título inicial; los artículos mantienen un solo H1.
 - Los tiempos de lectura se fijaban manualmente y no siempre correspondían al

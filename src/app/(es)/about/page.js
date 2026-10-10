@@ -1,12 +1,11 @@
-// src/app/about/page.js
-import Header from '@/components/layout/Header';
-import About from '@/components/common/about';
+import AboutPage from '@/components/pages/AboutPage';
 
 export const metadata = {
   title: 'Sobre mí',
   description: 'Conoce a Ulises Rodríguez Candela, desarrollador de software apasionado por crear soluciones innovadoras y compartir conocimientos.',
   alternates: {
     canonical: 'https://ulises.io/about',
+    languages: { es: 'https://ulises.io/about', en: 'https://ulises.io/en/about' },
   },
   openGraph: {
     title: 'Sobre mí - Ulises.io',
@@ -18,13 +17,4 @@ export const metadata = {
   },
 };
 
-export default function AboutPage() {
-  return (
-    <>
-      <Header />
-      <main className="pt-16 w-screen text-center text-white font-sans">
-        <About />
-      </main>
-    </>
-  );
-}
+export default function Page() { return <AboutPage />; }

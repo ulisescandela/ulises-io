@@ -1,7 +1,8 @@
 import { notFound } from 'next/navigation';
 import { getEnglishPosts } from '@lib/translations';
 import { decodeRouteParam } from '@lib/routeParams';
-import PostsListClient from '@/components/common/PostsListClient';
-export function generateStaticParams() { return [...new Set(getEnglishPosts().map(p => p.frontMatter.category))].map(category => ({ category })); }
-export async function generateMetadata({ params }) { const { category } = await params; const name = decodeRouteParam(category); return { title: `${name} articles`, alternates: { canonical: `https://ulises.io/en/category/${encodeURIComponent(name)}` } }; }
-export default async function Category({ params }) { const { category } = await params; const name = decodeRouteParam(category); const posts = getEnglishPosts().filter(p => p.frontMatter.category === name); if (!posts.length) notFound(); return <main className="max-w-5xl mx-auto px-4 sm:px-6 pt-32 pb-12 text-white"><h1 className="text-4xl font-bold mb-8">{name}</h1><PostsListClient initialPosts={posts} language="en" initialCount={posts.length} /></main>; }
+import CollectionPage from '@/components/pages/CollectionPage';
+import BlogShell from '@/components/pages/BlogShell';
+export function generateStaticParams() { return [...new Set(getEnglishPosts().map(post => post.frontMatter.category))].map(category => ({ category })); }
+export async function generateMetadata({ params }) { const { category } = await params; const label = decodeRouteParam(category); return { title: `${label} articles`, alternates: { canonical: `https://ulises.io/en/category/${encodeURIComponent(label)}` }, robots: { index: true, follow: true } }; }
+export default async function Page({ params }) { const { category } = await params; const label = decodeRouteParam(category); const posts = getEnglishPosts().filter(post => post.frontMatter.category === label); if (!posts.length) notFound(); return <BlogShell language="en"><CollectionPage kind="category" label={label} posts={posts} language="en" /></BlogShell>; }

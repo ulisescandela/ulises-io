@@ -60,10 +60,15 @@ Puedes pasar una URL base como argumento para otro puerto o entorno.
 
 ## Contenido bilingüe
 
-Las URLs españolas siguen en `/blog/<slug>`. El catálogo inglés está en `/en`
-y cada traducción vive en `/en/<slug-en-inglés>`, con Markdown en `posts/en`.
+Las URLs españolas siguen en `/blog/<slug>`. La portada inglesa está en `/en` y el catálogo en `/en/blog`.
+Cada traducción vive en `/en/<slug-en-inglés>`, con Markdown en `posts/en`.
 `sourceSlug` enlaza con el artículo español y `lib/translation-map.json` documenta
 las parejas. No hay redirecciones automáticas por idioma o país.
+
+Ambos idiomas usan las mismas plantillas en `src/components/pages`: portada,
+blog, artículos, categorías, etiquetas, rutas y páginas informativas. Los textos
+y destinos cambian por idioma; el diseño se comparte. `lib/locales.js` traduce
+categorías y etiquetas, preservando la clasificación del catálogo español.
 
 Cada versión tiene canonical propio, HTML `lang` e indicadores `hreflang`
 recíprocos. El sitemap incluye ambas. La misma variable `NEXT_PUBLIC_GA_ID` sigue

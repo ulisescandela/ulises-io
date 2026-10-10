@@ -1,3 +1,4 @@
+import { translateCategory, translateTag } from '../lib/locales.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { getAllPostsData, getPostBySlug, preparePostContent } from '../lib/posts.js';
@@ -38,4 +39,14 @@ test('missing translations and duplicate leading titles are handled safely', () 
   assert.equal(getEnglishPost('unknown-article'), null);
   assert.equal(getPostBySlug('unknown-article'), null);
   assert.equal(preparePostContent('# Title\n\n## A section\n\nBody'), '## A section\n\nBody');
+});
+
+test('translated catalog keeps source order, categories and every tag', () => {
+  const source = getAllPostsData();
+  const translated = getEnglishPosts();
+  assert.deepEqual(translated.map(post => post.sourceSlug), source.map(post => post.slug));
+  for (let i = 0; i < source.length; i++) {
+    assert.equal(translated[i].frontMatter.category, translateCategory(source[i].frontMatter.category));
+    assert.deepEqual(translated[i].frontMatter.tags, source[i].frontMatter.tags.map(translateTag));
+  }
 });

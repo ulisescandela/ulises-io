@@ -14,6 +14,7 @@ function generateSitemap() {
   const today = getLocalDate();
   // Páginas estáticas
   const staticPages = [
+    ...["blog", "about", "contact", "privacy", "cv"].map(page => ({ url: `${baseUrl}/en/${page}`, lastModified: today, priority: 0.6 })),
     { url: `${baseUrl}/en/start-here`, lastModified: today, priority: 0.8 },
     { url: `${baseUrl}/en`, lastModified: today, priority: 0.8 },
     {

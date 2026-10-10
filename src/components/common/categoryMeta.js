@@ -1,3 +1,4 @@
+import { sourceCategory } from "../../../lib/locales";
 import { FiBriefcase, FiCode, FiTool, FiCpu, FiFeather, FiHash } from "react-icons/fi";
 
 // Metadatos visuales por categoría: icono, color de acento (clases Tailwind
@@ -42,6 +43,9 @@ const FALLBACK = {
   hoverBorder: "hover:!border-zinc-400/50",
 };
 
-export function getCategoryMeta(category) {
-  return CATEGORY_META[category] || FALLBACK;
+export function getCategoryMeta(category, language = "es") {
+  const key = sourceCategory(category);
+  const meta = CATEGORY_META[key] || FALLBACK;
+  const descriptions = { Carrera: "Career growth, interviews and soft skills", Programación: "Languages, logic and best practices", Herramientas: "Git, terminal and productivity", IA: "Artificial intelligence and its impact", Reflexiones: "Ideas, mindset and experiences" };
+  return language === "en" ? { ...meta, desc: descriptions[key] || "Blog articles" } : meta;
 }

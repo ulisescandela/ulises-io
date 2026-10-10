@@ -1,3 +1,4 @@
+import { sourceTag } from "../../../lib/locales";
 import { normalizeTags } from "../../../lib/tags";
 import Link from "next/link";
 
@@ -6,13 +7,13 @@ export default function TagsSection({ posts = [], language = "es" }) {
 
   const tagMap = {};
   posts.forEach((p) => {
-    (language === "en" ? [p.frontMatter.category].filter(Boolean) : normalizeTags(p.frontMatter?.tags)).forEach((key) => {
+    (language === "en" ? (p.frontMatter?.tags || []) : normalizeTags(p.frontMatter?.tags)).forEach((key) => {
       if (!tagMap[key]) tagMap[key] = [];
       tagMap[key].push(p);
     });
   });
 
-  const tags = Object.keys(tagMap).sort();
+  const tags = Object.keys(tagMap).sort((a, b) => { const first = language === "en" ? sourceTag(a) : a; const second = language === "en" ? sourceTag(b) : b; return first < second ? -1 : first > second ? 1 : 0; });
 
   return (
     <div className="w-full py-12 text-left">
@@ -25,7 +26,7 @@ export default function TagsSection({ posts = [], language = "es" }) {
         {tags.map((tag) => (
           <Link
             key={tag}
-            href={language === "en" ? `/en/category/${encodeURIComponent(tag)}` : `/blog/tag/${encodeURIComponent(tag)}`}
+            href={language === "en" ? `/en/tag/${encodeURIComponent(tag)}` : `/blog/tag/${encodeURIComponent(tag)}`}
             aria-label={language === "en" ? `Articles about ${tag}` : `Ver posts con la etiqueta ${tag}`}
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-zinc-300 hover:text-white hover:border-blue-400/50 hover:bg-blue-600/10 transition"
           >

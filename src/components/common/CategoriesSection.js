@@ -1,9 +1,10 @@
+import { sourceCategory } from "../../../lib/locales";
 import Link from "next/link";
 import { getCategoryMeta } from "./categoryMeta";
 
 // Muestra las categorías canónicas del blog como páginas pilar navegables,
 // cada una con su icono, color de acento y descripción.
-export default function CategoriesSection({ posts = [] }) {
+export default function CategoriesSection({ posts = [], language = "es" }) {
   if (!posts || posts.length === 0) return null;
 
   const counts = {};
@@ -13,25 +14,25 @@ export default function CategoriesSection({ posts = [] }) {
     counts[cat] = (counts[cat] || 0) + 1;
   });
 
-  const categories = Object.keys(counts).sort();
+  const categories = Object.keys(counts).sort((a, b) => { const first = sourceCategory(a); const second = sourceCategory(b); return first < second ? -1 : first > second ? 1 : 0; });
   if (categories.length === 0) return null;
 
   return (
     <div className="w-full py-10 text-left">
       <h2 className="text-2xl sm:text-3xl font-bold text-zinc-100 mb-8 flex items-center gap-3">
         <span className="h-6 w-1.5 rounded-full bg-gradient-to-b from-blue-400 to-purple-500" />
-        Explora por categoría
+        {language === "en" ? "Explore by category" : "Explora por categoría"}
       </h2>
 
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {categories.map((cat) => {
-          const meta = getCategoryMeta(cat);
+          const meta = getCategoryMeta(cat, language);
           const Icon = meta.icon;
           return (
             <Link
               key={cat}
-              href={`/blog/categoria/${encodeURIComponent(cat)}`}
-              aria-label={`Ver artículos de la categoría ${cat}`}
+              href={`${language === "en" ? "/en/category" : "/blog/categoria"}/${encodeURIComponent(cat)}`}
+              aria-label={language === "en" ? `Articles in ${cat}` : `Ver artículos de la categoría ${cat}`}
               className={`glass-card group flex items-start gap-4 p-5 rounded-2xl ${meta.hoverBorder}`}
             >
               <span

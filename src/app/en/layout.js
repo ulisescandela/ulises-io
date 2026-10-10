@@ -1,5 +1,4 @@
 import RootDocument from '@/components/layout/RootDocument';
-import Header from '@/components/layout/Header';
 
 export const metadata = {
   metadataBase: new URL('https://ulises.io'),
@@ -11,7 +10,6 @@ export const metadata = {
 export default function EnglishLayout({ children }) {
   return (
     <RootDocument lang="en">
-      <Header language="en" />
       {children}
     </RootDocument>
   );

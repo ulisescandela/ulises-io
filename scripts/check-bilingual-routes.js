@@ -31,11 +31,11 @@ for (const source of getAllPostsData()) {
 }
 const index = await page('/en');
 for (const post of getEnglishPosts().slice(0, 4)) assert.ok(index.includes(`/en/${post.slug}`), post.slug);
-for (const path of ['/', '/about', '/cv', '/contacto', '/privacy', '/empieza-aqui', '/rss.xml', '/en/start-here', '/en/rss.xml', '/recursos/portfolio-checklist.txt']) await page(path);
-for (const category of new Set(getEnglishPosts().map(post => post.frontMatter.category))) {
-  const html = await page(`/en/category/${encodeURIComponent(category)}`);
-  for (const post of getEnglishPosts().filter(post => post.frontMatter.category === category)) assert.ok(html.includes(`/en/${post.slug}`), post.slug);
-}
+for (const path of ['/', '/about', '/cv', '/contacto', '/privacy', '/empieza-aqui', '/rss.xml', '/en/start-here', '/en/blog', '/en/about', '/en/contact', '/en/privacy', '/en/cv', '/en/rss.xml', '/recursos/portfolio-checklist.txt']) await page(path);
+const englishBlog = await page('/en/blog');
+for (const post of getEnglishPosts()) assert.ok(englishBlog.includes(`/en/${post.slug}`), post.slug);
+for (const category of new Set(getEnglishPosts().map(post => post.frontMatter.category))) await page(`/en/category/${encodeURIComponent(category)}`);
+for (const tag of new Set(getEnglishPosts().flatMap(post => post.frontMatter.tags))) await page(`/en/tag/${encodeURIComponent(tag)}`);
 for (const text of ['grow as a developer', 'Choose your next step', 'Latest articles', 'Explore by topic', 'Download checklist']) assert.ok(index.includes(text), text);
 const missing = await fetch(new URL('/en/no-such-article', base));
 assert.equal(missing.status, 404);

@@ -79,7 +79,7 @@ const initialCv = {
   }
 }
 
-export default function CVPage() {
+export default function CVPage({ language = "es" }) {
   const [cv, setCv] = useState(initialCv);
 
   const handleUnlock = (data) => {
@@ -93,7 +93,7 @@ export default function CVPage() {
     <>
       <div className="flex justify-between items-start px-10 sticky top-4 z-50 pointer-events-none print:hidden">
         <div className="pointer-events-auto">
-          <Link href="/">
+          <Link href={language === "en" ? "/en" : "/"}>
             <div className="flex flex-row gap-2 items-center bg-white text-blue-700 font-medium text-sm border border-gray-200 rounded-xl p-2.5 shadow-sm hover:shadow-lg transition-all duration-300 hover:cursor-pointer">
               <HiArrowLeft className="w-4 h-4" />
               <span className="text-sm">Return to home</span>
