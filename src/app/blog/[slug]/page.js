@@ -9,6 +9,7 @@ import ReadingProgress from '@/components/blog/ReadingProgress';
 import TableOfContents from '@/components/blog/TableOfContents';
 import ScrollToTop from '@/components/common/ScrollToTop';
 import Link from 'next/link';
+import ReaderResources from '@/components/common/ReaderResources';
 import { notFound } from 'next/navigation';
 
 export { generateStaticParams };
@@ -164,6 +165,7 @@ export default async function BlogPost({ params }) {
         </Link>
       </div>
 
+      <ReaderResources portfolio={slug === 'proyectos-valiosos-para-tu-cv-programador'} />
       <RelatedPosts posts={related} />
     </article>
   );

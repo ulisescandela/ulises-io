@@ -1,4 +1,4 @@
-import PostCard from "../blog/postCard";
+import { normalizeTags } from "../../../lib/tags";
 import Link from "next/link";
 
 export default function TagsSection({ posts = [] }) {
@@ -6,18 +6,10 @@ export default function TagsSection({ posts = [] }) {
 
   const tagMap = {};
   posts.forEach((p) => {
-    const tags = p.frontMatter?.tags || [];
-    if (Array.isArray(tags)) {
-      tags.forEach((t) => {
-        const key = String(t);
-        if (!tagMap[key]) tagMap[key] = [];
-        tagMap[key].push(p);
-      });
-    } else if (tags) {
-      const key = String(tags);
+    normalizeTags(p.frontMatter?.tags).forEach((key) => {
       if (!tagMap[key]) tagMap[key] = [];
       tagMap[key].push(p);
-    }
+    });
   });
 
   const tags = Object.keys(tagMap).sort();
@@ -26,7 +18,7 @@ export default function TagsSection({ posts = [] }) {
     <div className="w-full py-12 text-left">
       <h2 className="text-2xl sm:text-3xl font-bold text-zinc-100 mb-8 flex items-center gap-3">
         <span className="h-6 w-1.5 rounded-full bg-gradient-to-b from-cyan-400 to-blue-500" />
-        Explora por tag
+        Explora por tema
       </h2>
 
       <div className="flex flex-wrap gap-3">
