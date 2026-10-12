@@ -44,3 +44,14 @@ idioma original y los enlaces entre artículos apuntan a sus versiones inglesas.
 
 Referencias: [Google: versiones localizadas](https://developers.google.com/search/docs/specialty/international/localized-versions),
 [Google: contenido útil](https://developers.google.com/search/docs/fundamentals/creating-helpful-content).
+
+
+## Search demand and implementation — 2026-10-12
+Screenshots supplied by the owner show 361 clicks, approximately 5,530 impressions and 6.5% CTR over 28 days. The ten visible query rows total 163 clicks; this is a query subset, not an article total. The property name and query/page associations are not visible. Owner context identifies these as Ulises.io; confirm page filtering in Search Console before attributing all rows to one article. Main visible query: historia de la programación, 74 clicks / 731 impressions (10.1% CTR); structured-programming variants also appear.
+
+Keep the winning history URL and title. Add definitions of origins/history/evolution, structured-programming history, a runnable example, concept distinctions and a primary Dijkstra source. Expand four related guides with executable examples or diagnostic/decision tables; mirror additions in English. Homepage metadata now matches learning routes; its large tag cloud is replaced by a blog link. CV gets distinct metadata from a server route. Sitemap uses content dates for edited articles and omits fabricated dates on static pages.
+
+Validate code examples, build, internal links and rendered canonical/hreflang/H1. After deployment compare this unchanged history URL over 28-day periods by query, country and device. Do not change functioning titles based on CTR without position context. Outreach, authentic project screenshots and external backlinks remain owner/account-dependent; no outreach was sent.
+
+
+Validation: production build passed. 110 sitemap URLs passed HTTP, canonical and H1 checks; Python examples executed successfully. Browser screenshot QA could not run because Chromium download failed in this environment. Visual approval, real account integration and production verification remain pending.

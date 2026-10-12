@@ -1,4 +1,5 @@
 ---
+updated: "2026-10-12"
 title: 'Python Tutorial for Beginners: Build Your First Project'
 sourceSlug: tutorial-python-principiantes-proyecto-basico
 category: Programming
@@ -457,3 +458,33 @@ What project are you going to build with Python? Tell me in my networks.
 ---
 
 Did this tutorial help you? Share it with someone who wants to learn Python. And follow me for more practical tutorials.
+
+## Test the calculator with awkward inputs
+
+Separate calculation from keyboard input so it can be checked without entering every value manually.
+
+```python
+def calculate(a, b, operation):
+    if operation == "+":
+        return a + b
+    if operation == "-":
+        return a - b
+    if operation == "*":
+        return a * b
+    if operation == "/":
+        if b == 0:
+            raise ValueError("Cannot divide by zero")
+        return a / b
+    raise ValueError("Unsupported operation")
+
+assert calculate(8, 2, "/") == 4
+assert calculate(-3, 5, "+") == 2
+try:
+    calculate(8, 0, "/")
+except ValueError as error:
+    assert str(error) == "Cannot divide by zero"
+else:
+    raise AssertionError("Division by zero should be rejected")
+```
+
+Save this as `calculator_test.py` and run `python calculator_test.py`. Passing checks produce no output. Add a check for an unknown operation. Validate empty text and invalid numbers separately in the layer using `input()`. In your README explain execution, accepted inputs and handled errors, then explore [data structures](/en/programming-logic-and-data-structures-guide).

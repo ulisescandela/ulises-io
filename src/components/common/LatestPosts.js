@@ -1,7 +1,7 @@
 import { getAllPostsData } from "../../../lib/posts";
 import { getEnglishPosts } from "../../../lib/translations";
 import PostsListClient from "@/components/common/PostsListClient";
-import TagsSection from "@/components/common/TagsSection";
+import Link from "next/link";
 
 export default function LatestPosts({ language = "es" }) {
   const posts = language === "en" ? getEnglishPosts() : getAllPostsData();
@@ -15,7 +15,7 @@ export default function LatestPosts({ language = "es" }) {
 
       <PostsListClient initialPosts={posts} initialCount={4} increment={4} language={language} />
 
-      <TagsSection posts={posts} language={language} />
+      <Link href={language === "en" ? "/en/blog" : "/blog"} className="inline-block mt-8 text-blue-300 underline underline-offset-4">{language === "en" ? "Explore all programming guides" : "Explora todas las guías de programación"} →</Link>
     </section>
   );
 }
