@@ -5,51 +5,38 @@ import path from 'path';
 
 const baseUrl = 'https://ulises.io';
 
-// Obtener fecha en zona horaria de México (America/Mexico_City)
-function getLocalDate() {
-  return new Date().toLocaleDateString('en-CA', { timeZone: 'America/Mexico_City' });
-}
-
 function generateSitemap() {
-  const today = getLocalDate();
   // Páginas estáticas
   const staticPages = [
-    ...["blog", "about", "contact", "privacy", "cv"].map(page => ({ url: `${baseUrl}/en/${page}`, lastModified: today, priority: 0.6 })),
-    { url: `${baseUrl}/en/start-here`, lastModified: today, priority: 0.8 },
-    { url: `${baseUrl}/en`, lastModified: today, priority: 0.8 },
+    ...["blog", "about", "contact", "privacy", "cv"].map(page => ({ url: `${baseUrl}/en/${page}`, priority: 0.6 })),
+    { url: `${baseUrl}/en/start-here`, priority: 0.8 },
+    { url: `${baseUrl}/en`, priority: 0.8 },
     {
       url: `${baseUrl}/empieza-aqui`,
-      lastModified: today,
       priority: 0.8,
     },
     {
       url: baseUrl,
-      lastModified: today,
       priority: 1,
     },
     {
       url: `${baseUrl}/blog`,
-      lastModified: today,
       priority: 0.9,
     },
     {
       url: `${baseUrl}/cv`,
-      lastModified: today,
       priority: 0.8,
     },
     {
       url: `${baseUrl}/about`,
-      lastModified: today,
       priority: 0.6,
     },
     {
       url: `${baseUrl}/contacto`,
-      lastModified: today,
       priority: 0.6,
     },
     {
       url: `${baseUrl}/privacy`,
-      lastModified: today,
       priority: 0.4,
     },
   ];
@@ -65,16 +52,15 @@ function generateSitemap() {
   // Páginas de categoría (indexables, páginas pilar)
   const categoryPages = getAllCategories().map((category) => ({
     url: `${baseUrl}/blog/categoria/${encodeURIComponent(category)}`,
-    lastModified: today,
     priority: 0.6,
   }));
 
   const englishPages = getEnglishPosts().map((post) => ({
     url: `${baseUrl}/en/${post.slug}`,
-    lastModified: post.frontMatter.translated || post.frontMatter.date,
+    lastModified: post.frontMatter.updated || post.frontMatter.translated || post.frontMatter.date,
     priority: 0.7,
   }));
-  const englishCategories = [...new Set(getEnglishPosts().map(post => post.frontMatter.category))].map(category => ({ url: `${baseUrl}/en/category/${encodeURIComponent(category)}`, lastModified: today, priority: 0.6 }));
+  const englishCategories = [...new Set(getEnglishPosts().map(post => post.frontMatter.category))].map(category => ({ url: `${baseUrl}/en/category/${encodeURIComponent(category)}`, priority: 0.6 }));
   const allPages = [...staticPages, ...blogPosts, ...categoryPages, ...englishPages, ...englishCategories];
 
   // Generar XML
@@ -84,7 +70,7 @@ ${allPages
   .map(
     (page) => `  <url>
     <loc>${page.url}</loc>
-    <lastmod>${page.lastModified}</lastmod>
+    ${page.lastModified ? `<lastmod>${page.lastModified}</lastmod>` : ""}
     <changefreq>weekly</changefreq>
     <priority>${page.priority}</priority>
   </url>`

@@ -1,4 +1,5 @@
 ---
+updated: "2026-10-12"
 title: "How the Internet Works When You Open a Website: DNS, HTTPS and the Browser"
 sourceSlug: como-funciona-internet-al-abrir-una-web
 category: Programming
@@ -146,3 +147,15 @@ Practice with a small page and explain its journey in your own words. Then build
 - [IETF, RFC 8446](https://www.rfc-editor.org/rfc/rfc8446): TLS 1.3.
 - [IETF, RFC 9114](https://www.rfc-editor.org/rfc/rfc9114): HTTP/3.
 - [ICANN: what ICANN does](https://www.icann.org/resources/pages/what-2012-02-25-en): domain and DNS context.
+
+## Diagnose by layer when a website will not load
+
+| Observation | First check | What it does not establish |
+| --- | --- | --- |
+| Name resolution fails | DNS and requested hostname | That the application is down |
+| Connection or TLS fails | Server reachability and certificate | That the HTML is broken |
+| HTTP 404 | Route and deployment | That the entire network failed |
+| HTTP 500 | Server logs and request | That the browser needs reinstalling |
+| HTML arrives but interaction fails | Console and JavaScript resources | That Google indexed the page correctly |
+
+Open browser developer tools and inspect Network after reloading a public page. Identify the document request, its status and subsequent resources. Check Console for errors; do not paste unknown scripts to fix a page. In your own project, temporarily break a resource path, observe the failed request, then restore it. Relate symptoms to layers rather than changing everything at once. Continue with the [history of web programming](/en/history-of-programming-languages-and-technologies).

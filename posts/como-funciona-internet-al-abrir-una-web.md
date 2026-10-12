@@ -1,4 +1,5 @@
 ---
+updated: "2026-10-12"
 title: "Cómo funciona Internet al abrir una web: de DNS a HTTPS y al navegador"
 category: "Programación"
 date: "2026-10-10"
@@ -137,6 +138,20 @@ Puedes empezar sin dominar redes. Para crear aplicaciones web, entender URL, DNS
 ## Qué aprender después
 
 Practica con una página pequeña y describe su recorrido con tus propias palabras. Luego construye un proyecto donde puedas explicar la interfaz, la solicitud, el servidor y la respuesta. Si buscas una idea concreta, revisa estos [proyectos para tu portafolio](/blog/proyectos-valiosos-para-tu-cv-programador).
+
+## Diagnostica por capas: una web no carga
+
+| Lo que observas | Qué revisar primero | Lo que no demuestra |
+| --- | --- | --- |
+| No se resuelve el nombre | DNS y nombre solicitado | Que la aplicación esté caída |
+| Falla la conexión o TLS | Acceso al servidor y certificado | Que el HTML tenga un error |
+| Respuesta HTTP 404 | Ruta y despliegue | Que falle toda la red |
+| Respuesta HTTP 500 | Registros del servidor y petición | Que el navegador necesite reinstalarse |
+| HTML llega pero falta interacción | Consola y archivos JavaScript | Que Google haya indexado correctamente la página |
+
+Abre las herramientas de desarrollo del navegador y revisa la pestaña Network. Recarga una página pública: identifica la petición del documento, su estado y los archivos que solicita después. En Console comprueba si hay errores; no pegues scripts desconocidos para “arreglar” una web.
+
+En un proyecto propio cambia temporalmente una ruta de un recurso y observa qué petición falla. Luego restáurala. El objetivo es relacionar el síntoma con una capa, no cambiar varias cosas a ciegas. Para entender por qué el navegador se volvió una plataforma de software, continúa con la [historia de la programación web](/blog/evolucion-programacion-historia-2026).
 
 ## Fuentes para profundizar
 

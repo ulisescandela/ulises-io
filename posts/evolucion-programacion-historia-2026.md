@@ -2,7 +2,7 @@
 title: "La Evolución de la Programación: Historia Completa de los Lenguajes y Tecnologías"
 category: "Programación"
 date: "2026-01-24"
-updated: "2026-10-10"
+updated: "2026-10-12"
 excerpt: "Un viaje completo por la historia de la programación. Descubre cómo hemos pasado del código máquina y los primeros lenguajes hasta la era móvil y la nube."
 readTime: "14 min"
 tags: ["Historia Tech", "Evolución", "Programación", "Lenguajes"]
@@ -14,7 +14,7 @@ coverImage: ""
 
 La programación ha recorrido un camino extraordinario. Lo que comenzó como interruptores físicos y tarjetas de papel perforadas se ha transformado en lenguajes expresivos y plataformas en la nube que permiten crear aplicaciones complejas con relativa facilidad.
 
-Entender de dónde venimos es crucial para comprender hacia dónde vamos. En este artículo recorreremos la **historia y evolución de la programación** completa: desde el primer algoritmo de Ada Lovelace, pasando por el ensamblador, los lenguajes de alto nivel y la programación estructurada, hasta la era móvil, la nube y la inteligencia artificial. Estos son los hitos que han moldeado el desarrollo de software tal como lo conocemos hoy.
+Entender de dónde venimos es crucial para comprender hacia dónde vamos. En este artículo recorreremos la **historia y evolución de la programación** completa: desde el procedimiento de Ada Lovelace destinado a la Máquina Analítica, pasando por el ensamblador, los lenguajes de alto nivel y la programación estructurada, hasta la era móvil, la nube y la inteligencia artificial. Estos son los hitos que han moldeado el desarrollo de software tal como lo conocemos hoy.
 
 ## Los Inicios: El Hardware era el Software
 
@@ -41,7 +41,7 @@ Si quieres ver cómo se traduce todo esto a las opciones de hoy, te dejo mi guí
 
 Antes de la orientación a objetos hubo una revolución silenciosa pero igual de importante: la **programación estructurada**. En los primeros años, el flujo de un programa se controlaba a base de saltos `GOTO`, lo que producía el temido "código espagueti": programas imposibles de leer, depurar o mantener.
 
-En 1968, el científico **Edsger Dijkstra** publicó su célebre carta *"Go To Statement Considered Harmful"* ("La sentencia Go To considerada dañina"), que encendió el debate. La propuesta era radical para la época: cualquier programa podía escribirse usando solo **tres estructuras de control**:
+En 1968, el científico **Edsger Dijkstra** publicó su célebre carta *"Go To Statement Considered Harmful"* ("La sentencia Go To considerada dañina"), que encendió el debate. La programación estructurada favoreció organizar el flujo alrededor de **tres estructuras de control**, en lugar de depender de saltos indiscriminados:
 
 1.  **Secuencia:** instrucciones que se ejecutan una tras otra.
 2.  **Selección:** decisiones con `if / else` o `switch`.
@@ -115,6 +115,46 @@ Porque cada paradigma actual (POO, funcional, IA) nació para resolver un proble
 Mirando hacia atrás, la tendencia es clara: **cada evolución ha elevado el nivel de abstracción**. Pasamos de controlar electrones a escribir lógica de negocio.
 
 Lejos de desaparecer, la programación se ha vuelto más accesible y poderosa. La historia de la programación es, en última instancia, la historia de cómo los humanos buscamos herramientas más eficientes para materializar nuestras ideas.
+
+## Origen, historia y evolución: tres preguntas distintas
+
+El **origen de la programación** no es una sola fecha. Hay que distinguir los algoritmos, que existían antes de las computadoras; los procedimientos diseñados para máquinas, como las notas de Lovelace de 1843; y la programación de computadoras electrónicas del siglo XX. También conviene separar la aparición de una idea de su adopción: un lenguaje puede existir durante años antes de convertirse en una herramienta común.
+
+La **historia** organiza estos acontecimientos; la **evolución** explica qué problema intentaba resolver cada cambio. El ensamblador facilitó expresar instrucciones de máquina. Los lenguajes de alto nivel permitieron escribir operaciones con mayor abstracción. La programación estructurada ayudó a razonar sobre el flujo de control. El despliegue web cambió cómo se distribuía el software. Ninguna etapa eliminó por completo las anteriores: hoy siguen existiendo ensamblador, C, aplicaciones empresariales, servicios web y asistentes de IA.
+
+## Historia y evolución de la programación estructurada
+
+La programación estructurada no nació como una función de Python o Java. Se desarrolló alrededor de un problema previo: comprender programas cuyo flujo saltaba entre lugares difíciles de seguir. La carta de Dijkstra de 1968 criticó el uso indiscriminado de `GOTO`; no debe confundirse esa carta con todos los resultados formales sobre estructuras de control ni con el único origen del movimiento.
+
+Un ejemplo actual muestra su utilidad. Para sumar solo las ventas positivas de una lista podemos expresar secuencia, selección e iteración en pocas líneas:
+
+```python
+ventas = [120, -20, 80, 0]
+total = 0
+for venta in ventas:
+    if venta > 0:
+        total += venta
+print(total)  # 200
+```
+
+La secuencia inicializa datos; el bucle recorre valores; la condición decide qué sumar. El beneficio no es que el programa sea moderno, sino que otra persona puede seguir la ejecución y verificar el resultado. Como ejercicio, mueve la suma a una función y comprueba una lista vacía. La misma idea puede implementarse en C, JavaScript o Python sin cambiar el razonamiento.
+
+### Lenguajes, paradigmas y plataformas no son lo mismo
+
+| Concepto | Pregunta que responde | Ejemplo |
+| --- | --- | --- |
+| Lenguaje | ¿Con qué sintaxis expreso instrucciones? | C, Python, JavaScript |
+| Paradigma | ¿Cómo organizo el problema y el código? | Estructurado, orientado a objetos, funcional |
+| Plataforma | ¿Dónde ejecuto o distribuyo el programa? | Navegador, sistema operativo, nube |
+| Herramienta | ¿Qué me ayuda a construir o revisar? | Compilador, editor, asistente de IA |
+
+Un lenguaje puede admitir varios paradigmas. La nube no es un lenguaje y un asistente de IA no convierte automáticamente un programa en correcto. Separar estas categorías evita una cronología que mezcle invenciones incomparables.
+
+### Cómo estudiar esta historia sin memorizar fechas sueltas
+
+Para cada hito escribe tres cosas: el problema anterior, el cambio introducido y lo que todavía queda bajo responsabilidad del programador. Después implementa el mismo cálculo con un bucle, una función y una clase; explica cuándo cada organización facilita entenderlo. Continúa con la [guía de lógica y estructuras de datos](/blog/guia-completa-logica-estructuras-de-datos) y el [proyecto inicial de Python](/blog/tutorial-python-principiantes-proyecto-basico).
+
+Fuente primaria para profundizar: [carta de Dijkstra sobre GOTO, conservada por la Universidad de Texas](https://www.cs.utexas.edu/~EWD/transcriptions/EWD02xx/EWD215.html).
 
 ## Fuentes para profundizar
 

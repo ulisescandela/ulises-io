@@ -1,4 +1,5 @@
 ---
+updated: "2026-10-12"
 title: 'Programming Logic and Data Structures: A Complete Guide'
 sourceSlug: guia-completa-logica-estructuras-de-datos
 category: Programming
@@ -1543,3 +1544,25 @@ You don't need to be a math genius or have studied computer science. You need cu
 It begins today. One problem at a time. In 3 months you will be surprised how much progress you have made.
 
 And remember: every senior you admire went through exactly the same process. The difference is that they started earlier. Your time to start is now.
+
+## A complete exercise: find the first repeated sale ID
+
+A list preserves order; a set records identifiers already seen. Combining them avoids comparing every item with every previous item.
+
+```python
+def first_repeat(ids):
+    seen = set()
+    for identifier in ids:
+        if identifier in seen:
+            return identifier
+        seen.add(identifier)
+    return None
+
+assert first_repeat([7, 2, 7, 3]) == 7
+assert first_repeat([7, 2, 3]) is None
+assert first_repeat([]) is None
+```
+
+“First” means the first repeat encountered in input order. For hashable values, set operations have average constant cost, giving expected O(n) time and up to O(n) space; hashing does not guarantee that every operation has constant cost.
+
+For `[2, 1, 1, 2]`, the result is `1`. Define the intended result before changing the data structure. For objects, choose a stable key. For large inputs, consider memory as well as time. Read the [history of structured programming](/en/history-of-programming-languages-and-technologies), then turn this exercise into a validation with helpful user-facing errors.

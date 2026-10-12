@@ -1,4 +1,5 @@
 ---
+updated: "2026-10-12"
 title: "Guía Completa para Aprender Lógica de Programación y Estructuras de Datos"
 category: "Programación"
 date: "2026-01-27"
@@ -1544,3 +1545,27 @@ No necesitas ser un genio de las matemáticas ni haber estudiado computer scienc
 Empieza hoy. Un problema a la vez. En 3 meses te sorprenderá cuánto has avanzado.
 
 Y recuerda: cada senior que admiras pasó por exactamente el mismo proceso. La diferencia es que ellos empezaron antes. Tu momento de empezar es ahora.
+
+## Un ejercicio completo: encontrar la primera venta repetida
+
+Una lista conserva el orden; un conjunto permite registrar los identificadores vistos. Combinar ambas estructuras evita comparar cada venta con todas las anteriores.
+
+```python
+def primera_repetida(ids):
+    vistos = set()
+    for identificador in ids:
+        if identificador in vistos:
+            return identificador
+        vistos.add(identificador)
+    return None
+
+assert primera_repetida([7, 2, 7, 3]) == 7
+assert primera_repetida([7, 2, 3]) is None
+assert primera_repetida([]) is None
+```
+
+La función devuelve la primera repetición encontrada al recorrer la entrada, no el número más pequeño repetido. Para valores hashables, las operaciones del conjunto tienen coste promedio constante; el recorrido tiene coste esperado O(n) y necesita hasta O(n) espacio. Ese coste no debe presentarse como una garantía absoluta de cada operación de hash.
+
+Prueba `[2, 1, 1, 2]`: el resultado es `1`. Antes de cambiar la estructura, define qué significa “primera”. Si necesitas detectar repeticiones de objetos, elige una clave estable. Si la entrada es enorme, considera la memoria además del tiempo.
+
+La [historia de la programación estructurada](/blog/evolucion-programacion-historia-2026) explica por qué organizar el flujo ayuda a verificar algoritmos. Como siguiente paso, convierte este ejercicio en una validación de datos con mensajes claros para el usuario.

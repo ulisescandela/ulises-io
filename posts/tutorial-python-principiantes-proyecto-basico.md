@@ -1,4 +1,5 @@
 ---
+updated: "2026-10-12"
 title: "Tutorial de Python para Principiantes: Lo Básico + Calculadora Interactiva"
 category: "Programación"
 date: "2026-01-19"
@@ -458,3 +459,35 @@ El secreto es practicar. No solo leas, escribe código, rompe cosas, y construye
 ---
 
 *¿Te sirvió este tutorial? Compártelo con alguien que quiera aprender Python. Y sígueme para más tutoriales prácticos.*
+
+## Comprueba la calculadora con entradas incómodas
+
+Que el ejemplo feliz funcione no basta. Separa el cálculo de la lectura de teclado para comprobarlo sin repetir manualmente cada entrada.
+
+```python
+def calcular(a, b, operacion):
+    if operacion == "+":
+        return a + b
+    if operacion == "-":
+        return a - b
+    if operacion == "*":
+        return a * b
+    if operacion == "/":
+        if b == 0:
+            raise ValueError("No se puede dividir entre cero")
+        return a / b
+    raise ValueError("Operación no admitida")
+
+assert calcular(8, 2, "/") == 4
+assert calcular(-3, 5, "+") == 2
+try:
+    calcular(8, 0, "/")
+except ValueError as error:
+    assert str(error) == "No se puede dividir entre cero"
+else:
+    raise AssertionError("Se esperaba rechazar la división entre cero")
+```
+
+Guarda este fragmento como `prueba_calculadora.py` y ejecuta `python prueba_calculadora.py`. Si pasa, termina sin imprimir nada. Añade una comprobación para una operación desconocida. Después valida texto vacío y números inválidos en la capa que usa `input()`: eso es diferente de comprobar la función que ya recibe números.
+
+Una mejora útil para tu proyecto es explicar en el README cómo ejecutarlo, qué entradas admite y qué errores maneja. Luego revisa la [guía de estructuras de datos](/blog/guia-completa-logica-estructuras-de-datos) para elegir tu próximo ejercicio.

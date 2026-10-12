@@ -1,4 +1,5 @@
 ---
+updated: "2026-10-12"
 title: Programming Languages in 2026 and Projects to Get Started
 sourceSlug: lenguajes-de-programacion-2026-y-proyectos-para-empezar
 category: Programming
@@ -185,3 +186,14 @@ Have you decided what your next language will be? Tell me in my networks what yo
 ---
 
 Did you like this article? Share it with someone who is deciding what to learn. And if you want more content on development and tech career, follow me so you do not miss the next publications.
+
+## Choose around a project you can finish
+
+| Starter project | Reasonable option | Evidence of learning |
+| --- | --- | --- |
+| Process a sales file | Python | Read, validate and summarize reproducible input |
+| Browser application | JavaScript | Forms, state and helpful error handling |
+| HTTP service with persistence | Python or JavaScript | Validation, queries and predictable error responses |
+| Explore memory and compilation | C | Explain bounds, memory and program behavior |
+
+This is not a universal ranking. Choose around the execution environment, documentation and your ability to debug the project. Before switching languages, implement a function independently, debug unexpected input and explain a data-structure choice. Start with the [logic exercise](/en/programming-logic-and-data-structures-guide) and use [programming history](/en/history-of-programming-languages-and-technologies) to understand the languages' original goals.

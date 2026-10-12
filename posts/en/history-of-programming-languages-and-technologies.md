@@ -3,7 +3,7 @@ title: "The History of Programming: Languages, Paradigms and Technologies"
 sourceSlug: evolucion-programacion-historia-2026
 category: Programming
 date: '2026-01-24'
-updated: '2026-10-10'
+updated: "2026-10-12"
 excerpt: Explore programming history from Ada Lovelace and assembly to high-level languages, structured programming, the web, cloud computing and AI.
 published: true
 translated: '2026-10-10'
@@ -126,6 +126,46 @@ Programming tools and paradigms developed in response to specific problems. Unde
 Many developments in programming have increased the level of abstraction available to developers. We can express more complex behavior without managing every low-level detail ourselves.
 
 That progress changes the work rather than making understanding irrelevant. The history of programming offers useful context for choosing tools, learning fundamentals and evaluating what a new technology can actually do.
+
+## Origins, history and evolution are different questions
+
+Programming does not have a single starting date. Algorithms predate computers; Lovelace's 1843 notes describe a procedure intended for a machine; electronic computer programming developed in the twentieth century. The appearance of an idea also differs from its widespread adoption.
+
+History organizes events. Evolution explains the problems those changes addressed: assembly made machine instructions easier to express, higher-level languages raised abstraction, structured programming improved reasoning about control flow, and the web changed distribution. These developments coexist today rather than replacing every earlier approach.
+
+## The history and evolution of structured programming
+
+Structured programming predates Python and Java. It developed around the difficulty of understanding unrestricted jumps in control flow. Dijkstra's 1968 letter challenged indiscriminate use of GOTO; the letter should not be confused with every formal result about control structures or treated as the movement's sole origin.
+
+This modern example sums positive sales:
+
+```python
+sales = [120, -20, 80, 0]
+total = 0
+for sale in sales:
+    if sale > 0:
+        total += sale
+print(total)  # 200
+```
+
+Initialization provides sequence, the loop provides iteration and the condition provides selection. A reader can trace the execution and verify the result. Move the calculation into a function, then check an empty list. The reasoning can be implemented in C, JavaScript or Python.
+
+### Languages, paradigms and platforms are different
+
+| Concept | Question | Example |
+| --- | --- | --- |
+| Language | Which syntax expresses instructions? | C, Python, JavaScript |
+| Paradigm | How is the problem and code organized? | Structured, object-oriented, functional |
+| Platform | Where does software run or get distributed? | Browser, operating system, cloud |
+| Tool | What helps build or review it? | Compiler, editor, AI assistant |
+
+A language can support multiple paradigms. Cloud computing is not a language, and AI assistance does not automatically make code correct. Keeping these categories separate makes the timeline more useful.
+
+### Study the problems, not just dates
+
+For each milestone, record the previous problem, the change and the responsibilities still left to the developer. Implement the same calculation with a loop, a function and a class, then explain which organization makes sense for the task. Continue with [programming logic and data structures](/en/programming-logic-and-data-structures-guide) and the [beginner Python project](/en/python-tutorial-for-beginners-with-a-project).
+
+Primary source: [Dijkstra's letter on GOTO in the University of Texas archive](https://www.cs.utexas.edu/~EWD/transcriptions/EWD02xx/EWD215.html).
 
 ## Further reading and historical sources
 
