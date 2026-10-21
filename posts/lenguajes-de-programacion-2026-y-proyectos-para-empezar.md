@@ -2,7 +2,8 @@
 title: "Lenguajes de Programación que Debes Aprender en 2026 (y Proyectos para Empezar)"
 category: "Programación"
 date: "2026-01-16"
-excerpt: "¿No sabes qué lenguaje aprender en 2026? Te cuento cuáles dominan el mercado, cuáles están en auge y te doy ideas de proyectos prácticos para cada uno que puedes agregar a tu portafolio."
+updated: "2026-10-21"
+excerpt: "Compara JavaScript, TypeScript, Python, Go, Rust y SQL según el proyecto que quieres construir. Incluye criterios de elección y prácticas concretas."
 readTime: "10 min"
 tags: ["Programación", "Lenguajes", "Proyectos", "Portafolio", "2026"]
 published: true
@@ -11,7 +12,7 @@ coverImage: ""
 
 Elegir tu primer (o siguiente) lenguaje de programación puede sentirse abrumador. Hay decenas de opciones, cada comunidad te dice que el suyo es el mejor, y las tendencias cambian constantemente. ¿Por dónde empezar?
 
-En este artículo te doy mi perspectiva honesta sobre qué lenguajes vale la pena aprender en 2026, basándome en demanda laboral, versatilidad y curva de aprendizaje. Además, para cada lenguaje te propongo **proyectos concretos** que puedes construir para practicar y llenar tu portafolio.
+En este artículo te doy mi perspectiva honesta sobre qué lenguajes vale la pena aprender en 2026, usando criterios de versatilidad, ecosistema y curva de aprendizaje; no es un ranking medido de vacantes. Además, para cada lenguaje te propongo **proyectos concretos** que puedes construir para practicar y llenar tu portafolio.
 
 ## El criterio: ¿Qué hace que un lenguaje valga la pena?
 
@@ -28,12 +29,12 @@ Con esto en mente, vamos a la lista.
 
 ## 1. JavaScript / TypeScript: El rey indiscutible del web
 
-No hay forma de evitarlo: si quieres trabajar en desarrollo web (frontend o backend), JavaScript es obligatorio. Y en 2026, **TypeScript** ya no es opcional, es el estándar en equipos profesionales.
+No hay forma de evitarlo: si quieres trabajar en desarrollo web (frontend o backend), JavaScript es obligatorio. **TypeScript** añade comprobaciones estáticas útiles; su adopción depende del proyecto y del equipo.
 
 ### ¿Por qué aprenderlo?
 
 - Literalmente corre en todos lados: navegadores, servidores (Node.js), apps móviles (React Native), desktop (Electron).
-- La demanda de desarrolladores JS/TS sigue siendo la más alta del mercado.
+- JavaScript y TypeScript permiten trabajar con un ecosistema amplio de aplicaciones web.
 - El ecosistema es gigante: React, Vue, Next.js, Svelte, y un nuevo framework cada semana (para bien o para mal).
 
 ### Proyectos para empezar:
@@ -87,11 +88,11 @@ Go fue creado por Google para resolver problemas de escalabilidad y rendimiento.
 
 ## 4. Rust: El futuro de la programación de sistemas
 
-Rust lleva años siendo votado como "el lenguaje más amado" en encuestas de desarrolladores. En 2026, ya no es solo para entusiastas: empresas como Microsoft, Amazon, y Cloudflare lo usan en producción.
+Rust propone un enfoque de sistemas basado en ownership y comprobaciones durante la compilación. En 2026, ya no es solo para entusiastas: empresas como Microsoft, Amazon, y Cloudflare lo usan en producción.
 
 ### ¿Por qué aprenderlo?
 
-- Seguridad de memoria sin garbage collector, adiós a los memory leaks y segfaults.
+- El sistema de tipos y ownership de Rust previene muchas clases de errores de memoria en código seguro, sin un recolector obligatorio. Aun así pueden existir fugas, errores lógicos y código `unsafe` que requiere revisión.
 - Rendimiento comparable a C/C++.
 - Cada vez más adoptado en WebAssembly, sistemas embebidos, y herramientas de desarrollo.
 - Te hace mejor programador al obligarte a pensar en ownership y lifetimes.
@@ -128,13 +129,13 @@ SQL no es "sexy", pero es absolutamente fundamental. No importa qué stack uses,
 
 Un resumen rápido para decidir de un vistazo según tu objetivo:
 
-| Lenguaje | Ideal para | Curva de aprendizaje | Demanda en 2026 |
+| Lenguaje | Ideal para | Curva de aprendizaje | Uso que puedes practicar |
 |---|---|---|---|
-| JavaScript / TS | Desarrollo web (front y back) | Media | Altísima |
-| Python | Data, IA, automatización, backend | Suave | Muy alta |
-| Go | Backend de alto rendimiento, DevOps | Media | Alta y creciente |
-| Rust | Sistemas, rendimiento, WebAssembly | Alta | Creciente (nicho) |
-| SQL | Datos (transversal a todo) | Suave | Constante |
+| JavaScript / TS | Desarrollo web (front y back) | Media | Interfaces y servicios web |
+| Python | Data, IA, automatización, backend | Suave | Scripts y análisis de datos |
+| Go | Backend de alto rendimiento, DevOps | Media | Servicios y herramientas de infraestructura |
+| Rust | Sistemas, rendimiento, WebAssembly | Alta | Herramientas y software de sistemas |
+| SQL | Datos (transversal a todo) | Suave | Consultas y modelado relacional |
 
 Si estás empezando desde cero y aún dudas, te lo simplifico todavía más en [las mejores tecnologías para empezar a programar en 2026](/blog/mejores-tecnologias-para-empezar-a-programar-2026).
 
@@ -164,6 +165,18 @@ Si ya tienes experiencia y quieres especializarte:
 
 ---
 
+## Compara dos opciones con la misma tarea
+
+Para elegir un lenguaje, empieza por el proyecto: qué entorno debe ejecutarlo, qué bibliotecas necesita y qué conocimientos tienes. Una lista de popularidad no sustituye esas restricciones ni demuestra qué vacantes existen en tu región.
+
+Si dudas entre Python y JavaScript, prueba una tarea pequeña: leer una lista de gastos y agruparla por categoría. Compara cómo ejecutas el código, cómo manejas entradas inválidas y qué documentación necesitas. Si el objetivo principal es una interfaz en el navegador, JavaScript resuelve esa parte directamente; si es un script local, Python puede darte un punto de entrada sencillo.
+
+Go y Rust requieren otra comparación: herramientas de despliegue, concurrencia, control de memoria y costo de aprendizaje. No necesitas elegirlos para demostrar que tu aplicación es «seria».
+
+SQL puede acompañar cualquiera de esos lenguajes cuando el proyecto usa una base de datos relacional. Aprende primero a guardar y consultar datos correctamente; optimiza con datos y mediciones cuando aparezca una necesidad.
+
+Para elegir un stack mínimo completo, continúa con [las tecnologías para empezar a programar](/blog/mejores-tecnologias-para-empezar-a-programar-2026). Aquí la decisión se limita al lenguaje y a un proyecto para practicarlo.
+
 ## Preguntas Frecuentes
 
 **¿Qué lenguaje de programación debería aprender primero en 2026?**
@@ -174,6 +187,14 @@ Uno bien dominado vale más que cinco a medias. Profundiza en uno y, sobre todo,
 
 **¿Da igual el lenguaje si entiendo la lógica?**
 En gran medida, sí. Por eso conviene conocer la [historia y evolución de la programación](/blog/evolucion-programacion-historia-2026): los paradigmas se repiten una y otra vez. La sintaxis cambia; los conceptos perduran.
+
+### ¿TypeScript reemplaza aprender JavaScript?
+
+No. Añade un sistema de tipos que ayuda durante el desarrollo, pero el comportamiento de ejecución sigue ligado a JavaScript. Aprende funciones, objetos, módulos y asincronía además de las anotaciones.
+
+### ¿SQL cuenta como lenguaje de programación?
+
+Es un lenguaje declarativo para consultar y manipular datos, con extensiones procedimentales en distintos motores. No necesitas clasificarlo como lenguaje de propósito general para reconocer su utilidad en un proyecto.
 
 ## Conclusión: Lenguajes + Proyectos = Progreso real
 

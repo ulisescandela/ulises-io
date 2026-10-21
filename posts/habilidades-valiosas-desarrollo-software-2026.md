@@ -2,7 +2,8 @@
 title: "Las Habilidades Más Valiosas en el Desarrollo de Software para 2026 y Más Allá"
 category: "Carrera"
 date: "2026-09-02"
-excerpt: "Una proyección honesta de las habilidades que de verdad importarán en software de 2026 en adelante. No modas: capacidades duraderas que la IA no puede reemplazar y que marcan la diferencia en tu carrera."
+updated: "2026-10-21"
+excerpt: "Fundamentos, diseño de sistemas, depuración y comunicación: criterios para elegir qué habilidad practicar y cómo demostrarla con tu trabajo."
 readTime: "12 min"
 tags: ["Carrera", "Habilidades", "Futuro del Desarrollo", "Soft Skills", "2026"]
 published: true
@@ -17,7 +18,7 @@ En este artículo hago una proyección de las habilidades más valiosas para el 
 
 Piensa en la [evolución de la programación](/blog/evolucion-programacion-historia-2026): FORTRAN, C, Java, JavaScript, Python... cada década tuvo su rey. Quien ató su identidad a una sola tecnología tuvo que reinventarse varias veces. Quien invirtió en **fundamentos y en cómo pensar** simplemente cambió de herramienta y siguió siendo relevante.
 
-En 2026 hay un acelerante nuevo: la IA. Ahora que [escribir código es casi gratis](/blog/que-es-valioso-cuando-todos-pueden-programar-con-ia), el valor se ha desplazado hacia las habilidades que un modelo no cubre. Las que siguen son, en mi opinión, las apuestas más seguras.
+En 2026 hay un acelerante nuevo: la IA. Ahora que [generar un borrador de código es más accesible](/blog/que-es-valioso-cuando-todos-pueden-programar-con-ia), el valor se ha desplazado hacia las habilidades que un modelo no cubre. Las que siguen son capacidades que considero útiles; no constituyen una predicción del mercado laboral.
 
 ## Habilidades técnicas que no caducan
 
@@ -28,7 +29,7 @@ Es lo más aburrido de estudiar y lo más rentable a largo plazo. Entender cómo
 Escribir una función es fácil; decidir **cómo encajan cientos de ellas** sin que el sistema se vuelva ingobernable es difícil y escaso. Saber dónde poner los límites, cómo se comunican los servicios y qué se rompe cuando algo falla es una habilidad que crece en valor con los años. Los [fundamentos de arquitectura de software](/blog/fundamentos-arquitectura-software-libros-recomendados) son el punto de partida.
 
 ### 3. Depuración y lectura de código ajeno
-El 80% del trabajo real no es escribir código nuevo, es **entender y arreglar el que ya existe** (a menudo escrito por otra persona, o por una IA). Leer código con soltura y depurar con método es una superpotencia silenciosa que casi nadie entrena a propósito.
+Una parte importante del trabajo consiste en **entender y arreglar código existente** (a menudo escrito por otra persona, o por una IA). Leer código con soltura y depurar con método es una superpotencia silenciosa que casi nadie entrena a propósito.
 
 ### 4. Dirigir a la IA (el nuevo "saber buscar en Google")
 Saber descomponer un problema, dar contexto, revisar críticamente la respuesta y detectar cuándo el modelo alucina es una habilidad técnica de pleno derecho. No es hacer *prompts* bonitos: es **saber lo suficiente para no fiarte a ciegas**.
@@ -61,6 +62,22 @@ No puedes con todo a la vez. Mi orden recomendado:
 3.  **Después, diseño de sistemas.** Llega de forma natural con proyectos reales; fuérzalo construyendo cosas ambiciosas para [tu portafolio](/blog/proyectos-valiosos-para-tu-cv-programador).
 4.  **En paralelo, dirigir a la IA.** Intégralo en tu día a día desde ya, con criterio.
 
+## Convierte una habilidad en una evidencia
+
+Una habilidad profesional se demuestra en una tarea y en su resultado. «Sé arquitectura» dice poco; «comparé dos opciones para separar reservas y notificaciones y documenté sus costos» permite revisar tu razonamiento. La evidencia no tiene que incluir cifras si no las mediste.
+
+| Capacidad | Evidencia posible |
+| --- | --- |
+| Fundamentos | Explicas una estructura y sus operaciones en un problema |
+| Depuración | Reproduces un fallo y localizas su causa |
+| Diseño | Documentas una decisión y una alternativa descartada |
+| Comunicación | Otra persona puede ejecutar el proyecto con tu README |
+| Trabajo con IA | Detectas y corriges una propuesta que incumple un requisito |
+
+Elige primero una dificultad que se repita en tu trabajo. Si la entrega se bloquea por requisitos ambiguos, otro framework puede no resolver el problema. Si no entiendes un error, practica diagnóstico antes de cambiar toda la arquitectura.
+
+Solicita una revisión sobre esa tarea y conserva el cambio que hiciste después. Para practicar la parte interpersonal, continúa con la [guía de soft skills para desarrolladores](/blog/consejos-para-incrementar-softskills).
+
 ## Preguntas Frecuentes
 
 **¿Sigue mereciendo la pena aprender un lenguaje a fondo?**
@@ -73,7 +90,11 @@ No es "más", es que se multiplican. Un técnico excelente que no comunica se es
 Con proyectos reales que expliques bien y con cómo razonas los problemas, no solo con la solución. En las [pruebas técnicas](/blog/consejos-para-pruebas-tecnicas) importa tanto tu proceso de pensamiento como el resultado final.
 
 **¿Esto cambiará en cinco años?**
-Las tecnologías sí; estas habilidades, no. Justamente las he elegido porque llevan décadas siendo valiosas y la IA las hace *más* escasas, no menos.
+Las herramientas cambian y estas capacidades también evolucionan con el contexto. Justamente las he elegido porque llevan décadas siendo valiosas y la IA las hace *más* escasas, no menos.
+
+### ¿Cómo elijo una habilidad para trabajar este mes?
+
+Busca un bloqueo recurrente, define una tarea donde aparezca y pide una revisión del resultado. Elige una capacidad que puedas practicar con tus recursos actuales y ajusta el plan según lo observado.
 
 ## Conclusión: apuesta por lo que no caduca
 

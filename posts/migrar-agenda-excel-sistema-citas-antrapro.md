@@ -2,6 +2,7 @@
 title: "De Excel a una agenda de citas: cómo migrar sin perder el control del negocio"
 category: "Herramientas"
 date: "2026-10-10"
+updated: "2026-10-21"
 excerpt: "Un plan por etapas para ordenar servicios, clientes y horarios antes de adoptar una agenda como AntraPro. Sin prometer importaciones ni automatizaciones mágicas."
 published: true
 tags: ["AntraPro", "Herramientas", "Productividad"]
@@ -53,6 +54,16 @@ Crear una cita suele ser fácil de demostrar. Dedica tiempo a lo que ocurre desp
 
 Entrega una instrucción corta: dónde consultar la agenda, dónde registrar cambios y a quién avisar si algo no coincide. No hace falta redactar un manual de cincuenta páginas para acordar estas reglas.
 
+## Concilia las citas y acuerda una contingencia
+
+Migrar una agenda no termina al copiar registros. Debes comprobar que las próximas citas confirmadas coinciden en fecha, hora, servicio, profesional y estado. Una cantidad total igual no demuestra que cada registro sea correcto.
+
+Antes del corte, guarda una copia autorizada del origen y define quién resolverá discrepancias. Revisa una muestra pertinente y comprueba todos los compromisos inmediatos que el negocio necesite atender. No fusiones clientes solo porque sus nombres coinciden.
+
+Acuerda también qué hará el equipo si el nuevo sistema no está disponible. La contingencia debe indicar dónde registrar una cita y quién la conciliará después; mantener dos agendas editables sin responsable recrea el problema inicial.
+
+Si la página pública se activa al mismo tiempo, comprueba que no ofrezca espacios ya comprometidos. La [guía para diseñar reservas](/blog/disenar-pagina-reservas-negocio-servicios) explica el flujo del cliente. Estas comprobaciones son trabajo de adopción y no implican que un producto tenga importación o sincronización automática.
+
 ## Mide si el cambio ayuda
 
 Durante las primeras semanas, registra cuántas citas necesitaron corrección, cuántas preguntas de disponibilidad resolvió el equipo manualmente y qué dudas se repiten. Compara con un período anterior que tenga un volumen similar cuando puedas.
@@ -60,3 +71,25 @@ Durante las primeras semanas, registra cuántas citas necesitaron corrección, c
 Estos datos no prueban por sí solos que una herramienta aumentó las ventas. Sí ayudan a encontrar errores de configuración y a decidir si el proceso resulta más claro. Si todavía hay problemas, separa los de datos, capacitación y funciones que el producto no cubre.
 
 Para revisar una opción existente, [visita AntraPro](https://antrapro.app/es?utm_source=ulises_io&utm_medium=referral&utm_campaign=antrapro_guides&utm_content=es_migrar-agenda-excel-sistema-citas-antrapro) y consulta sus condiciones actuales. Si estás haciendo software para un cliente, este proceso también te ayuda a definir el alcance: una migración y una capacitación son trabajo real, no detalles gratuitos después de terminar el formulario.
+
+## Preguntas frecuentes
+
+### ¿Necesito trasladar todo el historial de Excel?
+
+No necesariamente. Define qué necesita la operación y qué debes conservar por tus obligaciones. Puedes comenzar con servicios activos y próximas citas, manteniendo el origen autorizado como referencia.
+
+### ¿Puedo editar Excel y la nueva agenda a la vez?
+
+Solo con reglas de transición, una fuente de referencia y un responsable de conciliar. Dos agendas independientes pueden producir diferencias y dobles compromisos.
+
+### ¿Cómo compruebo que no faltan citas?
+
+Compara las próximas citas confirmadas registro por registro en los campos relevantes, no solo el total. Resuelve discrepancias con quien conoce la operación antes de abrir disponibilidad.
+
+### ¿Esta guía demuestra que AntraPro importa archivos de Excel?
+
+No. Propone un proceso de adopción sin asumir una función de importación. Verifica en el producto las opciones disponibles y acuerda cómo trasladar los datos.
+
+### ¿Qué hago con duplicados de clientes?
+
+Usa más evidencia que el nombre y revisa los casos con una persona autorizada. Documenta la regla de conciliación y evita unir registros de personas distintas por una coincidencia superficial.

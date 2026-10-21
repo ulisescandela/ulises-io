@@ -2,6 +2,7 @@
 title: "Fundamentos de Arquitectura de Software: Guía y Libros Esenciales para 2026"
 category: "Programación"
 date: "2026-01-25"
+updated: "2026-10-21"
 excerpt: "Aprende los pilares de la arquitectura de software: patrones, principios SOLID, microservicios y más. Incluye los mejores libros recomendados para dominar el tema."
 readTime: "12 min"
 tags: ["Arquitectura", "Software", "Libros", "Backend", "Patrones de Diseño"]
@@ -55,7 +56,7 @@ Divide tu sistema en capas con responsabilidades claras:
 
 ### Monolito
 
-Todo el código en una sola aplicación. Ideal para empezar, pero difícil de escalar.
+Una aplicación que se despliega como una unidad. Puede organizarse en módulos y escalar; sus límites dependen del diseño, las dependencias y la operación.
 
 **Cuándo usarlo**: MVPs, equipos pequeños, aplicaciones simples.
 
@@ -73,9 +74,9 @@ Los componentes reaccionan a eventos en lugar de llamarse directamente.
 
 **Cuándo usarlo**: Sistemas asíncronos, alta desacoplación, procesamiento en tiempo real.
 
-### Clean Architecture / Hexagonal
+### Clean Architecture y arquitectura hexagonal
 
-Capas concéntricas donde el dominio está en el centro, aislado de frameworks y bases de datos.
+Ambas buscan proteger la lógica de negocio de detalles externos. Clean Architecture organiza dependencias hacia las políticas internas; la arquitectura hexagonal expresa la interacción mediante puertos y adaptadores. Son enfoques relacionados, no nombres equivalentes.
 
 **Cuándo usarlo**: Aplicaciones con lógica de negocio compleja que necesitan ser testeables y mantenibles.
 
@@ -140,6 +141,24 @@ Si estás empezando, este es el orden que te sugiero:
 4. **Fundamentals of Software Architecture** → Domina los patrones
 5. **Designing Data-Intensive Applications** → Entiende los sistemas a escala
 
+## De un requisito a una decisión de arquitectura
+
+La arquitectura debe responder a restricciones concretas: qué debe hacer el sistema, qué fallos tolera y quién puede operarlo. Un patrón no resuelve esas preguntas por sí solo. Define atributos de calidad observables antes de elegir cómo dividir el software.
+
+Para una agenda de un negocio, podrías necesitar que dos clientes no confirmen el mismo recurso y que el equipo consulte las citas aunque falle el correo. Eso sugiere separar la confirmación persistida del envío de notificaciones; no obliga a desplegar microservicios.
+
+| Decisión | Alternativa inicial | Costo que debes reconocer |
+| --- | --- | --- |
+| Organización | Monolito con módulos de reservas y notificaciones | Mantener límites dentro de una aplicación |
+| Confirmación | Regla de integridad y operación transaccional | Resolver conflictos y reintentos |
+| Correo | Procesamiento posterior con estado verificable | Atender fallos y evitar envíos duplicados |
+
+La [guía para evitar dobles reservas](/blog/evitar-dobles-reservas-sistema-citas) desarrolla la parte de concurrencia sin atribuir esta implementación a un producto concreto.
+
+### Deja un ADR corto
+
+Un registro de decisión de arquitectura o ADR puede contener: contexto, opciones consideradas, decisión y consecuencias. Añade qué cambio justificaría revisarla. Por ejemplo, «separar el servicio cuando exista una necesidad medida de operación independiente» es más útil que «usar microservicios porque escalan».
+
 ## Preguntas Frecuentes
 
 **¿Qué es la arquitectura de software, en simple?**
@@ -150,6 +169,14 @@ No de golpe, pero entender los principios SOLID temprano te ahorra años de malo
 
 **¿Por dónde empiezo con arquitectura de software?**
 Por los principios SOLID y por escribir código simple y legible, un tema central también en mis [consejos para mejorar en programación](/blog/consejos-para-mejorar-en-programacion). La complejidad se añade solo cuando el problema la exige.
+
+### ¿Un monolito puede escalar?
+
+Sí. Puede optimizarse y desplegarse en varias instancias si su diseño y dependencias lo permiten. El volumen de tráfico no determina por sí solo que necesites microservicios.
+
+### ¿Arquitectura de software y patrones de diseño son lo mismo?
+
+No. La arquitectura trata decisiones estructurales y atributos del sistema; los patrones de diseño suelen abordar colaboraciones más acotadas. Sus límites se relacionan y dependen del contexto.
 
 ## Conclusión
 

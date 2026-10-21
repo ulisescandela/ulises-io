@@ -2,6 +2,7 @@
 title: "How to Prevent Double Bookings: The Engineering Behind an Appointment Calendar"
 category: "Tools"
 date: "2026-10-10"
+updated: "2026-10-21"
 excerpt: "Two people can choose the same time before confirming. Learn to reason about intervals, availability and concurrent requests using an appointment calendar such as AntraPro."
 published: true
 tags: ["AntraPro", "Programación", "Bases de Datos"]
@@ -58,3 +59,19 @@ Instead of asking a business to build everything from scratch, you can evaluate 
 For your own project, prepare five scenarios: a valid consecutive booking, a partial overlap, a contained interval, two simultaneous requests and a retry of the same request. You do not need to invent thousands of users to demonstrate that you understand the problem.
 
 To address a business's appointment operations, [explore AntraPro](https://antrapro.app?utm_source=ulises_io&utm_medium=referral&utm_campaign=antrapro_guides&utm_content=en_evitar-dobles-reservas-sistema-citas). If you are learning to code, use these situations to turn a demonstration calendar into a project whose decisions you can defend.
+
+## An overlap rule needs an integrity guarantee
+
+For half-open intervals, including the start and excluding the end, intervals overlap when the new start is before the existing end and the new end is after the existing start. Consecutive appointments are compatible unless a buffer is required.
+
+```text
+conflicto = mismo_recurso
+            y inicio_nuevo < fin_existente
+            y fin_nuevo > inicio_existente
+```
+
+Also validate start before end and use a consistent time model. Include preparation or cleanup in resource occupancy where necessary.
+
+A unique key on resource and start time cannot prevent every overlap: 10:00–11:00 and 10:30–11:30 have distinct starts. Integrity must cover the full interval and the states that occupy capacity.
+
+Depending on the database and design, evaluate exclusion constraints, coordinated locking or isolation with retries. An isolated availability query is not a guarantee. Send concurrent requests and inspect persisted state as well as responses. These are general criteria, not claims about AntraPro's internal implementation. See the [architecture fundamentals](/en/software-architecture-fundamentals-and-books).

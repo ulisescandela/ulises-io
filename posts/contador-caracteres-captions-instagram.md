@@ -2,6 +2,7 @@
 title: "Contador de caracteres para Instagram: cómo ajustar un caption sin perder el mensaje"
 category: "Herramientas"
 date: "2026-10-10"
+updated: "2026-10-21"
 excerpt: "Cuenta caracteres, palabras y hashtags con Antrapost. Entiende espacios, emoji y objetivos de longitud sin confundirlos con límites oficiales."
 published: true
 tags: ["Antrapost", "Contenido", "Instagram", "Redes Sociales"]
@@ -65,6 +66,14 @@ El borrador se procesa en el navegador y no se guarda al recargar o cerrar. Usa 
 
 Después comprueba links, nombres de cuentas y archivos. Contar caracteres no revisa esas partes: la [checklist previa a publicar](/blog/checklist-publicar-redes-prompts-ia) sirve para organizar una revisión manual más completa.
 
+## Compara dos borradores con la misma información
+
+Para acortar un caption, conserva la función de cada frase: qué ofreces, qué condición importa y qué puede hacer la persona después. El contador ayuda a comparar longitudes; no demuestra que la versión más corta comunique mejor.
+
+Prueba «La demo permite importar gastos en CSV. Usa los datos de ejemplo; todavía no admite archivos de tu banco». Una versión breve que elimine la segunda frase cambia la expectativa del lector. Recorta una introducción redundante antes de borrar ese límite.
+
+Cuando el texto quepa en tu objetivo, pégalo en el editor del destino y revisa el resultado real. Sus reglas de conteo y presentación pueden diferir. Después verifica archivos y enlaces con la [checklist antes de publicar](/blog/checklist-publicar-redes-prompts-ia).
+
 ## Preguntas frecuentes
 
 ### ¿El objetivo de 500 es el límite de una plataforma?
@@ -78,6 +87,14 @@ Sí, en el total. El contador ofrece también una medida que los excluye para qu
 ### ¿La herramienta evalúa si mi publicación es buena?
 
 No. Mide el texto con las reglas descritas. Tú revisas claridad, veracidad, relevancia y el resultado final en cada red.
+
+### ¿Un emoji siempre cuenta como un carácter?
+
+No en todos los sistemas. Un símbolo visible puede combinar varios puntos de código; este contador utiliza esos puntos. El editor del destino puede aplicar otras reglas.
+
+### ¿Es mejor quitar condiciones para que el texto sea más corto?
+
+No si alteras lo que prometes. Conserva disponibilidad, límites y requisitos importantes. Elimina repeticiones o cambia el formato antes de sacrificar precisión.
 
 ## Ajusta la longitud con intención
 

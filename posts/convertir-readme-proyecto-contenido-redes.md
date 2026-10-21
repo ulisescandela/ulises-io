@@ -2,6 +2,7 @@
 title: "Cómo convertir el README de tu proyecto en contenido para redes"
 category: "Herramientas"
 date: "2026-10-10"
+updated: "2026-10-21"
 excerpt: "Extrae el problema, la demo y una decisión técnica de tu README para preparar portada, carrusel y caption con las herramientas gratuitas de Antrapost."
 published: true
 tags: ["Antrapost", "Portafolio", "GitHub", "Documentación"]
@@ -68,6 +69,16 @@ No presentes un tutorial copiado como una arquitectura original ni una demo pequ
 
 Si utilizaste IA, cuenta qué verificaste y qué decisiones puedes explicar. Compartir un proyecto debería ayudarte a conversar sobre él, no crear un relato que luego no puedas sostener.
 
+## Un ejemplo de transformación, sin inventar una historia
+
+Un README y una publicación responden preguntas distintas. El primero puede explicar cómo ejecutar el proyecto; la segunda necesita mostrar por qué la tarea importa y qué puede probar el lector. Reutilizar no significa pegar el mismo texto en otro formato.
+
+Supón que tu README dice «importación CSV con validación por fila». Puedes convertirlo en una explicación: «un archivo con una fecha inválida no debería bloquear todos los registros. Esta demo muestra cuáles acepta y cuáles debes corregir». Ese texto solo corresponde si el proyecto realmente se comporta así.
+
+La captura puede mostrar una fila aceptada y una rechazada con datos ficticios. El caption aclara el alcance y enlaza la demo o el repositorio. No hace falta afirmar que ahorraste horas o conseguiste usuarios para enseñar una decisión útil.
+
+Si buscas un plan de presentación y seguimiento, utiliza la [guía de lanzamiento del side project](/blog/lanzar-side-project-redes-plan-publicaciones); aquí el trabajo consiste en extraer y adaptar una pieza de documentación.
+
 ## Preguntas frecuentes
 
 ### ¿Necesito escribir un README enorme?
@@ -81,6 +92,14 @@ Puedes usar las herramientas gratuitas para crear y descargar el material sin re
 ### ¿Qué hago si mi proyecto todavía está incompleto?
 
 Comparte un avance concreto y sus límites. Indica qué funciona y qué falta; no lo anuncies como una solución terminada.
+
+### ¿Puedo publicar instrucciones de instalación tal como están?
+
+Puedes, pero revisa si responden a la necesidad de tu audiencia. Para presentar el proyecto suele ayudar primero una tarea demostrable; deja las instrucciones completas en el repositorio.
+
+### ¿Cómo reconozco trabajo basado en un tutorial?
+
+Nombra la fuente y separa el punto de partida de tus cambios. Explica una decisión o función propia que puedas demostrar sin presentar todo el proyecto como creación original.
 
 ## Empieza por algo que ya puedas mostrar
 

@@ -2,6 +2,7 @@
 title: "Cómo comprimir imágenes JPG y WebP gratis sin subir tus fotos"
 category: "Herramientas"
 date: "2026-10-10"
+updated: "2026-10-21"
 excerpt: "Reduce el peso de una imagen con Antrapost, compara calidad y dimensiones y entiende por qué una compresión puede producir un archivo más grande."
 published: true
 tags: ["Antrapost", "Imágenes", "Compresión", "Privacidad"]
@@ -58,6 +59,14 @@ WebP puede conservar transparencia. JPG no la admite: en este compresor las zona
 
 La herramienta no admite imágenes animadas. Para elegir entre formatos o cambiar el color que reemplaza una zona transparente al convertir a JPG, revisa la [guía de conversión de imágenes](/blog/convertir-png-jpg-webp-transparencia).
 
+## Una foto y una captura de código necesitan revisiones distintas
+
+Para comprimir una imagen, compara el tamaño real del archivo y el detalle que importa en su uso final. En una foto revisa texturas y degradados; en una captura técnica revisa letras, símbolos y bordes. El mismo ajuste de calidad no tiene por qué servir para ambas.
+
+Guarda siempre el original y genera las pruebas desde él. Volver a comprimir varias veces una salida con pérdida puede acumular degradación sin aportar un ahorro útil. Si la captura deja de leerse, prueba otro formato o un recorte que permita mostrar el texto a mayor tamaño.
+
+Si necesitas un límite de peso concreto, cambia un ajuste cada vez y verifica el archivo descargado. Un porcentaje en el control de calidad no equivale a ese porcentaje de reducción de bytes. Para decidir el encuadre antes de codificar, revisa [cómo redimensionar y recortar una imagen](/blog/redimensionar-recortar-imagenes-instagram-gratis).
+
 ## Preguntas frecuentes
 
 ### ¿Comprimir significa no perder calidad?
@@ -71,6 +80,14 @@ El procesamiento ocurre en el navegador. La herramienta no guarda tus fotos; des
 ### ¿Un WebP siempre sirve para publicar en redes?
 
 No asumas compatibilidad universal. Comprueba el editor y los requisitos del destino. Si necesita otro formato, convierte el archivo y revisa otra vez el resultado.
+
+### ¿Calidad 80 significa que el archivo pesará 80 % del original?
+
+No. Es un parámetro del codificador, no una proporción directa de bytes o detalle. El tamaño depende del contenido, formato y dimensiones; comprueba la descarga.
+
+### ¿Puedo recuperar el detalle perdido después de comprimir?
+
+No mediante una nueva exportación. Conserva el original y úsalo para generar otra versión con ajustes diferentes. Ampliar o cambiar de formato no restaura automáticamente esa información.
 
 ## Reduce el peso con una decisión visible
 

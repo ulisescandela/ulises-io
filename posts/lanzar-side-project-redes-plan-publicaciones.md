@@ -2,6 +2,7 @@
 title: "Cómo lanzar un side project en redes: un plan de tres publicaciones"
 category: "Herramientas"
 date: "2026-10-10"
+updated: "2026-10-21"
 excerpt: "Prepara presentación, explicación y seguimiento para lanzar un proyecto. Usa las herramientas gratis de Antrapost y evita promesas o métricas inventadas."
 published: true
 tags: ["Antrapost", "Lanzamientos", "Proyectos", "Contenido"]
@@ -67,6 +68,16 @@ Las herramientas públicas ayudan a preparar contenido sin registro. No equivale
 
 Empieza por el flujo que necesitas hoy. Un proyecto que requiere una publicación manual puede preparar sus imágenes con las herramientas gratis; varias cuentas y un calendario son necesidades diferentes.
 
+## Qué hacer si el lanzamiento no recibe respuestas
+
+La ausencia de comentarios no demuestra por sí sola que la idea no tenga valor. Revisa primero si la publicación llegó a personas pertinentes, si el enlace abre y si la promesa coincide con lo que pueden probar. Sin esas comprobaciones es difícil interpretar el silencio.
+
+Pide a una persona de la audiencia prevista que realice una tarea concreta sin guiar cada paso. Registra dónde duda y qué esperaba encontrar. Esa observación puede orientar la siguiente mejora; no equivale a una validación de mercado ni a un resultado comercial.
+
+En el seguimiento cuenta una corrección o un aprendizaje comprobable. Si cambiaste el acceso, aclara si ahora requiere registro o si sigue siendo una demo. La siguiente pieza debe aportar información, no repetir una promesa más grande para compensar la falta de atención.
+
+Para preparar el material desde algo que ya tienes, usa la [guía para reutilizar el README](/blog/convertir-readme-proyecto-contenido-redes).
+
 ## Preguntas frecuentes
 
 ### ¿Necesito publicar todos los días para lanzar?
@@ -80,6 +91,14 @@ Sí, si lo explicas. Indica qué funciona, qué falta y cómo puede reportarse u
 ### ¿Estas herramientas escriben el lanzamiento por mí?
 
 No. Los editores de portadas y carruseles trabajan con tu contenido. El checklist ofrece prompts que puedes copiar a un asistente aparte para revisar el texto.
+
+### ¿Cuándo publico el seguimiento si todavía no tengo usuarios?
+
+Cuando tengas algo concreto que aportar: una corrección, una pregunta o una explicación del alcance. Puedes decir que aún no tienes resultados; no necesitas inventar tracción.
+
+### ¿Qué acción principal debería pedir en el lanzamiento?
+
+Elige la que el proyecto ya permita: probar una tarea, leer el repositorio o solicitar acceso. Explica condiciones como registro o beta para que la expectativa coincida con el siguiente paso.
 
 ## Haz que cada publicación tenga un trabajo
 

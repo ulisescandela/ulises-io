@@ -2,6 +2,7 @@
 title: "Consejos para Pruebas Técnicas: Cómo Mejorar y Plataformas Recomendadas"
 category: "Carrera"
 date: "2026-01-31"
+updated: "2026-10-21"
 excerpt: "Las pruebas técnicas son un paso crucial en el proceso de contratación. Descubre consejos prácticos para prepararte, plataformas recomendadas y por qué es esencial desarrollar tus habilidades sin atajos como la IA."
 readTime: "10 min"
 tags: ["Programación", "Entrevistas", "Consejos", "Pruebas Técnicas", "Carrera"]
@@ -9,7 +10,7 @@ published: true
 coverImage: ""
 ---
 
-Las pruebas técnicas son una de las partes más desafiantes del proceso de entrevistas para desarrolladores. No se trata solo de resolver problemas, sino de demostrar tu pensamiento lógico, capacidad de resolución de problemas y conocimiento profundo de algoritmos y estructuras de datos. En este artículo, compartiré consejos prácticos para mejorar en estas pruebas, con un enfoque especial en el aprendizaje genuino y el desarrollo de habilidades reales.
+Las pruebas técnicas son una de las partes más desafiantes del proceso de entrevistas para desarrolladores. Según el puesto, pueden evaluar razonamiento, uso del lenguaje, diseño, depuración o entrega de un proyecto; confirma el formato. En este artículo, compartiré consejos prácticos para mejorar en estas pruebas, con un enfoque especial en el aprendizaje genuino y el desarrollo de habilidades reales.
 
 ## 1. Enfócate en el Aprendizaje Genuino, No en los Atajos
 
@@ -50,6 +51,24 @@ Después de resolver un problema, revisa soluciones óptimas si la tuya no lo fu
 
 **Idea adicional:** Forma un grupo de estudio con otros desarrolladores. Compartir soluciones y discutir enfoques acelera el aprendizaje y te expone a perspectivas diferentes.
 
+## Prepara el formato que realmente te van a evaluar
+
+Una prueba técnica puede ser programación en vivo, un ejercicio para casa o la revisión de un proyecto. Pregunta el formato, el tiempo disponible, los criterios y las herramientas permitidas. Practicar solo algoritmos no cubre todas esas situaciones.
+
+| Formato | Qué practicar |
+| --- | --- |
+| Programación en vivo | Aclarar el problema y razonar mientras implementas |
+| Ejercicio para casa | Alcance, instrucciones reproducibles y decisiones explícitas |
+| Revisión de proyecto | Explicar alternativas, límites y cambios que harías |
+
+### Un recorrido para una pregunta de duplicados
+
+Si te piden detectar valores repetidos, aclara si buscan un booleano, el primer repetido o todos. Pregunta por orden, tipos y tamaño. Muestra un ejemplo normal, una lista vacía y una lista sin repeticiones.
+
+Después compara recorrer pares con guardar valores vistos en un conjunto. Explica el costo de tiempo y memoria bajo los supuestos de la estructura utilizada. Implementa y comprueba los casos; si no terminas, describe qué falta sin fingir que la solución está completa.
+
+Los conceptos se desarrollan en la [guía de lógica y estructuras de datos](/blog/guia-completa-logica-estructuras-de-datos). Aquí la práctica consiste en usarlos y comunicarlos dentro de una evaluación.
+
 ## Preguntas Frecuentes
 
 **¿Qué temas entran en una prueba técnica?**
@@ -59,7 +78,15 @@ La mayoría giran en torno a algoritmos y estructuras de datos: arrays, strings,
 Practica un problema al día, lee código ajeno y simula entrevistas con tiempo. Si aún flojeas con el lenguaje, refuerza primero las bases con [estos consejos para mejorar en programación](/blog/consejos-para-mejorar-en-programacion).
 
 **¿Está mal usar IA para resolver los retos de práctica?**
-Para *aprender*, sí: te roba el músculo de razonar bajo presión, que es justo lo que evalúan. Úsala para revisar tu solución *después* de intentarlo, no para saltarte el proceso.
+Pedir la solución completa puede ocultar lo que todavía necesitas practicar. Úsala para revisar tu solución *después* de intentarlo, no para saltarte el proceso.
+
+### ¿Puedo usar IA durante una prueba técnica?
+
+Depende de las reglas de la evaluación. Pregunta antes y respétalas. Durante la preparación puedes revisar un intento propio con asistencia, pero conserva práctica sin ayuda para conocer tu nivel.
+
+### ¿Qué hago si no logro terminar la prueba?
+
+Explica lo que sí funciona, qué casos faltan y cómo continuarías. Prioriza un comportamiento correcto y verificable sobre añadir funciones incompletas; la evaluación depende de sus criterios.
 
 ## Conclusión
 

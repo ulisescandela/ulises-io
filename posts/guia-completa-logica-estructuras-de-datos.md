@@ -2,6 +2,7 @@
 title: "Guía Completa para Aprender Lógica de Programación y Estructuras de Datos"
 category: "Programación"
 date: "2026-01-27"
+updated: "2026-10-21"
 excerpt: "Domina los fundamentos que separan a los buenos programadores de los excelentes. Una guía exhaustiva para aprender lógica de programación, algoritmos y estructuras de datos desde cero hasta nivel avanzado."
 readTime: "25 min"
 tags: ["Lógica de Programación", "Estructuras de Datos", "Algoritmos", "Fundamentos", "Guía Completa", "2026"]
@@ -112,7 +113,7 @@ Los operadores manipulan datos. Dominarlos es esencial.
 #### Operadores aritméticos
 ```
 +   Suma
--   Resta  
+-   Resta
 *   Multiplicación
 /   División
 %   Módulo (resto de división)
@@ -240,11 +241,11 @@ Las funciones encapsulan lógica reutilizable. Son fundamentales para escribir c
 def nombre_funcion(parametro1, parametro2="valor_default"):
     """
     Docstring: describe qué hace la función
-    
+
     Args:
         parametro1: descripción
         parametro2: descripción (opcional)
-    
+
     Returns:
         descripción de lo que retorna
     """
@@ -267,12 +268,12 @@ def nombre_funcion(parametro1, parametro2="valor_default"):
 def calcular_descuento(precio, porcentaje_descuento, es_cliente_premium=False):
     """
     Calcula el precio final después de aplicar descuento.
-    
+
     Args:
         precio: Precio original del producto
         porcentaje_descuento: Descuento a aplicar (0-100)
         es_cliente_premium: Si es premium, obtiene 5% adicional
-    
+
     Returns:
         Precio final con descuento aplicado
     """
@@ -281,15 +282,15 @@ def calcular_descuento(precio, porcentaje_descuento, es_cliente_premium=False):
         raise ValueError("El precio no puede ser negativo")
     if not 0 <= porcentaje_descuento <= 100:
         raise ValueError("El descuento debe estar entre 0 y 100")
-    
+
     # Cálculo
     descuento_total = porcentaje_descuento
     if es_cliente_premium:
         descuento_total += 5
-    
+
     descuento_total = min(descuento_total, 100)  # Máximo 100%
     precio_final = precio * (1 - descuento_total / 100)
-    
+
     return round(precio_final, 2)
 ```
 
@@ -356,7 +357,7 @@ def fibonacci_memo(n, memo={}):
 
 ## Parte 2: Estructuras de Datos Fundamentales
 
-Ahora que piensas como programador, necesitas saber dónde y cómo guardar tus datos. La estructura correcta puede hacer tu código 1000x más rápido.
+Ahora que piensas como programador, necesitas saber dónde y cómo guardar tus datos. La estructura elegida puede cambiar el costo de las operaciones; la diferencia concreta se comprueba con el problema y sus datos.
 
 ### 2.1 Arrays (Arreglos/Listas)
 
@@ -364,7 +365,7 @@ El array es la estructura más básica y más usada. Es una colección ordenada 
 
 #### Características
 
-- **Acceso por índice:** O(1) - instantáneo
+- **Acceso por índice:** O(1); constante no significa instantáneo
 - **Búsqueda:** O(n) - hay que recorrer todo en el peor caso
 - **Inserción al final:** O(1) amortizado
 - **Inserción al inicio/medio:** O(n) - hay que mover elementos
@@ -417,7 +418,7 @@ def dos_suma_ordenada(nums, target):
     """
     izquierda = 0
     derecha = len(nums) - 1
-    
+
     while izquierda < derecha:
         suma_actual = nums[izquierda] + nums[derecha]
         if suma_actual == target:
@@ -426,7 +427,7 @@ def dos_suma_ordenada(nums, target):
             izquierda += 1
         else:
             derecha -= 1
-    
+
     return None
 ```
 
@@ -441,16 +442,16 @@ def max_suma_subarray(nums, k):
     """
     if len(nums) < k:
         return None
-    
+
     # Suma de la primera ventana
     suma_ventana = sum(nums[:k])
     max_suma = suma_ventana
-    
+
     # Deslizar la ventana
     for i in range(k, len(nums)):
         suma_ventana += nums[i] - nums[i - k]
         max_suma = max(max_suma, suma_ventana)
-    
+
     return max_suma
 ```
 
@@ -499,7 +500,7 @@ def es_palindromo(texto):
     """
     # Limpiar texto
     limpio = ''.join(c.lower() for c in texto if c.isalnum())
-    
+
     # Comparar con su reverso
     return limpio == limpio[::-1]
 
@@ -507,13 +508,13 @@ def es_palindromo(texto):
 def es_palindromo_punteros(texto):
     limpio = ''.join(c.lower() for c in texto if c.isalnum())
     izq, der = 0, len(limpio) - 1
-    
+
     while izq < der:
         if limpio[izq] != limpio[der]:
             return False
         izq += 1
         der -= 1
-    
+
     return True
 ```
 
@@ -526,7 +527,7 @@ La estructura más versátil. Almacena pares clave-valor con acceso O(1).
 - **Acceso por clave:** O(1) promedio
 - **Inserción:** O(1) promedio
 - **Eliminación:** O(1) promedio
-- **No ordenado:** Las claves no tienen orden garantizado
+- **Orden:** depende de la implementación; `dict` conserva el orden de inserción como garantía del lenguaje en Python 3.7 y posteriores
 
 #### Operaciones fundamentales
 
@@ -593,13 +594,13 @@ def two_sum(nums, target):
     Encuentra dos índices cuya suma sea target.
     """
     vistos = {}  # valor -> índice
-    
+
     for i, num in enumerate(nums):
         complemento = target - num
         if complemento in vistos:
             return [vistos[complemento], i]
         vistos[num] = i
-    
+
     return None
 ```
 
@@ -611,13 +612,13 @@ def agrupar_anagramas(palabras):
     Agrupa palabras que son anagramas entre sí.
     """
     grupos = {}
-    
+
     for palabra in palabras:
         clave = ''.join(sorted(palabra))
         if clave not in grupos:
             grupos[clave] = []
         grupos[clave].append(palabra)
-    
+
     return list(grupos.values())
 
 # Ejemplo
@@ -633,7 +634,7 @@ Un set es como un diccionario pero solo con claves (sin valores). Elementos úni
 #### Características
 
 - **Elementos únicos:** No hay duplicados
-- **Verificación de pertenencia:** O(1)
+- **Verificación de pertenencia:** O(1) promedio en conjuntos basados en hash
 - **Inserción/Eliminación:** O(1) promedio
 - **Sin índices:** No puedes acceder por posición
 
@@ -679,12 +680,12 @@ def tiene_duplicados(lista):
 def encontrar_duplicados(lista):
     vistos = set()
     duplicados = set()
-    
+
     for elemento in lista:
         if elemento in vistos:
             duplicados.add(elemento)
         vistos.add(elemento)
-    
+
     return list(duplicados)
 ```
 
@@ -724,7 +725,7 @@ def parentesis_validos(s):
     """
     stack = []
     pares = {')': '(', ']': '[', '}': '{'}
-    
+
     for char in s:
         if char in '([{':
             stack.append(char)
@@ -732,7 +733,7 @@ def parentesis_validos(s):
             if not stack or stack[-1] != pares[char]:
                 return False
             stack.pop()
-    
+
     return len(stack) == 0
 
 # Ejemplos
@@ -756,7 +757,7 @@ def evaluar_rpn(tokens):
         '*': lambda a, b: a * b,
         '/': lambda a, b: int(a / b)  # División entera hacia cero
     }
-    
+
     for token in tokens:
         if token in operadores:
             b = stack.pop()
@@ -765,7 +766,7 @@ def evaluar_rpn(tokens):
             stack.append(resultado)
         else:
             stack.append(int(token))
-    
+
     return stack[0]
 ```
 
@@ -806,24 +807,24 @@ def bfs_matriz(matriz, inicio, fin):
     filas, cols = len(matriz), len(matriz[0])
     cola = deque([(inicio, 0)])  # (posición, distancia)
     visitados = {inicio}
-    
+
     direcciones = [(0, 1), (0, -1), (1, 0), (-1, 0)]
-    
+
     while cola:
         (fila, col), distancia = cola.popleft()
-        
+
         if (fila, col) == fin:
             return distancia
-        
+
         for df, dc in direcciones:
             nf, nc = fila + df, col + dc
-            if (0 <= nf < filas and 0 <= nc < cols and 
-                (nf, nc) not in visitados and 
+            if (0 <= nf < filas and 0 <= nc < cols and
+                (nf, nc) not in visitados and
                 matriz[nf][nc] != 1):  # 1 = obstáculo
-                
+
                 visitados.add((nf, nc))
                 cola.append(((nf, nc), distancia + 1))
-    
+
     return -1  # No hay camino
 ```
 
@@ -842,38 +843,38 @@ class Nodo:
 class ListaEnlazada:
     def __init__(self):
         self.cabeza = None
-    
+
     def agregar_al_final(self, valor):
         nuevo = Nodo(valor)
         if not self.cabeza:
             self.cabeza = nuevo
             return
-        
+
         actual = self.cabeza
         while actual.siguiente:
             actual = actual.siguiente
         actual.siguiente = nuevo
-    
+
     def agregar_al_inicio(self, valor):
         nuevo = Nodo(valor)
         nuevo.siguiente = self.cabeza
         self.cabeza = nuevo
-    
+
     def eliminar(self, valor):
         if not self.cabeza:
             return
-        
+
         if self.cabeza.valor == valor:
             self.cabeza = self.cabeza.siguiente
             return
-        
+
         actual = self.cabeza
         while actual.siguiente:
             if actual.siguiente.valor == valor:
                 actual.siguiente = actual.siguiente.siguiente
                 return
             actual = actual.siguiente
-    
+
     def buscar(self, valor):
         actual = self.cabeza
         while actual:
@@ -881,7 +882,7 @@ class ListaEnlazada:
                 return True
             actual = actual.siguiente
         return False
-    
+
     def imprimir(self):
         actual = self.cabeza
         elementos = []
@@ -900,17 +901,17 @@ def tiene_ciclo(cabeza):
     """
     if not cabeza or not cabeza.siguiente:
         return False
-    
+
     lento = cabeza
     rapido = cabeza
-    
+
     while rapido and rapido.siguiente:
         lento = lento.siguiente
         rapido = rapido.siguiente.siguiente
-        
+
         if lento == rapido:
             return True
-    
+
     return False
 ```
 
@@ -923,13 +924,13 @@ def invertir_lista(cabeza):
     """
     previo = None
     actual = cabeza
-    
+
     while actual:
         siguiente = actual.siguiente
         actual.siguiente = previo
         previo = actual
         actual = siguiente
-    
+
     return previo
 ```
 
@@ -955,13 +956,13 @@ class NodoArbol:
 class ArbolBinario:
     def __init__(self):
         self.raiz = None
-    
+
     def insertar(self, valor):
         if not self.raiz:
             self.raiz = NodoArbol(valor)
         else:
             self._insertar_recursivo(self.raiz, valor)
-    
+
     def _insertar_recursivo(self, nodo, valor):
         if valor < nodo.valor:
             if nodo.izquierdo:
@@ -1012,10 +1013,10 @@ def level_order(raiz):
     """Recorrido por niveles (BFS)"""
     if not raiz:
         return []
-    
+
     resultado = []
     cola = deque([raiz])
-    
+
     while cola:
         nivel = []
         for _ in range(len(cola)):
@@ -1026,7 +1027,7 @@ def level_order(raiz):
             if nodo.derecho:
                 cola.append(nodo.derecho)
         resultado.append(nivel)
-    
+
     return resultado
 ```
 
@@ -1047,10 +1048,10 @@ def altura(nodo):
 def es_bst_valido(nodo, minimo=float('-inf'), maximo=float('inf')):
     if not nodo:
         return True
-    
+
     if nodo.valor <= minimo or nodo.valor >= maximo:
         return False
-    
+
     return (es_bst_valido(nodo.izquierdo, minimo, nodo.valor) and
             es_bst_valido(nodo.derecho, nodo.valor, maximo))
 ```
@@ -1064,10 +1065,10 @@ def lca(raiz, p, q):
     """
     if not raiz or raiz == p or raiz == q:
         return raiz
-    
+
     izq = lca(raiz.izquierdo, p, q)
     der = lca(raiz.derecho, p, q)
-    
+
     if izq and der:
         return raiz
     return izq or der
@@ -1115,18 +1116,18 @@ class MedianFinder:
     def __init__(self):
         self.pequeños = []  # Max heap (mitad menor)
         self.grandes = []   # Min heap (mitad mayor)
-    
+
     def agregar(self, num):
         # Agregar a max heap (negamos para simular)
         heapq.heappush(self.pequeños, -num)
-        
+
         # Mover el mayor de pequeños a grandes
         heapq.heappush(self.grandes, -heapq.heappop(self.pequeños))
-        
+
         # Balancear: pequeños puede tener 1 más que grandes
         if len(self.grandes) > len(self.pequeños):
             heapq.heappush(self.pequeños, -heapq.heappop(self.grandes))
-    
+
     def mediana(self):
         if len(self.pequeños) > len(self.grandes):
             return -self.pequeños[0]
@@ -1174,21 +1175,21 @@ grafo_pesos = {
 def dfs(grafo, inicio, visitados=None):
     if visitados is None:
         visitados = set()
-    
+
     visitados.add(inicio)
     print(inicio)  # Procesar nodo
-    
+
     for vecino in grafo[inicio]:
         if vecino not in visitados:
             dfs(grafo, vecino, visitados)
-    
+
     return visitados
 
 # Versión iterativa con stack
 def dfs_iterativo(grafo, inicio):
     visitados = set()
     stack = [inicio]
-    
+
     while stack:
         nodo = stack.pop()
         if nodo not in visitados:
@@ -1197,7 +1198,7 @@ def dfs_iterativo(grafo, inicio):
             for vecino in grafo[nodo]:
                 if vecino not in visitados:
                     stack.append(vecino)
-    
+
     return visitados
 ```
 
@@ -1207,16 +1208,16 @@ def dfs_iterativo(grafo, inicio):
 def bfs(grafo, inicio):
     visitados = set([inicio])
     cola = deque([inicio])
-    
+
     while cola:
         nodo = cola.popleft()
         print(nodo)
-        
+
         for vecino in grafo[nodo]:
             if vecino not in visitados:
                 visitados.add(vecino)
                 cola.append(vecino)
-    
+
     return visitados
 ```
 
@@ -1230,24 +1231,24 @@ def dijkstra(grafo, inicio):
     """
     distancias = {nodo: float('inf') for nodo in grafo}
     distancias[inicio] = 0
-    
+
     heap = [(0, inicio)]  # (distancia, nodo)
     visitados = set()
-    
+
     while heap:
         dist_actual, nodo = heapq.heappop(heap)
-        
+
         if nodo in visitados:
             continue
         visitados.add(nodo)
-        
+
         for vecino, peso in grafo[nodo]:
             if vecino not in visitados:
                 nueva_dist = dist_actual + peso
                 if nueva_dist < distancias[vecino]:
                     distancias[vecino] = nueva_dist
                     heapq.heappush(heap, (nueva_dist, vecino))
-    
+
     return distancias
 ```
 
@@ -1256,28 +1257,28 @@ def dijkstra(grafo, inicio):
 ```python
 def tiene_ciclo_dirigido(grafo):
     """
-    Detecta ciclo usando coloración: 
+    Detecta ciclo usando coloración:
     0 = blanco (no visitado), 1 = gris (en proceso), 2 = negro (terminado)
     """
     colores = {nodo: 0 for nodo in grafo}
-    
+
     def dfs(nodo):
         colores[nodo] = 1  # Gris
-        
+
         for vecino in grafo.get(nodo, []):
             if colores[vecino] == 1:  # Encontramos un gris -> ciclo
                 return True
             if colores[vecino] == 0 and dfs(vecino):
                 return True
-        
+
         colores[nodo] = 2  # Negro
         return False
-    
+
     for nodo in grafo:
         if colores[nodo] == 0:
             if dfs(nodo):
                 return True
-    
+
     return False
 ```
 
@@ -1294,7 +1295,7 @@ class TrieNode:
 class Trie:
     def __init__(self):
         self.raiz = TrieNode()
-    
+
     def insertar(self, palabra):
         nodo = self.raiz
         for char in palabra:
@@ -1302,14 +1303,14 @@ class Trie:
                 nodo.hijos[char] = TrieNode()
             nodo = nodo.hijos[char]
         nodo.es_fin_palabra = True
-    
+
     def buscar(self, palabra):
         nodo = self._buscar_prefijo(palabra)
         return nodo is not None and nodo.es_fin_palabra
-    
+
     def empieza_con(self, prefijo):
         return self._buscar_prefijo(prefijo) is not None
-    
+
     def _buscar_prefijo(self, prefijo):
         nodo = self.raiz
         for char in prefijo:
@@ -1317,21 +1318,21 @@ class Trie:
                 return None
             nodo = nodo.hijos[char]
         return nodo
-    
+
     def autocomplete(self, prefijo):
         """Retorna todas las palabras que empiezan con el prefijo."""
         nodo = self._buscar_prefijo(prefijo)
         if not nodo:
             return []
-        
+
         resultados = []
         self._dfs_palabras(nodo, prefijo, resultados)
         return resultados
-    
+
     def _dfs_palabras(self, nodo, prefijo_actual, resultados):
         if nodo.es_fin_palabra:
             resultados.append(prefijo_actual)
-        
+
         for char, hijo in nodo.hijos.items():
             self._dfs_palabras(hijo, prefijo_actual + char, resultados)
 ```
@@ -1353,7 +1354,7 @@ Big O describe cómo escala un algoritmo cuando el input crece. No mide tiempo e
 | O(1) | Constante | Acceso a array por índice |
 | O(log n) | Logarítmica | Búsqueda binaria |
 | O(n) | Lineal | Recorrer array |
-| O(n log n) | Linearítmica | Merge sort, quick sort |
+| O(n log n) | Linearítmica | Merge sort; quicksort en promedio |
 | O(n²) | Cuadrática | Dos loops anidados |
 | O(2ⁿ) | Exponencial | Fibonacci recursivo sin memo |
 | O(n!) | Factorial | Permutaciones |
@@ -1365,7 +1366,7 @@ Big O describe cómo escala un algoritmo cuando el input crece. No mide tiempo e
 1. **Ignora constantes:** O(2n) = O(n)
 2. **Ignora términos menores:** O(n² + n) = O(n²)
 3. **Loops anidados multiplican:** Loop dentro de loop = O(n × m)
-4. **Loops secuenciales suman:** Loop seguido de loop = O(n + m) = O(n)
+4. **Loops secuenciales suman:** Loop seguido de loop = O(n + m); solo se simplifica a O(n) cuando m está acotado por n o ambos representan el mismo tamaño
 
 **Ejemplos prácticos:**
 
@@ -1406,11 +1407,11 @@ def busqueda_binaria(lista, objetivo):
 def merge_sort(lista):
     if len(lista) <= 1:
         return lista
-    
+
     mid = len(lista) // 2
     izq = merge_sort(lista[:mid])   # log n niveles de recursión
     der = merge_sort(lista[mid:])
-    
+
     return merge(izq, der)          # O(n) por nivel
 
 def merge(izq, der):
@@ -1524,16 +1525,42 @@ def factorial(n):
 
 ---
 
+## Cómo elegir una estructura a partir del problema
+
+Elige la estructura según las operaciones que necesitas: una lista conserva una secuencia y permite acceder por posición; un conjunto comprueba pertenencia y evita duplicados; un diccionario relaciona claves con valores. La elección también depende del orden, la memoria y las garantías de la implementación.
+
+Imagina un registro de gastos. Para mostrarlos en orden de captura puedes usar una lista. Para identificar categorías únicas, un conjunto. Para acumular el total de cada categoría, un diccionario. No son sustitutos universales: pueden coexistir porque resuelven operaciones distintas.
+
+```python
+gastos = [("comida", 50), ("transporte", 20), ("comida", 30)]
+totales = {}
+for categoria, importe in gastos:
+    totales[categoria] = totales.get(categoria, 0) + importe
+print(totales)  # {'comida': 80, 'transporte': 20}
+```
+
+El recorrido procesa cada gasto una vez. Con operaciones de diccionario de tiempo esperado constante, el tiempo esperado es O(n) y el espacio adicional O(k), donde k es el número de categorías distintas. Esas cotas no predicen milisegundos ni equivalen a una garantía de capacidad del servidor.
+
+Para practicar, agrega una categoría nueva, una lista vacía y un importe inválido. Define qué hacer con ese importe antes de cambiar el código. Después explica tu decisión como lo harías en una [prueba técnica](/blog/consejos-para-pruebas-tecnicas).
+
 ## Preguntas Frecuentes
 
 **¿Necesito saber matemáticas avanzadas para esto?**
-No. Necesitas pensamiento lógico, no cálculo avanzado. Big O usa algo de notación, pero el 90% es razonar sobre cómo se comporta tu código, no resolver integrales.
+No. Necesitas pensamiento lógico, no cálculo avanzado. Big O usa algo de notación, pero gran parte del trabajo consiste en razonar sobre cómo se comporta tu código, no resolver integrales.
 
 **¿En qué lenguaje practico la lógica y las estructuras de datos?**
 En el que quieras: los conceptos son universales. Aquí usamos Python por su legibilidad; si no lo conoces, empieza por mi [tutorial de Python para principiantes](/blog/tutorial-python-principiantes-proyecto-basico) y luego vuelve a esta guía.
 
 **¿Esto me sirve para entrevistas técnicas?**
 Muchísimo. La mayoría de entrevistas técnicas evalúan exactamente esto. Y si dudas qué stack acompañar, mira los [lenguajes](/blog/lenguajes-de-programacion-2026-y-proyectos-para-empezar) y [frameworks](/blog/frameworks-mas-usados-2026-learning-path) con más demanda en 2026.
+
+### ¿Big O predice cuánto tardará mi programa?
+
+No. Describe una cota de crecimiento del costo según el tamaño de entrada, bajo un modelo de operaciones. Hardware, implementación y constantes también influyen; mide cuando necesites tiempos reales.
+
+### ¿Implemento cada estructura o uso la biblioteca del lenguaje?
+
+Implementarla una vez ayuda a entender sus operaciones. Para un proyecto, suele convenir la implementación de la biblioteca si cumple tus requisitos; documenta las garantías de orden y rendimiento que utilizas.
 
 ## Conclusión
 

@@ -2,6 +2,7 @@
 title: "Las ideas no valen nada si no las ejecutas"
 category: "Reflexiones"
 date: "2025-11-06"
+updated: "2026-10-21"
 excerpt: "He aprendido que las ideas no valen nada si no las ejecutas, aquí te cuento por qué."
 published: true
 readTime: "7 min"
@@ -42,7 +43,7 @@ La gente desperdicia mucho tiempo posponiendo sus ideas viendo las redes sociale
 
 La clave está en encontrar un equilibrio saludable entre el trabajo y el descanso, y en desarrollar hábitos que nos permitan ser productivos y efectivos en la ejecución de nuestras ideas.
 
-Por su puesto que mientras más insano se vuelva nuestro enfoque al trabajo, es más probable que logremos ingresos más altos, pero a la larga esto puede afectar nuestra salud mental y física, así que siempre hay que buscar un balance (a no ser que estes dispuesto a sacrificar tu salud por dinero, lo cual no recomiendo).
+Trabajar más horas no garantiza mayores ingresos. Define un ritmo sostenible y cuida el descanso; la ejecución necesita decisiones y aprendizaje, no un compromiso de sacrificar tu salud.
 
 ## El Fracaso como parte del Aprendizaje
 
@@ -50,13 +51,23 @@ Yo mismo he fracasado muchas veces al intentar ejecutar mis ideas, pero no me ri
 
 La ejecución constante, incluso frente al fracaso, es lo que finalmente conduce al éxito. Así que no tengas miedo de tomar acción y ejecutar tus ideas, porque al final del día, es la única manera de convertirlas en realidad.
 
-Es importante NO OLVIDAR que el éxito es meramente jugar con estadísticas, si lanzas 100 ideas, es probable que 1 o 2 tengan éxito, pero si no lanzas ninguna, el éxito es imposible.
+Lanzar más intentos no establece una probabilidad fija de éxito. Cada prueba debe aportar información que permita mejorar una decisión o descartar una hipótesis.
 
 ## Memento Mori: "Recuerda que vas a morir"
 
 Este concepto filosófico nos recuerda la inevitabilidad de la muerte y la importancia de vivir una vida significativa. Al recordar que nuestro tiempo es limitado, podemos encontrar la motivación para actuar y ejecutar nuestras ideas en lugar de posponerlas indefinidamente.
 
 Vivir con la conciencia de nuestra mortalidad nos impulsa a aprovechar al máximo cada momento y a perseguir nuestras pasiones con determinación. Así que recuerda, el tiempo es un recurso finito, y la mejor manera de honrar nuestra existencia es ejecutando nuestras ideas y dejando una huella significativa en el mundo.
+
+## Define la primera prueba antes de construir todo
+
+Ejecutar una idea de software empieza por una acción que reduzca una incertidumbre. Puedes probar si una persona entiende el problema, si consigue completar una tarea o si el flujo resuelve una necesidad. Hacer más pantallas no demuestra por sí solo ninguna de esas cosas.
+
+Para una idea de agenda, escribe: «quiero comprobar si un cliente puede elegir servicio y horario sin preguntarme por mensaje». Prepara un flujo pequeño o un prototipo y pide a una persona pertinente que intente la tarea. Observa dónde duda; no le indiques cada botón.
+
+Antes de probar, decide qué registrarás: tarea completada, preguntas y errores. Después elige un siguiente paso concreto, como aclarar la duración del servicio. Si descubres que el problema principal era otro, cambiar el enfoque también es un resultado útil.
+
+Reserva un bloque de trabajo sostenible y una entrega pequeña. Descansar no equivale a procrastinar, y acumular horas no garantiza ingresos. Cuando ya exista algo que se pueda probar, la [guía para lanzar un side project](/blog/lanzar-side-project-redes-plan-publicaciones) ayuda a comunicarlo sin inventar resultados.
 
 ## Preguntas Frecuentes
 
@@ -65,3 +76,15 @@ Porque una idea sin acción es solo un pensamiento. El valor real se crea al con
 
 **¿Cómo dejo de procrastinar y empiezo a ejecutar?**
 Empieza pequeño y hoy. La motivación llega *después* de actuar, no antes. Mucho de esto es cuestión de mentalidad: lo desarrollo en [la importancia de la mentalidad de crecimiento](/blog/importancia-mentalidad-crecimiento-profesional-personal).
+
+### ¿Necesito programar antes de validar una idea?
+
+No siempre. Una conversación, una demostración manual o un prototipo pueden ayudarte a comprobar una incertidumbre. Elige la prueba según la pregunta, no según la herramienta que quieras usar.
+
+### ¿Cómo sé cuándo dejar de agregar funciones?
+
+Define una tarea principal y un criterio para probarla. Si una función no es necesaria para esa comprobación, puede esperar. Registra lo pendiente para decidirlo después con evidencia.
+
+### ¿Cerrar un proyecto significa que fallé como desarrollador?
+
+No. Revisa qué aprendiste, qué información faltó y si tiene sentido continuar. Cerrar un intento puede liberar recursos para un objetivo más pertinente.

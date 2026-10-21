@@ -2,6 +2,7 @@
 title: "Cómo diseñar una página de reservas útil para un negocio de servicios"
 category: "Herramientas"
 date: "2026-10-10"
+updated: "2026-10-21"
 excerpt: "Convierte un formulario de citas en un flujo claro: servicio, profesional, disponibilidad y confirmación. Una guía práctica con AntraPro como ejemplo."
 published: true
 tags: ["AntraPro", "Diseño", "UX"]
@@ -58,3 +59,35 @@ Una confirmación enviada al reservar y un recordatorio enviado antes de la cita
 Haz una prueba con alguien que no conozca tu negocio: pídele reservar un servicio concreto desde el teléfono y luego explicar qué confirmó. Observa dónde duda y qué información busca; no le indiques dónde pulsar. Esa revisión aporta más que preguntar si le gustaron los colores.
 
 Si quieres una solución existente, [consulta AntraPro](https://antrapro.app/es?utm_source=ulises_io&utm_medium=referral&utm_campaign=antrapro_guides&utm_content=es_disenar-pagina-reservas-negocio-servicios) y revisa sus funciones y condiciones actuales. Si estás construyendo tu propia app, documenta estas decisiones y las pruebas en el README. También puedes [convertir esa documentación en contenido para mostrar tu proyecto](/blog/convertir-readme-proyecto-contenido-redes).
+
+## Define qué ocurre mientras llega la confirmación
+
+Una solicitud enviada todavía no equivale a una reserva confirmada. El flujo debe distinguir envío, confirmación, conflicto y resultado desconocido. Esa diferencia ayuda a que el cliente no interprete una pausa de red como una invitación a crear otra cita.
+
+Antes de implementar, escribe el mensaje de cada estado. Si el horario se ocupó, conserva la información que siga siendo válida y permite elegir otro. Si no sabes si se guardó, ofrece una comprobación del resultado según las capacidades del sistema, sin mostrar una confirmación inventada.
+
+La interfaz también debe indicar zona horaria cuando pueda haber ambigüedad y presentar fecha y hora sin depender solo de un calendario visual. Prueba el recorrido con teclado y en una pantalla pequeña.
+
+Son criterios de diseño para evaluar o construir un sistema, no funciones adicionales atribuidas a AntraPro. La parte de concurrencia se desarrolla en [cómo evitar dobles reservas](/blog/evitar-dobles-reservas-sistema-citas).
+
+## Preguntas frecuentes
+
+### ¿Un formulario de contacto ya es una página de reservas?
+
+Puede recibir solicitudes, pero no confirma por sí solo disponibilidad ni una cita. Nombra el resultado con precisión para que el cliente sepa si debe esperar otra respuesta.
+
+### ¿Qué debería aparecer en una confirmación?
+
+Servicio, fecha, hora, ubicación o modalidad y profesional cuando corresponda. Añade el siguiente paso para consultar o pedir un cambio, según las funciones reales del sistema.
+
+### ¿Qué hago si no hay horarios disponibles?
+
+Explica si el día está completo o fuera de atención y permite revisar alternativas pertinentes. No prometas lista de espera o notificaciones si no existen.
+
+### ¿Cómo pruebo accesibilidad sin limitarme a los colores?
+
+Recorre el formulario con teclado, revisa etiquetas y foco, y comprueba que errores y cambios de estado sean comprensibles sin distinguir colores. Complementa la revisión con usuarios y herramientas adecuadas.
+
+### ¿Mostrar un horario libre garantiza que se puede reservar?
+
+No. Puede cambiar antes de confirmar. El servidor debe proteger la operación y la interfaz debe explicar un conflicto; la disponibilidad mostrada es una observación, no una garantía futura.

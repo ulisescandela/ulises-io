@@ -3,6 +3,7 @@ title: 'Git and GitHub for Beginners: A Practical Guide'
 sourceSlug: git-github-para-principiantes-guia-practica
 category: Tools
 date: '2026-05-27'
+updated: "2026-10-21"
 excerpt: Learn what Git and GitHub do, how they differ and how to use repositories, commits and branches in a practical beginner workflow.
 published: true
 translated: '2026-10-10'
@@ -92,3 +93,29 @@ As soon as you master the basic flow. Branches allow you to work on a functional
 Git may seem like another obstacle when you already have a thousand things to learn, but it is just the opposite: it is the safety net that lets you experiment without fear of breaking anything, because you can always go back. Learning it soon is one of the best decisions you can make as a developer.
 
 Start today: create a repository, make your first commit and upload it to GitHub. In a few days, this cycle will be as natural as saving a document. And with Git under control, you have a key piece of the [roadmap from zero to contracted](/en/developer-roadmap-from-beginner-to-hired) solved.
+
+## Your first project on GitHub, from start to finish
+
+To upload a project you need a local repository with a commit, a remote repository and a way to authenticate. A commit saves history locally; push sends it to the configured remote.
+
+For this exercise, create an empty GitHub repository without an initial README or license. Open your project folder in a terminal:
+
+```bash
+git init
+git status
+```
+
+Create a suitable `.gitignore` before adding files. For a Node project, for example, exclude `node_modules/` and `.env`. Review file names and replace the example paths with files you actually intend to publish:
+
+```bash
+git add README.md .gitignore
+git commit -m "docs: agregar presentación del proyecto"
+git branch -M main
+git remote add origin https://github.com/TU_USUARIO/TU_REPO.git
+git remote -v
+git push -u origin main
+```
+
+The identity in git config identifies commits; it does not authenticate GitHub access. Use the HTTPS or SSH method configured for your account. If origin already exists, inspect `git remote -v` first. This exercise assumes an empty remote. If it already has files, clone it into another folder and integrate your work there.
+
+Open GitHub and verify the commit arrived. Continue with the [Git command reference](/en/essential-git-commands-for-developers) for branches and recovery.

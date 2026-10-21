@@ -2,6 +2,7 @@
 title: "Cómo convertir PNG, JPG y WebP: formatos, fondos y transparencia"
 category: "Herramientas"
 date: "2026-10-10"
+updated: "2026-10-21"
 excerpt: "Convierte imágenes gratis con Antrapost y aprende qué ocurre con la transparencia, las dimensiones y el peso al cambiar de formato."
 published: true
 tags: ["Antrapost", "Imágenes", "Conversión", "Diseño"]
@@ -60,6 +61,14 @@ La salida es una imagen estática. La herramienta no admite archivos animados y 
 
 Las imágenes se procesan localmente en el navegador y no quedan guardadas para otra visita. Guarda tu resultado antes de cerrar la página.
 
+## Comprueba la transparencia sobre dos fondos
+
+La transparencia permite que se vea el fondo situado detrás de la imagen. No es un color blanco ni un patrón de cuadros: ese patrón suele ser una ayuda del visor. Al convertir a un formato opaco debes elegir qué color reemplazará las zonas transparentes.
+
+Para un logo, abre el resultado sobre un fondo claro y uno oscuro. Revisa bordes y sombras semitransparentes: un contorno que parecía correcto sobre blanco puede mostrar un halo en otro contexto. Si debes entregar JPG, evalúalo sobre el mismo fondo incorporado a la salida.
+
+No basta con mirar la extensión en el nombre. Abre el archivo descargado y comprueba que el destino lo reconoce. Si el problema es el peso y no la compatibilidad, utiliza la [guía de compresión](/blog/comprimir-imagenes-jpg-webp-gratis) para evaluar otra variable.
+
 ## Preguntas frecuentes
 
 ### ¿Puedo convertir gratis un PNG a JPG?
@@ -73,6 +82,14 @@ Convierte a un formato que sí admita y revisa el resultado. Que el navegador ab
 ### ¿Debo convertir todo a PNG para mejorar la calidad?
 
 No. PNG no recupera información que una imagen JPG ya perdió. Elige según el uso, no por una supuesta mejora automática.
+
+### ¿Cambiar .webp por .jpg en el nombre convierte el archivo?
+
+No. Solo cambia el nombre. El contenido debe codificarse de nuevo en el formato elegido; de lo contrario puede fallar en el destino aunque el nombre parezca correcto.
+
+### ¿WebP puede conservar un fondo transparente?
+
+Sí, el formato admite transparencia. Debes comprobar que el archivo de origen la tenga y que la herramienta y la configuración elegidas la conserven.
 
 ## Elige la salida por lo que necesitas conservar
 

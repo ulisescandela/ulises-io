@@ -3,6 +3,7 @@ title: Essential Git Commands for Developers
 sourceSlug: comandos-git-esenciales-para-desarrolladores
 category: Tools
 date: '2026-01-17'
+updated: "2026-10-21"
 excerpt: Learn essential Git commands for daily work, including commits, branches, merging and recovering from common mistakes.
 published: true
 translated: '2026-10-10'
@@ -76,7 +77,7 @@ Pro tip: Use [Conventional Committees](https://www.conventionalcommits.org/) for
 ```bash
 git push                              # Subir al remote
 git push -u origin main               # Primera vez (establece upstream)
-git push --force-with-lease           # Force push seguro
+git push --force-with-lease           # Reescribir solo si entiendes el historial remoto
 ```
 
 ▁Nunca Never use `git push --force` in shared branches. If you need to force, use `--force-with-lease` that verifies that no one else has uploaded changes.
@@ -244,3 +245,23 @@ Do you have a favorite command that I did not mention? Share it on my networks.
 ---
 
 Was this guide useful? Share it with that friend who is still afraid of Git. And follow me for more content on development and tools.
+
+## Resolve a merge conflict deliberately
+
+A conflict occurs when Git cannot combine changes automatically. Read both intentions, edit the result and check its behavior before recording the resolution. For a merge already in progress:
+
+```bash
+git status
+git diff --name-only --diff-filter=U
+# Edita cada archivo en conflicto y comprueba el resultado.
+git add ruta/del/archivo
+git merge --continue
+```
+
+Remove conflict markers only after deciding what the combined code should do. To cancel that merge, `git merge --abort` attempts to restore the previous state. Save local work before starting an integration.
+
+### A recovered commit is not every unsaved file
+
+`git reflog` records local reference movements. If you find a lost commit, preserve it with `git branch rescue COMMIT_HASH` and inspect it before integration. Reflog does not guarantee recovery of changes never saved in a commit or stash, and entries and objects can expire.
+
+If local and remote repositories are still unclear, review [Git and GitHub for beginners](/en/git-and-github-for-beginners).
