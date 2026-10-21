@@ -2,6 +2,7 @@
 title: "Tutorial de Python para Principiantes: Lo Básico + Calculadora Interactiva"
 category: "Programación"
 date: "2026-01-19"
+updated: "2026-10-21"
 excerpt: "Aprende Python desde cero con este tutorial práctico. Cubrimos lo esencial que necesitas saber y construimos juntos una calculadora interactiva que puedes agregar a tu portafolio."
 readTime: "15 min"
 tags: ["Python", "Tutorial", "Principiantes", "Proyecto", "Programación"]
@@ -361,22 +362,22 @@ def main():
     print("3. Multiplicación")
     print("4. División")
     print("5. Salir")
-    
+
     while True:
         try:
             opcion = int(input("\nElige una operación (1-5): "))
-            
+
             if opcion == 5:
                 print("¡Hasta luego!")
                 break
-            
+
             if opcion not in [1, 2, 3, 4]:
                 print("Opción inválida. Intenta de nuevo.")
                 continue
-            
+
             num1 = float(input("Ingresa el primer número: "))
             num2 = float(input("Ingresa el segundo número: "))
-            
+
             if opcion == 1:
                 resultado = suma(num1, num2)
                 print(f"Resultado: {num1} + {num2} = {resultado}")
@@ -389,7 +390,7 @@ def main():
             elif opcion == 4:
                 resultado = division(num1, num2)
                 print(f"Resultado: {num1} / {num2} = {resultado}")
-                
+
         except ValueError:
             print("Error: Ingresa un número válido.")
         except Exception as e:
@@ -436,6 +437,30 @@ Una vez que domines lo básico, explora:
 
 ---
 
+## Dónde escribir y cómo ejecutar tu primer archivo
+
+Un archivo `.py` contiene el programa; la terminal ejecuta el intérprete y muestra su salida. El indicador `>>>` pertenece a la consola interactiva de Python: los comandos de la terminal no se escriben ahí. Puedes salir con `exit()`.
+
+Guarda `saludo.py` con este contenido:
+
+```python
+nombre = input("¿Cómo te llamas? ")
+print(f"Hola, {nombre}")
+```
+
+Abre la terminal en esa carpeta. En Windows prueba `py saludo.py`; en macOS o Linux, `python3 saludo.py`. Usa el comando que corresponda a la instalación que verificaste. Si el sistema no encuentra el archivo, revisa la carpeta actual y que no se haya guardado como `saludo.py.txt`.
+
+### Comprueba la calculadora antes de ampliarla
+
+| Entrada o acción | Comportamiento que debes observar |
+| --- | --- |
+| Sumar 2 y 3 | Muestra 5 |
+| Dividir entre cero | Explica el problema sin cerrar inesperadamente |
+| Escribir letras donde espera números | Pide una entrada válida |
+| Elegir salir | Termina sin pedir otra operación |
+
+Prueba cada caso en tu versión. Cuando falle uno, sigue el recorrido de la entrada hasta la función que la procesa; no copies otra calculadora completa. Si necesitas reforzar ese razonamiento, revisa la [guía de lógica y estructuras de datos](/blog/guia-completa-logica-estructuras-de-datos).
+
 ## Preguntas Frecuentes
 
 **¿Es Python bueno para principiantes?**
@@ -446,6 +471,14 @@ Lo básico de este tutorial lo puedes asimilar en pocas semanas. Para soltura re
 
 **¿Qué hago después de aprender lo básico?**
 Da el salto a un framework. Para web tienes Django o FastAPI, que cubro junto a otros en [los frameworks más usados en 2026](/blog/frameworks-mas-usados-2026-learning-path); o métete en ciencia de datos e IA, donde Python es el rey.
+
+### ¿Por qué obtengo un IndentationError?
+
+Python usa la indentación para delimitar bloques. Revisa las líneas después de if, for, while o def y evita mezclar tabulaciones con espacios. El editor puede mostrar los espacios en blanco.
+
+### ¿Necesito instalar paquetes para esta calculadora?
+
+No para el proyecto básico de consola: las funciones utilizadas pertenecen a Python y su biblioteca estándar. Instala dependencias solo cuando agregues una función que realmente las necesite.
 
 ## Conclusión
 

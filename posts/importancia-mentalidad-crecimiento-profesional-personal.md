@@ -2,6 +2,7 @@
 title: "Mentalidad de Crecimiento: La Clave para Mejorar en Programación y Evitar Estancarte"
 category: "Reflexiones"
 date: "2026-01-28"
+updated: "2026-10-21"
 excerpt: "La mentalidad fija te mantiene estancado en programación. Descubre cómo adoptar una mentalidad de crecimiento para aprender constantemente, superar errores y escalar en tu carrera como desarrollador."
 readTime: "15 min"
 tags: ["Mentalidad", "Crecimiento Profesional", "Programación", "Desarrollo Personal", "Soft Skills", "Carrera", "2026"]
@@ -30,13 +31,13 @@ Imagina a dos desarrolladores junior que entran a la misma empresa el mismo día
 
 Misma situación. Misma empresa. Mismo feedback. Resultados completamente diferentes.
 
-La única variable que cambió fue la mentalidad.
+El ejemplo ilustra dos maneras de responder; no es un experimento que aísle la mentalidad como única causa.
 
 ---
 
 ## Mentalidad fija vs. mentalidad de crecimiento
 
-Carol Dweck, psicóloga de Stanford, identificó dos tipos fundamentales de mentalidad que determinan cómo enfrentamos los desafíos:
+El trabajo de Carol Dweck popularizó la distinción entre mentalidad fija y de crecimiento para describir creencias sobre cómo se desarrollan las capacidades:
 
 ### Mentalidad fija
 
@@ -376,6 +377,16 @@ Antes de cerrar esta página y seguir con tu día, haz este ejercicio:
 
 ---
 
+## Cambiar la estrategia también es parte del aprendizaje
+
+Una mentalidad de crecimiento implica tratar una dificultad como algo que puedes investigar y trabajar, no como una sentencia sobre tu capacidad. Eso no significa que esforzarte más resuelva cualquier problema ni que un resultado laboral dependa solo de tu actitud.
+
+Si una revisión señala que mezclas validación y acceso a datos, transforma el comentario en una práctica: separa una función, comprueba su comportamiento y pide una nueva revisión. Observa qué entendiste y qué explicación todavía necesitas. Repetir «puedo hacerlo» sin cambiar el método no sustituye esa tarea.
+
+También revisa el contexto. Requisitos cambiantes, falta de tiempo, instrucciones ambiguas y ausencia de acompañamiento pueden dificultar el progreso. Pedir claridad, reducir alcance o descansar son decisiones compatibles con aprender.
+
+Los ejemplos de este texto ilustran respuestas posibles; no demuestran que la mentalidad sea la única causa de una promoción o un resultado. Para llevarlo a la colaboración diaria, consulta las [prácticas de comunicación y feedback](/blog/consejos-para-incrementar-softskills).
+
 ## Preguntas Frecuentes
 
 **¿Qué es la mentalidad de crecimiento?**
@@ -386,6 +397,14 @@ Muchísimo. A menudo pesa más que el talento puro: de hecho, [ser un buen progr
 
 **¿Se puede cambiar una mentalidad fija?**
 Sí. No naciste con ella; la construiste, y puedes reconstruirla con práctica deliberada. Combínala con habilidades concretas para [destacar en la industria](/blog/guia-destacar-en-tech-2026-habilidades-y-negocios).
+
+### ¿Mentalidad de crecimiento significa nunca abandonar un proyecto?
+
+No. Puedes cambiar de estrategia, reducir alcance o cerrar un intento cuando la evidencia lo justifique. Aprender incluye revisar si el objetivo sigue teniendo sentido.
+
+### ¿Cómo distingo práctica de repetir el mismo error?
+
+Define qué cambiarás, con qué caso lo comprobarás y qué observación pedirás. Si repites la tarea sin revisar el resultado o ajustar el método, acumulas intentos sin una dirección clara.
 
 ## Conclusión
 

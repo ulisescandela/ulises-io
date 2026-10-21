@@ -2,6 +2,7 @@
 title: "Cómo funciona Internet al abrir una web: de DNS a HTTPS y al navegador"
 category: "Programación"
 date: "2026-10-10"
+updated: "2026-10-21"
 excerpt: "Sigue el viaje de una página web: URL, DNS, conexiones, HTTPS, servidor y renderizado. Incluye ejemplos y una guía para detectar dónde falla una carga."
 tags: ["Internet", "DNS", "HTTP", "Desarrollo Web"]
 published: true
@@ -116,6 +117,14 @@ Si llega HTML con 200 y la interfaz queda vacía, revisa errores de JavaScript y
 
 Aprender estos límites te permite explicar un problema concreto: «la solicitud del documento tarda» es mucho más útil que «Internet está lento».
 
+## Cómo interpretar la espera en Network
+
+El TTFB mide el tiempo hasta recibir el primer byte de una respuesta según la herramienta utilizada. No representa únicamente el tiempo que tu código pasa calculando: también intervienen la comunicación y la infraestructura. Revisa el desglose antes de culpar a la base de datos.
+
+Compara el documento con sus recursos. Si el documento responde pronto pero una imagen grande tarda en transferirse, revisa ese archivo. Si las descargas terminan y la interfaz sigue bloqueada, investiga la ejecución con Performance y la consola. Network muestra solicitudes; no explica por sí solo todo el trabajo del navegador.
+
+Haz las comparaciones en condiciones parecidas: misma URL, dispositivo y modo de caché. Una prueba local aislada no representa la experiencia de todos los visitantes. Este diagnóstico ayuda tanto si trabajas en [frontend como en backend](/blog/frontend-backend-fullstack-cual-elegir-2026), porque separa el trabajo del navegador del que ocurre antes de recibir la respuesta.
+
 ## Preguntas frecuentes
 
 ### ¿DNS y hosting son lo mismo?
@@ -133,6 +142,10 @@ Puede haber diferencias de red, DNS, caché, navegador o código. Compara la URL
 ### ¿Necesito saber redes para empezar a programar?
 
 Puedes empezar sin dominar redes. Para crear aplicaciones web, entender URL, DNS, HTTPS y HTTP te ayudará pronto: son herramientas para depurar, publicar y explicar tu trabajo.
+
+### ¿Un TTFB alto significa que la base de datos es lenta?
+
+No necesariamente. Revisa red, conexión, caché y procesamiento del servidor. Para atribuir la espera a una consulta necesitas evidencia adicional, como registros o trazas del backend.
 
 ## Qué aprender después
 

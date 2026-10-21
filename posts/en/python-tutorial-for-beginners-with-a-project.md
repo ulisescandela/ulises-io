@@ -3,6 +3,7 @@ title: 'Python Tutorial for Beginners: Build Your First Project'
 sourceSlug: tutorial-python-principiantes-proyecto-basico
 category: Programming
 date: '2026-01-19'
+updated: "2026-10-21"
 excerpt: Learn Python basics through practical examples, then build an interactive calculator to apply variables, control flow and functions.
 published: true
 translated: '2026-10-10'
@@ -360,22 +361,22 @@ def main():
     print("3. Multiplicación")
     print("4. División")
     print("5. Salir")
-    
+
     while True:
         try:
             opcion = int(input("\nElige una operación (1-5): "))
-            
+
             if opcion == 5:
                 print("¡Hasta luego!")
                 break
-            
+
             if opcion not in [1, 2, 3, 4]:
                 print("Opción inválida. Intenta de nuevo.")
                 continue
-            
+
             num1 = float(input("Ingresa el primer número: "))
             num2 = float(input("Ingresa el segundo número: "))
-            
+
             if opcion == 1:
                 resultado = suma(num1, num2)
                 print(f"Resultado: {num1} + {num2} = {resultado}")
@@ -388,7 +389,7 @@ def main():
             elif opcion == 4:
                 resultado = division(num1, num2)
                 print(f"Resultado: {num1} / {num2} = {resultado}")
-                
+
         except ValueError:
             print("Error: Ingresa un número válido.")
         except Exception as e:
@@ -457,3 +458,18 @@ What project are you going to build with Python? Tell me in my networks.
 ---
 
 Did this tutorial help you? Share it with someone who wants to learn Python. And follow me for more practical tutorials.
+
+## Where to write and run your first file
+
+A `.py` file contains the program. Your terminal runs the interpreter and displays its output. The `>>>` prompt belongs to Python's interactive console, not the system terminal; leave it with `exit()` before running terminal commands.
+
+Save this as `saludo.py`. The Spanish prompts are kept identical to the source example:
+
+```python
+nombre = input("¿Cómo te llamas? ")
+print(f"Hola, {nombre}")
+```
+
+Open a terminal in that folder. On Windows try `py saludo.py`; on macOS or Linux try `python3 saludo.py`, using the command for your installation. If the file is missing, check the current folder and whether it was saved as `saludo.py.txt`.
+
+Before expanding the calculator, check addition, division by zero, nonnumeric input and the exit option. Trace an invalid input to the function that handles it. The [logic and data structures guide](/en/programming-logic-and-data-structures-guide) develops that reasoning.

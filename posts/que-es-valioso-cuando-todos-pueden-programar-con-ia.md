@@ -2,7 +2,8 @@
 title: "Qué es Valioso Ahora que Todos Pueden 'Programar' con IA (2026)"
 category: "IA"
 date: "2026-09-01"
-excerpt: "Si la IA convierte escribir código en algo casi gratis, ¿qué te hace valioso? Analizo qué habilidades se vuelven escasas cuando todos pueden 'programar' y dónde deberías poner tu energía en 2026."
+updated: "2026-10-21"
+excerpt: "Qué aporta un desarrollador cuando la IA genera código: definir requisitos, revisar riesgos y hacerse responsable de un producto que funciona."
 readTime: "11 min"
 tags: ["IA", "Carrera", "Habilidades", "Futuro del Desarrollo", "2026"]
 published: true
@@ -25,7 +26,7 @@ Es exactamente el patrón que se ha repetido en toda la [historia de la programa
 
 Seamos claros sobre lo que se está abaratando, porque negarlo es la forma más rápida de quedarse atrás:
 
-*   **Escribir código repetitivo (boilerplate):** CRUDs, formularios, configuraciones. La IA los produce mejor y más rápido que tú tecleando.
+*   **Escribir código repetitivo (boilerplate):** CRUDs, formularios, configuraciones. La IA puede proponerlos rápidamente, pero su corrección y el costo de revisión dependen del caso.
 *   **Recordar sintaxis exacta:** ya no vale nada memorizar el orden de los argumentos de una función. Se consulta o se autocompleta.
 *   **Traducir un problema *ya definido* en código:** si alguien te da la especificación completa y clara, ese último paso es el más automatizable de todos.
 
@@ -33,7 +34,7 @@ Si tu identidad profesional se apoya solo en estas tres cosas, es normal sentir 
 
 ## Lo que se vuelve escaso (y por tanto valioso)
 
-Aquí está el otro lado de la balanza. Estas son las capacidades cuyo precio *sube* precisamente porque la IA no las cubre.
+Aquí está el otro lado de la balanza. Estas son capacidades que considero útiles para dirigir y evaluar el trabajo con IA; no es una medición de precios de mercado.
 
 ### 1. Definir bien el problema
 La IA responde a lo que le pides, no a lo que necesitas. Saber **formular la pregunta correcta** (qué construir, para quién, qué es un "hecho" y qué es opcional) es hoy más valioso que saber teclear la solución. Un mal prompt sobre un problema mal entendido produce código perfecto para el objetivo equivocado.
@@ -71,6 +72,16 @@ No hace falta reinventarse de cero. Hace falta **subir de nivel de abstracción*
 
 Y si te preguntas si esto significa que la IA te va a reemplazar, lo analizo a fondo en [IA reemplazando programadores](/blog/ia-reemplazando-developers): el resumen es que reemplaza *tareas*, no *personas con criterio*.
 
+## Una función generada todavía necesita una decisión de producto
+
+Generar una exportación de gastos no demuestra que el producto esté resuelto. Alguien debe definir qué registros puede exportar cada usuario, qué moneda aparece, cómo se representan los decimales y qué ocurre si falla la descarga. Esas decisiones forman parte del trabajo de desarrollo.
+
+Supón que una IA propone un endpoint que descarga todos los gastos. Una comprobación útil no es «el CSV abre», sino «un usuario solo obtiene los registros autorizados y el total coincide con los datos que ve». Ese criterio conecta seguridad, datos y experiencia de uso.
+
+Antes de aceptar la función, identifica una alternativa, un riesgo y una prueba. Por ejemplo, descarta exportar todos los registros desde el navegador si el servidor debe imponer permisos. No necesitas atribuir un ahorro que no mediste: puedes demostrar que aclaraste el requisito y evitaste un comportamiento incorrecto.
+
+Para convertir estas decisiones en evidencia profesional, consulta [cómo presentar proyectos en tu CV](/blog/proyectos-valiosos-para-tu-cv-programador). Aquí el foco es el valor de la decisión, no predecir qué sueldo pagará el mercado.
+
 ## Preguntas Frecuentes
 
 **Si la IA escribe el código, ¿para qué aprender a programar?**
@@ -80,10 +91,18 @@ Porque para dirigir, revisar y corregir a la IA necesitas entender lo que produc
 Los fundamentos (lógica, estructuras de datos, cómo funciona un sistema) por encima de cualquier framework de moda. Son lo que te da criterio, y el criterio es lo escaso. Framework nuevo aprendes en una semana; criterio, en años.
 
 **¿Van a bajar los salarios de los programadores?**
-Bajará el valor de las tareas automatizables y subirá el de las escasas (diseño, decisión, responsabilidad). La brecha entre quien solo teclea y quien piensa se va a ensanchar, no a cerrar.
+No se puede deducir una evolución salarial a partir de que una herramienta genere código. Influyen demanda, contratación, ubicación y responsabilidades; el artículo propone dónde invertir esfuerzo, no una predicción de sueldos.
 
 **¿Esto aplica solo a programación?**
 No. El mismo principio (el valor se mueve hacia lo escaso cuando algo se automatiza) aplica a diseño, marketing, derecho o medicina. Programación es solo donde se está viendo primero y más rápido.
+
+### ¿Cómo explico mi aporte si utilicé IA para escribir parte del código?
+
+Separa lo generado de tus decisiones: problema, alternativas, verificaciones y correcciones. Describe solo lo que hiciste y puedes defender; usar una herramienta no elimina tu responsabilidad sobre la entrega.
+
+### ¿El criterio técnico sustituye conocer el lenguaje?
+
+No. Necesitas comprender el comportamiento del código para revisar supuestos, detectar errores y mantenerlo. El criterio y la base técnica se apoyan entre sí.
 
 ## Conclusión: deja de competir con la máquina
 

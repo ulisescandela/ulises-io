@@ -2,7 +2,7 @@
 title: "Proyectos que de Verdad Valen para tu CV de Programador (2026)"
 category: "Carrera"
 date: "2026-09-03"
-updated: "2026-10-10"
+updated: "2026-10-21"
 excerpt: "Otra app de to-do list no te va a conseguir trabajo. Te muestro qué tipo de proyectos destacan de verdad en un CV de programador en 2026, con ideas concretas y cómo presentarlos para que un reclutador diga 'a esta persona la quiero'."
 readTime: "12 min"
 tags: ["Carrera", "Proyectos", "Portafolio", "CV", "2026"]
@@ -31,7 +31,7 @@ Esa última señal es clave en la era de la IA: como explico en [cómo aprender 
 El objetivo aquí es *terminar* y *desplegar* algo real, no impresionar con tecnología. Elige algo con un toque personal:
 
 *   Una herramienta que resuelva un problema tuyo (un gestor de gastos, un tracker de hábitos, un conversor que uses de verdad).
-*   Un sitio web para un negocio local real (aunque sea ficticio o de un familiar): demuestra que sabes entregar algo usable.
+*   Un sitio web para un negocio local o un caso ficticio claramente identificado: demuestra que sabes entregar algo usable.
 *   Un pequeño juego en el navegador: enseña lógica y hace tu portafolio memorable.
 
 Si aún estás eligiendo herramientas, mira [las mejores tecnologías para empezar en 2026](/blog/mejores-tecnologias-para-empezar-a-programar-2026) y las ideas por lenguaje de [lenguajes de programación 2026 y proyectos para empezar](/blog/lenguajes-de-programacion-2026-y-proyectos-para-empezar).
@@ -47,7 +47,7 @@ Ahora toca demostrar que puedes con **complejidad real**:
 Aquí destacas frente al resto demostrando **criterio de ingeniería**:
 
 *   Un proyecto con tests, CI/CD y despliegue automatizado: demuestra madurez profesional.
-*   Una contribución real a un proyecto *open source* conocido (un *pull request* aceptado vale más que diez repos propios vacíos).
+*   Una contribución real a un proyecto *open source* conocido (una contribución revisada permite mostrar colaboración y decisiones concretas).
 *   Algo que maneje escala o rendimiento: procesar muchos datos, optimizar, diseñar bien el sistema. Los [fundamentos de arquitectura de software](/blog/fundamentos-arquitectura-software-libros-recomendados) te dan la base para esto.
 
 ## Tabla: proyecto olvidable vs. proyecto que destaca
@@ -86,10 +86,22 @@ En el README explica el problema, una decisión que descartaste y el motivo. No 
 
 Antes de enviarlo, abre la demo desde una ventana privada. Si no puedes completar el flujo principal sin tus credenciales personales, todavía no está lista para un reclutador.
 
+## Cómo escribir la entrada del proyecto en tu CV
+
+Una entrada de proyecto debe explicar problema, contribución y evidencia. La tecnología aporta contexto, pero no sustituye decir qué implementaste ni cómo comprobaste que funciona. Incluye el repositorio o la demo que realmente puedes compartir.
+
+Para un gestor de gastos, un ejemplo de redacción sería:
+
+> Implementé importación de CSV con validación por fila y un reporte de registros rechazados. Documenté el formato admitido y comprobé casos con campos faltantes y fechas inválidas. Demo con datos ficticios y repositorio disponibles.
+
+Utiliza ese texto solo si esas funciones y comprobaciones existen en tu proyecto. Si trabajaste en equipo, identifica tu parte; si seguiste una base de tutorial, explica qué cambiaste y reconoce la fuente. Una mejora sin medición puede describirse sin añadir un porcentaje.
+
+Antes de enviar la candidatura, abre los enlaces sin tu sesión, sigue el README y comprueba que no expones datos personales. Después prepara una explicación corta de una alternativa descartada. Para compartir el trabajo fuera del CV, consulta [cómo convertir un README en contenido para redes](/blog/convertir-readme-proyecto-contenido-redes).
+
 ## Preguntas Frecuentes
 
 **¿Cuántos proyectos debería tener en mi CV?**
-Entre 2 y 4 proyectos sólidos, terminados y bien presentados. Más allá de eso, la cantidad resta credibilidad en lugar de sumarla. Un portafolio no es un almacén; es una selección de tus mejores trabajos.
+Entre 2 y 4 proyectos sólidos, terminados y bien presentados. El número no es una regla: selecciona lo más relevante para el puesto y el espacio disponible. Un portafolio no es un almacén; es una selección de tus mejores trabajos.
 
 **¿Puedo usar IA para construir mis proyectos de portafolio?**
 Sí, es realista y esperable en 2026. La condición innegociable: entiende cada parte y sé capaz de explicarla y modificarla. Un proyecto que no sabes defender en una entrevista se vuelve en tu contra.
@@ -99,6 +111,10 @@ Como aprendizaje, sí; en tu CV, poco. Un clon idéntico a un tutorial no demues
 
 **¿Es mejor un proyecto grande o varios pequeños?**
 Uno grande y terminado suele impresionar más que muchos pequeños a medias, porque demuestra que sabes llevar algo complejo hasta el final. Pero ojo: grande *y terminado*. Un proyecto ambicioso abandonado resta.
+
+### ¿Qué muestro si el proyecto de mi empleo es privado?
+
+Respeta los permisos y acuerdos de confidencialidad. Puedes describir responsabilidades y decisiones autorizadas sin compartir código o datos privados, o preparar un ejercicio independiente que no reutilice material restringido.
 
 ## Conclusión: construye para demostrar, no para rellenar
 

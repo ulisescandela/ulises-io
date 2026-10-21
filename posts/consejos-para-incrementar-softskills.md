@@ -2,6 +2,7 @@
 title: "Consejos para Incrementar Soft Skills: Guía para Profesionales de IT en Perfiles Altos"
 category: "Carrera"
 date: "2026-02-01"
+updated: "2026-10-21"
 excerpt: "En el mundo de la tecnología, las habilidades técnicas son esenciales, pero las soft skills son las que te diferencian en roles senior y de liderazgo. Descubre consejos prácticos para desarrollar comunicación, liderazgo y más."
 readTime: "8 min"
 tags: ["Soft Skills", "Carrera", "Profesional", "IT", "Liderazgo"]
@@ -67,6 +68,20 @@ La tecnología evoluciona rápido; la adaptabilidad es una soft skill premium.
 - **Aprende de manera intencional**: Dedica tiempo a leer sobre liderazgo, psicología o industrias adyacentes.
 - **Ejercicio**: Elige una nueva herramienta o metodología (ej. Agile avanzado) y aplícala en un proyecto pequeño.
 
+## Cómo dar feedback técnico que permita actuar
+
+El feedback útil describe una observación, su efecto y una propuesta. Evita convertir una diferencia de diseño en un juicio sobre la persona. Una revisión debe ayudar a decidir qué cambiar y por qué, no demostrar quién sabe más.
+
+En lugar de «este código está mal», prueba: «esta consulta no filtra por usuario; una persona podría recibir registros ajenos. ¿Podemos aplicar la autorización en el servidor y agregar un caso que lo compruebe?». Hay un problema identificable, una consecuencia y una acción verificable.
+
+Si el desacuerdo es sobre estilo, revisa primero las convenciones del proyecto. Si es una decisión con costos distintos, escribe alternativas y restricciones. Distingue un bloqueo necesario de una sugerencia opcional para evitar que todo comentario parezca una condición para aprobar.
+
+### Cierra con un acuerdo
+
+Resume quién hará qué y cómo se comprobará. Después pregunta si tu explicación fue clara y si dejaste espacio para otra alternativa. Puedes observar si disminuyen las aclaraciones repetidas; no necesitas asignar una puntuación ficticia a la empatía.
+
+Estas prácticas acompañan las [habilidades técnicas duraderas](/blog/habilidades-valiosas-desarrollo-software-2026): comunicar un riesgo también exige entenderlo.
+
 ## Preguntas Frecuentes
 
 **¿Las soft skills importan más que las habilidades técnicas?**
@@ -77,6 +92,14 @@ Empieza por lo asíncrono: escribe documentación clara, comenta PRs con empatí
 
 **¿Qué soft skill trabajo primero?**
 La comunicación. Es la base de todas las demás y la que más se nota en entrevistas y en el día a día. Si buscas una visión más amplia de cómo destacar, te dejo mi [guía para destacar en tech en 2026](/blog/guia-destacar-en-tech-2026-habilidades-y-negocios).
+
+### ¿Cómo resuelvo un desacuerdo técnico sin imponer mi solución?
+
+Expongan objetivo, restricciones y alternativas por escrito. Si pueden, comparen con una prueba pequeña. Dejen claro quién decide y documenten la consecuencia aceptada.
+
+### ¿Cómo practico liderazgo sin tener personas a mi cargo?
+
+Puedes facilitar una decisión, documentar un proceso o ayudar a otra persona a desbloquearse. Acuerda el alcance y permite que conserve la autonomía; liderar no exige asumir autoridad formal.
 
 ## Conclusión
 

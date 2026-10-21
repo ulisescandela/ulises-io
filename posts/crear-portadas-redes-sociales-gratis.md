@@ -2,6 +2,7 @@
 title: "Cómo crear portadas para redes sociales gratis que sí se lean"
 category: "Herramientas"
 date: "2026-10-10"
+updated: "2026-10-21"
 excerpt: "Crea una portada con título, foto y logo en Antrapost. Aprende a revisar contraste, encuadre y legibilidad antes de descargar el PNG."
 published: true
 tags: ["Antrapost", "Portadas", "Diseño", "Redes Sociales"]
@@ -60,6 +61,14 @@ Si necesitas cambiar el formato del logo, consulta [qué sucede al convertir PNG
 
 La portada se genera en el navegador y no lleva marca de agua de Antrapost. El borrador no se conserva al salir; guarda la descarga y las palabras originales si quieres modificarla más adelante.
 
+## Prueba la portada sin leer el caption
+
+Una portada debería permitir identificar el tema aunque el texto de la publicación no esté visible. Reduce la vista previa al tamaño aproximado de un teléfono y pregunta qué se entiende primero: el título, el objeto de la foto o un adorno que compite con ambos.
+
+Si anuncias una función de exportación, muestra esa acción o nómbrala con claridad. «Nueva actualización» obliga a buscar la información en otro sitio. Un título puede ser breve sin quedar vacío de significado.
+
+Comprueba también que firma y logo no ocupen la zona de mayor atención sin motivo. Si necesitas explicar una secuencia completa, deja a la portada presentar la pregunta y utiliza un [carrusel con una idea por lámina](/blog/crear-carrusel-instagram-desde-texto-gratis) para desarrollarla. No reduzcas toda la explicación hasta volverla ilegible.
+
 ## Preguntas frecuentes
 
 ### ¿Puedo crear una portada sin pagar y sin foto?
@@ -73,6 +82,14 @@ El espacio disponible es limitado. Acorta el título o el texto secundario y evi
 ### ¿La misma imagen sirve para cualquier red?
 
 No lo supongas. Revisa formato, encuadre y vistas previas del destino, especialmente cuando cambies entre cuadrado, vertical e historia.
+
+### ¿Cuánto texto debería llevar una portada?
+
+El necesario para identificar la idea y, si hace falta, una condición. No hay un número universal de palabras: comprueba que se lea a tamaño pequeño y que no prometa algo distinto del contenido.
+
+### ¿Puedo usar una captura de mi app como fondo?
+
+Sí, si no expone información privada y ayuda a entender el mensaje. Revisa el recorte y el contraste del título; una captura completa puede incluir demasiado detalle.
 
 ## Diseña para que se entienda
 

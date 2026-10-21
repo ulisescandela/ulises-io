@@ -2,6 +2,7 @@
 title: "Git y GitHub para Principiantes: la Guía Práctica que Necesitas"
 category: "Herramientas"
 date: "2026-05-27"
+updated: "2026-10-21"
 excerpt: "Git y GitHub asustan al principio, pero son la herramienta que más vas a usar en tu carrera. Esta guía práctica te explica qué son, en qué se diferencian y el flujo de trabajo básico para empezar hoy mismo."
 readTime: "11 min"
 tags: ["Herramientas", "Git", "GitHub", "Principiantes", "2026"]
@@ -28,7 +29,7 @@ Es la confusión número uno de los principiantes, y aclararla te ahorra mucho l
 
 Una analogía: Git es como la fotografía (la técnica de sacar y guardar fotos), y GitHub es como Instagram (el sitio donde las subes y las compartes con el mundo). Necesitas la técnica para usar el sitio.
 
-## El flujo de trabajo básico (el 90% de tu día a día)
+## El flujo de trabajo básico de cambios locales a remotos
 
 No necesitas dominar los cientos de comandos de Git. Con este ciclo cubres casi todo tu trabajo diario:
 
@@ -74,10 +75,36 @@ Empezar con buenas costumbres te ahorra dolores después:
 *   **Sube tu trabajo a GitHub.** Tu perfil de GitHub es tu carta de presentación: llénalo con [proyectos que de verdad valen para tu CV](/blog/proyectos-valiosos-para-tu-cv-programador).
 *   **Aprende Git pronto, no "después".** Es de [las primeras tecnologías que deberías tocar al empezar](/blog/mejores-tecnologias-para-empezar-a-programar-2026).
 
+## Tu primer proyecto en GitHub, de principio a fin
+
+Para subir un proyecto necesitas un repositorio local con al menos un commit, un repositorio remoto y un método de autenticación. `git commit` guarda el historial en tu computadora; `git push` lo envía al remoto configurado.
+
+En GitHub crea un repositorio vacío, sin README ni licencia iniciales para este ejercicio. En la terminal entra a la carpeta de tu proyecto y ejecuta:
+
+```bash
+git init
+git status
+```
+
+Antes de agregar archivos, crea un `.gitignore` adecuado al proyecto. Por ejemplo, en Node puedes excluir `node_modules/` y `.env`; revisa los nombres de los archivos antes de continuar. Sustituye las rutas de ejemplo por archivos que sí quieras publicar:
+
+```bash
+git add README.md .gitignore
+git commit -m "docs: agregar presentación del proyecto"
+git branch -M main
+git remote add origin https://github.com/TU_USUARIO/TU_REPO.git
+git remote -v
+git push -u origin main
+```
+
+La identidad de `git config` aparece en los commits, pero no autentica el acceso a GitHub. Usa el mecanismo HTTPS o SSH configurado para tu cuenta. Si aparece `remote origin already exists`, revisa `git remote -v` antes de modificarlo. Si el remoto ya tenía archivos, clónalo en otra carpeta e integra ahí tu trabajo: este ejercicio supone un remoto vacío.
+
+Al terminar, abre el repositorio en GitHub y comprueba que llegó el commit. Para trabajar después con ramas y recuperación, continúa con la [referencia de comandos de Git](/blog/comandos-git-esenciales-para-desarrolladores).
+
 ## Preguntas Frecuentes
 
 **¿Necesito saber Git para conseguir mi primer trabajo?**
-Sí, sin excepción. Git es la herramienta de colaboración estándar en la industria. No hace falta ser experto, pero sí manejar con soltura el flujo básico (add, commit, push, pull) y las ramas.
+Es una herramienta habitual en equipos de desarrollo; revisa los requisitos de cada vacante. No hace falta ser experto, pero sí manejar con soltura el flujo básico (add, commit, push, pull) y las ramas.
 
 **¿Git es difícil de aprender?**
 Los conceptos básicos se aprenden en un par de tardes usándolos en un proyecto real. Git tiene fama de difícil por sus funciones avanzadas (rebase, resolución de conflictos complejos), pero eso llega mucho después y no lo necesitas para empezar.
@@ -87,6 +114,10 @@ Sí, GitHub es gratuito para uso personal, incluyendo repositorios privados. Es 
 
 **¿Cuándo aprendo ramas (branches)?**
 En cuanto domines el flujo básico. Las ramas te permiten trabajar en una funcionalidad sin tocar el código estable, y son esenciales para trabajar en equipo. Están cubiertas en la [guía de comandos esenciales](/blog/comandos-git-esenciales-para-desarrolladores).
+
+### ¿Un archivo en .gitignore deja de estar publicado?
+
+No si Git ya lo seguía. .gitignore evita agregar archivos no rastreados; no borra el historial. Si publicaste una credencial, revócala y revisa cómo retirarla del repositorio y su historial.
 
 ## Conclusión: la herramienta que te acompañará siempre
 

@@ -2,6 +2,7 @@
 title: "Roadmap del Desarrollador en 2026: La Ruta de Cero a Contratado"
 category: "Carrera"
 date: "2026-03-18"
+updated: "2026-10-21"
 excerpt: "Una hoja de ruta clara y realista para pasar de cero a tu primer trabajo como desarrollador en 2026. Qué aprender, en qué orden, cuánto dedicarle y cómo saber que estás listo para postular."
 readTime: "13 min"
 tags: ["Carrera", "Roadmap", "Principiantes", "Empleo Tech", "2026"]
@@ -78,10 +79,27 @@ No esperes a sentirte "listo del todo", esa sensación no llega nunca. Estás li
 
 Si marcas esas casillas, postula ya. Aprenderás muchísimo en las propias entrevistas.
 
+## Avanza por evidencias, no solo por semanas
+
+Un roadmap es un orden de aprendizaje, no una fecha garantizada de contratación. Usa las semanas como una propuesta de organización y avanza cuando puedas demostrar el objetivo de cada fase con una tarea que no dependa de copiar un tutorial.
+
+| Fase | Evidencia para pasar a la siguiente |
+| --- | --- |
+| Fundamentos | Resuelves un problema pequeño y explicas entradas, salida y errores |
+| Web | Publicas un flujo que otra persona puede usar |
+| Especialización | Modificas una función del proyecto y justificas la herramienta |
+| Candidatura | Explicas una decisión, muestras el repositorio y respondes dudas sobre tu trabajo |
+
+### Ajusta la ruta a una vacante concreta
+
+Elige ofertas del perfil y lugar donde puedes trabajar. Separa requisitos repetidos, deseables y condiciones de contratación. No conviertas una lista de tecnologías en veinte cursos: elige una carencia que puedas resolver dentro de tu proyecto y verifica después el resultado.
+
+Si tienes poco tiempo, reduce el alcance antes que eliminar toda práctica. Un flujo terminado con validación y documentación permite evaluar mejor tu avance que varias aplicaciones inconclusas. Para decidir qué mostrar, usa la [guía de proyectos para el CV](/blog/proyectos-valiosos-para-tu-cv-programador).
+
 ## Preguntas Frecuentes
 
 **¿Cuánto tiempo se tarda en conseguir el primer trabajo?**
-Con dedicación constante, entre 6 y 12 meses es un rango realista para muchas personas, aunque varía mucho según tu tiempo diario y tu contexto. Desconfía de quien te promete un empleo garantizado en 3 meses.
+No hay un plazo universal: influyen tus conocimientos previos, la dedicación, el mercado y los requisitos de cada vacante. Desconfía de quien te promete un empleo garantizado en 3 meses.
 
 **¿Necesito un título universitario?**
 No es obligatorio. El mercado valora lo que sabes demostrar: proyectos, portafolio y cómo resuelves problemas. Un título ayuda en algunas empresas, pero muchos desarrolladores entran siendo autodidactas con un buen portafolio.
@@ -91,6 +109,10 @@ Para el primer empleo, elegir un camino y hacerlo bien suele ser mejor que queda
 
 **¿Debo aprender IA en este roadmap?**
 Úsala como apoyo para aprender más rápido, pero no la conviertas en el objetivo hasta tener base. Primero fundamentos; luego, si te interesa, especializarte. Cómo usarla sin volverte dependiente está en [cómo aprender de verdad en la era de la IA](/blog/como-aprender-programacion-era-ia).
+
+### ¿Cómo adapto el roadmap si ya sé programar en otro lenguaje?
+
+Comprueba los hitos con un proyecto pequeño y omite lo que ya puedes demostrar. Concentra el estudio en el ecosistema, la especialización o la preparación de candidatura que te falten.
 
 ## Conclusión: el mapa es simple, el camino es tuyo
 

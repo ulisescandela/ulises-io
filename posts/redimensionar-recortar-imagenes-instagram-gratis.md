@@ -2,6 +2,7 @@
 title: "Cómo redimensionar y recortar imágenes para Instagram gratis"
 category: "Herramientas"
 date: "2026-10-10"
+updated: "2026-10-21"
 excerpt: "Recorta o conserva una foto completa, elige dimensiones y descarga con el redimensionador de Antrapost. Incluye ejemplos para capturas de proyectos."
 published: true
 tags: ["Antrapost", "Imágenes", "Instagram", "Diseño"]
@@ -58,6 +59,14 @@ Si todavía estás construyendo el proyecto, estas [ideas de portafolio](/blog/p
 - **Elegir un formato por costumbre.** Una captura ancha y un retrato no necesitan la misma composición.
 - **Confundir dimensiones con peso.** Una imagen de 1080 píxeles todavía puede pesar demasiado. Para ese problema, utiliza el [compresor de imágenes](/blog/comprimir-imagenes-jpg-webp-gratis).
 
+## La proporción explica por qué aparecen márgenes
+
+La relación de aspecto compara ancho y alto. Un lienzo de 1080 × 1350 tiene proporción 4:5. Si tu foto es horizontal, conservarla completa en ese lienzo deja espacio; llenarlo sin deformar requiere recortar una parte de la imagen.
+
+No hay un ajuste que conserve simultáneamente todo el contenido, llene cualquier proporción y nunca deforme: cuando las proporciones difieren debes aceptar recorte o márgenes. Elige según el mensaje. Una captura con etiquetas importantes puede necesitar márgenes; una foto puede admitir otro encuadre.
+
+Comprueba después la vista previa del destino. Los tamaños del editor son opciones de exportación, no una lista exhaustiva de formatos que Instagram admite. Si necesitas agregar título y firma, ese trabajo se desarrolla en [cómo crear una portada](/blog/crear-portadas-redes-sociales-gratis).
+
 ## Preguntas frecuentes
 
 ### ¿Tengo que subir mi foto a un servidor?
@@ -71,6 +80,14 @@ Sí: selecciona **Imagen completa**. Tendrás que aceptar un fondo cuando la pro
 ### ¿Cambiar las dimensiones mejora la nitidez?
 
 No necesariamente. Reducir una imagen puede hacerla más adecuada para su uso; ampliarla no crea detalle nuevo y puede hacer visible la falta de resolución.
+
+### ¿Cambiar los DPI prepara mejor una imagen para redes?
+
+Para una imagen en pantalla revisa primero dimensiones en píxeles, proporción y archivo final. La etiqueta DPI no añade detalle ni sustituye esas comprobaciones.
+
+### ¿Cómo evito deformar una foto al cambiar su tamaño?
+
+Mantén su proporción al escalar. Si el lienzo tiene otra proporción, elige recortar o encajar con márgenes en vez de forzar ancho y alto de forma independiente.
 
 ## Prueba el encuadre con tu próxima publicación
 

@@ -2,6 +2,7 @@
 title: "Cómo publicar en Facebook e Instagram con Antrapost sin equivocarte de cuenta"
 category: "Herramientas"
 date: "2026-10-10"
+updated: "2026-10-21"
 excerpt: "Revisa cuentas, adapta el texto, confirma el horario y consulta cada resultado en Antrapost. Evita duplicados cuando una publicación falla solo en una red."
 published: true
 tags: ["Antrapost", "Facebook", "Instagram", "Automatización"]
@@ -64,6 +65,20 @@ Si una cuenta publicó y la otra falló, investiga el error. El reintento del hi
 
 Guarda un registro sencillo: publicación prevista, cuentas, horario y resultado por cuenta. Sirve para distinguir un fallo de contenido, permisos o procesamiento de una confusión de destino.
 
+## Antes de reintentar, distingue el estado de cada destino
+
+Un resultado desconocido no es lo mismo que un fallo confirmado. Si no recibiste respuesta o el estado sigue pendiente, revisa el historial y la cuenta de destino antes de crear otro envío. La ausencia de una confirmación en pantalla no demuestra que la red no haya publicado.
+
+| Situación observada | Siguiente comprobación |
+| --- | --- |
+| Una cuenta publicó y otra falló | Revisar el error del destino fallido |
+| Sigue en proceso | Consultar evolución del estado antes de reenviar |
+| El historial indica éxito y no la encuentras | Verificar cuenta exacta y publicación en el destino |
+
+Conserva la referencia de la publicación, la hora y las cuentas para investigar. No atribuyas la causa a permisos si el sistema no da esa evidencia. Las opciones de reintento dependen del producto y de su estado actual; sigue lo que muestre el historial.
+
+La [checklist de publicación](/blog/checklist-publicar-redes-prompts-ia) prepara la revisión previa; este paso verifica lo que ocurrió después del envío.
+
 ## Preguntas frecuentes
 
 ### ¿Las herramientas gratis publican por mí?
@@ -77,6 +92,14 @@ Puedes partir de la misma idea, pero revisa las diferencias de formato, enlaces 
 ### ¿Un resultado parcial significa que todo falló?
 
 No necesariamente. Mira qué ocurrió en cada cuenta antes de reenviar. Una publicación correcta y una fallida necesitan un tratamiento distinto.
+
+### ¿Si cierro el editor significa que se canceló la publicación?
+
+No debes inferirlo solo por cerrar una ventana. Revisa si el envío quedó guardado, programado o completado en el historial y comprueba el destino antes de repetirlo.
+
+### ¿Una autorización antigua garantiza que puedo seguir publicando?
+
+No. Los permisos o conexiones pueden cambiar. Si el producto informa un problema de autorización, revisa la conexión y las instrucciones actuales antes de reenviar.
 
 ## Prueba primero un envío controlado
 

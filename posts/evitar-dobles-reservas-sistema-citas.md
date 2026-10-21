@@ -2,6 +2,7 @@
 title: "Cómo evitar dobles reservas: el problema técnico detrás de una agenda de citas"
 category: "Herramientas"
 date: "2026-10-10"
+updated: "2026-10-21"
 excerpt: "Dos personas pueden elegir el mismo horario antes de confirmar. Aprende a modelar intervalos, disponibilidad y concurrencia con una agenda como AntraPro."
 published: true
 tags: ["AntraPro", "Programación", "Bases de Datos"]
@@ -51,8 +52,50 @@ En vez de pedirle a un negocio que construya todo desde cero, puedes evaluar una
 
 **Una confirmación por correo tampoco garantiza que el cliente asista.** Sirve para comunicar los detalles; la operación diaria y las políticas del negocio siguen importando.
 
+## La regla de solapamiento necesita una garantía al guardar
+
+Para intervalos semiabiertos, que incluyen el inicio y excluyen el final, existe solapamiento si `inicio_nuevo < fin_existente` y `fin_nuevo > inicio_existente`. Así, una cita puede comenzar exactamente cuando termina otra, salvo que el negocio exija un margen adicional.
+
+```text
+conflicto = mismo_recurso
+            y inicio_nuevo < fin_existente
+            y fin_nuevo > inicio_existente
+```
+
+Comprueba además que el inicio sea anterior al fin y que las fechas usen un criterio temporal consistente. Si bloqueas tiempo de limpieza, incorpora ese margen a la ocupación del recurso.
+
+### Un índice único de inicio no detecta todos los cruces
+
+Unicidad en profesional e inicio puede impedir dos citas a las 10:00, pero permite una de 10:00 a 11:00 y otra de 10:30 a 11:30. La regla debe cubrir el intervalo completo y los estados que realmente ocupan capacidad.
+
+La garantía depende del motor y del diseño: evalúa restricciones de exclusión cuando estén disponibles, bloqueo coordinado por recurso o aislamiento con manejo de reintentos. No presentes una consulta de disponibilidad aislada como protección. Prueba dos solicitudes concurrentes y verifica el estado persistido, además de las respuestas HTTP.
+
+Las decisiones y sus costos encajan en los [fundamentos de arquitectura de software](/blog/fundamentos-arquitectura-software-libros-recomendados).
+
 ## Una prueba pequeña que demuestra criterio
 
 Para tu propio proyecto, prepara cinco escenarios: reserva consecutiva válida, solapamiento parcial, intervalo contenido, dos solicitudes simultáneas y reintento de la misma solicitud. No necesitas inventar miles de usuarios para demostrar que entiendes el problema.
 
 Si quieres resolver la operación del negocio, [consulta AntraPro](https://antrapro.app/es?utm_source=ulises_io&utm_medium=referral&utm_campaign=antrapro_guides&utm_content=es_evitar-dobles-reservas-sistema-citas). Si estás aprendiendo a programar, usa estas situaciones para convertir una agenda de demostración en un proyecto cuyas decisiones puedas defender.
+
+## Preguntas frecuentes
+
+### ¿Una transacción siempre evita dos reservas del mismo horario?
+
+No. Importan el aislamiento, los bloqueos y las restricciones utilizadas. Debes comprobar cómo se comporta tu diseño cuando dos solicitudes validan e intentan insertar al mismo tiempo.
+
+### ¿La idempotencia evita que dos clientes elijan el mismo horario?
+
+No por sí sola. Permite reconocer la repetición de una misma operación. Dos operaciones distintas requieren además una regla de integridad sobre el recurso y el intervalo.
+
+### ¿Puedo permitir citas consecutivas?
+
+Sí si modelas intervalos que excluyen su final y no necesitas margen. Si hay preparación o limpieza, incorpora ese tiempo a la regla de ocupación.
+
+### ¿Cómo manejo zonas horarias en una agenda?
+
+Define la zona del negocio y convierte los instantes con reglas explícitas. Conserva la información necesaria para mostrar la hora local y considera cambios de horario donde apliquen; no dependas de cadenas ambiguas.
+
+### ¿Una reserva cancelada debe bloquear capacidad?
+
+Depende del modelo, pero normalmente solo ciertos estados ocupan el recurso. Define esos estados y aplica la misma regla al consultar y al confirmar; prueba también transiciones y liberación de capacidad.

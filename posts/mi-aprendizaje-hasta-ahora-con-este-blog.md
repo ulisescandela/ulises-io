@@ -1,7 +1,8 @@
 ---
-title: "Mi aprendizaje contruyendo este blog"
+title: "Mi aprendizaje construyendo este blog"
 category: "Reflexiones"
 date: "2025-07-11"
+updated: "2026-10-21"
 excerpt: "Algo de mi experiencia hasta ahora con la IA y el aprendizaje construyendo este blog."
 published: true
 readTime: "5 min"
@@ -26,8 +27,41 @@ En cuanto a esto, le atribuyo mucho de mi proceso de aprendizaje al construir es
 - Ejemplos de calidad.
 - Guía paso a paso con explicación detallada en caso de necesitarla.
 
+## Preguntas para revisar lo que aprendiste en tu propio blog
+
+Construir un blog con ayuda de IA puede ser una oportunidad para aprender si después puedes explicar y modificar sus piezas. Estas preguntas son una propuesta de revisión para quien esté haciendo un proyecto parecido; no describen nuevas mediciones ni cambios de mi experiencia original.
+
+- ¿Cómo pasa un archivo Markdown a una página y qué dato define su URL?
+- ¿Dónde se decide el estilo y qué ocurriría si una clase no se aplica?
+- ¿Cómo distingues un borrador de una entrada publicada?
+- ¿Puedes corregir un enlace o agregar un campo sin pedir que se regenere todo el proyecto?
+
+Elige una pregunta y sigue el recorrido en el código. Escribe lo que compruebas y separa lo que todavía no entiendes. La [guía para aprender programación con IA](/blog/como-aprender-programacion-era-ia) desarrolla un método de práctica; este post conserva su papel como reflexión personal.
+
 ## Pensamientos finales
 
 Sé que esto puede generar polémica, en especial, puede causar ruido en aquellos más experimentados que están acostumbrados a hacer las cosas de una manera, sin embargo, el *vibe coding* va más allá de dar instrucciones y esperar a recibir el próximo *uber* (o cualquier otra aplicación), con sólo escribir una prompt.
 
 Si te interesa este debate sobre programar con IA, te dejo dos lecturas: [el presente y futuro de la inteligencia artificial](/blog/inteligencia-artificial-presente-futuro-2026) y [¿está la IA reemplazando a los developers?](/blog/ia-reemplazando-developers).
+
+## Preguntas frecuentes
+
+### ¿Este post es una guía de instalación de Next.js?
+
+No. Es una reflexión del autor sobre su aprendizaje. No ofrece todos los pasos necesarios para reproducir la instalación o el despliegue.
+
+### ¿Usar IA demuestra que ya entendí el código?
+
+No por sí solo. Intenta explicar el flujo y hacer un cambio pequeño que puedas comprobar. Una respuesta o una página funcionando no permiten conocer todo el sistema.
+
+### ¿Markdown reemplaza a Next.js?
+
+No. Markdown es un formato de contenido; Next.js es un framework para construir aplicaciones web. Un proyecto puede transformar el primero mediante herramientas del segundo.
+
+### ¿Necesito copiar el mismo stack para aprender?
+
+No. Elige herramientas que permitan resolver y revisar un proyecto de alcance manejable. El aprendizaje depende de lo que practicas y compruebas, no de replicar esta lista.
+
+### ¿Qué puedo documentar si apenas estoy empezando?
+
+Una dificultad, lo que intentaste y lo que pudiste verificar. Señala lo que falta por entender; no necesitas presentar una experiencia inicial como una guía definitiva.

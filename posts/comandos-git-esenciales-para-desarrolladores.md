@@ -2,6 +2,7 @@
 title: "Comandos de Git que Todo Desarrollador Debe Dominar en 2026"
 category: "Herramientas"
 date: "2026-01-17"
+updated: "2026-10-21"
 excerpt: "Git es la herramienta más importante del desarrollo moderno. Aprende los comandos esenciales que usarás todos los días, desde lo básico hasta trucos que te sacarán de apuros."
 readTime: "7 min"
 tags: ["Git", "Herramientas", "Terminal", "Productividad", "Básico"]
@@ -77,10 +78,10 @@ git commit --amend                            # Modificar el último commit
 ```bash
 git push                              # Subir al remote
 git push -u origin main               # Primera vez (establece upstream)
-git push --force-with-lease           # Force push seguro
+git push --force-with-lease           # Reescribir solo si entiendes el historial remoto
 ```
 
-⚠️ **Nunca uses `git push --force`** en ramas compartidas. Si necesitas forzar, usa `--force-with-lease` que verifica que nadie más haya subido cambios.
+`--force-with-lease` comprueba una expectativa sobre la referencia remota, pero sigue reescribiendo historial. Coordina cualquier reescritura de una rama compartida; un fetch automático también puede alterar la referencia que se usa como expectativa.
 
 ---
 
@@ -158,7 +159,7 @@ git reset --mixed HEAD~1            # Deshacer último commit (mantiene cambios 
 git reset --hard HEAD~1             # Deshacer último commit (BORRA todo)
 ```
 
-⚠️ **Cuidado con `--hard`**: los cambios se pierden permanentemente.
+`reset --hard` descarta cambios del árbol de trabajo y del staging y puede eliminar archivos no rastreados que impidan escribir archivos rastreados. El reflog puede ayudar con commits previos, pero no garantiza recuperar trabajo sin guardar.
 
 ### Revert: deshacer un commit de forma segura
 
@@ -223,16 +224,46 @@ git undo                # Deshacer último commit
 
 ---
 
+## Resolver un conflicto de merge sin adivinar
+
+Un conflicto aparece cuando Git no puede combinar cambios automáticamente. El archivo conserva ambas propuestas y tú decides el resultado. Resolverlo exige entender el código, retirar los marcadores y comprobar el comportamiento final.
+
+En un merge ya iniciado, este recorrido permite identificar y registrar la resolución:
+
+```bash
+git status
+git diff --name-only --diff-filter=U
+# Edita cada archivo en conflicto y comprueba el resultado.
+git add ruta/del/archivo
+git merge --continue
+```
+
+Busca marcadores como `<<<<<<<`, `=======` y `>>>>>>>`, pero no te limites a borrarlos. A veces necesitas combinar la intención de los dos cambios. Si decides cancelar ese merge, `git merge --abort` intenta volver al estado previo; conviene empezar las integraciones con el trabajo local guardado.
+
+### Recuperar un commit no equivale a recuperar cualquier archivo
+
+`git reflog` muestra movimientos locales de referencias. Si localizas un commit perdido, puedes conservarlo creando una rama con `git branch rescate HASH_DEL_COMMIT`. Revisa su contenido antes de integrarlo. Esto no garantiza recuperar modificaciones que nunca guardaste en un commit o stash; además, las entradas y los objetos pueden expirar.
+
+Si todavía no distingues repositorio local y remoto, vuelve a la [guía de Git y GitHub para principiantes](/blog/git-github-para-principiantes-guia-practica).
+
 ## Preguntas Frecuentes
 
 **¿Cuáles son los comandos de Git más importantes?**
-Los del día a día: `add`, `commit`, `push`, `pull`, `status`, `branch`, `checkout` y `merge`. Con dominar esos cubres el 90% del trabajo real.
+Los del día a día: `add`, `commit`, `push`, `pull`, `status`, `branch`, `checkout` y `merge`. Con esos comandos puedes practicar un flujo básico; las necesidades cambian según el equipo.
 
 **¿Cómo deshago un cambio o un commit en Git?**
 Depende: `git restore` para descartar cambios sin guardar, `git reset` para mover el HEAD, y `git revert` para deshacer un commit ya publicado sin reescribir historia. Los cubro en la sección de comandos de rescate de arriba.
 
 **¿Necesito dominar Git para conseguir trabajo como desarrollador?**
 Sí, es innegociable. Git es una de las habilidades que doy por sentadas en mi [guía para destacar en tech en 2026](/blog/guia-destacar-en-tech-2026-habilidades-y-negocios), y va de la mano con [mejorar como programador](/blog/consejos-para-mejorar-en-programacion).
+
+### ¿git fetch modifica mis archivos?
+
+Descarga objetos y actualiza referencias remotas; no integra por sí solo esos commits en tu rama de trabajo. git pull combina una descarga con una integración según tu configuración.
+
+### ¿Puedo usar revert en una rama compartida?
+
+Sí. Crea un commit que deshace cambios anteriores sin retirar esos commits del historial. Puede haber conflictos y conviene comprobar el resultado como cualquier otro cambio.
 
 ## Conclusión
 

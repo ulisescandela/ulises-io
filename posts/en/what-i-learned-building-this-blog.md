@@ -32,3 +32,35 @@ As for this, I attribute a lot of my learning process to building this blog than
 I know that this can generate controversy, especially, it can cause noise in those more experienced who are used to doing things in a way, however, the vibe coding goes beyond giving instructions and waiting to receive the next uber (or any other application), just by writing a prompt.
 
 If you are interested in this debate about programming with AI, I leave you two readings: [the present and future of artificial intelligence](/en/artificial-intelligence-present-and-future) and [Is AI replacing developers?](/en/is-ai-replacing-software-developers).
+
+
+## Questions to review learning in your own blog
+
+Building a blog with AI assistance can be an opportunity to learn if you can explain and modify its parts afterward. These questions are a proposed review for a reader building a similar project. They do not describe new measurements or additional events from the author's original experience.
+
+- How does a Markdown file become a page, and which data determines its URL?
+- Where is styling defined, and how would you investigate a missing class?
+- How is a draft distinguished from a published article?
+- Can you fix a link or add a field without regenerating the whole project?
+
+Choose one question and trace the relevant code. Write what you verified and separate it from what you still do not understand. For a practice method, see [learning programming with AI](/en/learn-programming-with-ai-without-becoming-dependent). This post remains a personal reflection rather than a complete installation tutorial.
+
+### Does this post teach the full Next.js setup?
+
+No. It shares an experience and does not include every step required to reproduce installation or deployment.
+
+### Does using AI prove I understand the code?
+
+No. Try explaining a flow and making a small change you can verify. A working page is evidence of one result, not complete understanding of the system.
+
+### Does Markdown replace Next.js?
+
+No. Markdown is a content format; Next.js is an application framework. A project can use tools to turn Markdown content into web pages.
+
+### Must I use the same stack to learn?
+
+No. Choose tools for a manageable project whose behavior you can inspect. Learning does not require copying this exact stack.
+
+### What can I document while I am starting?
+
+Describe a difficulty, what you tried and what you could verify. State what you still need to understand rather than presenting a first experience as a definitive guide.

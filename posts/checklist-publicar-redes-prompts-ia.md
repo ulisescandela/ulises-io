@@ -2,6 +2,7 @@
 title: "Checklist antes de publicar en redes y prompts para revisar con IA"
 category: "Herramientas"
 date: "2026-10-10"
+updated: "2026-10-21"
 excerpt: "Revisa mensaje, archivos, enlaces, cuentas y fecha con la checklist gratuita de Antrapost. Usa prompts editables sin confundir una revisión con validación automática."
 published: true
 tags: ["Antrapost", "Redes Sociales", "IA", "Productividad"]
@@ -63,6 +64,14 @@ Después pregunta si el texto explica quién puede utilizar la exportación y qu
 
 Marca la checklist cuando tengas esas respuestas. Si debes cambiar la imagen o el enlace, escríbelo en pendientes en vez de completar todas las casillas para ver el contador lleno.
 
+## Un cambio de última hora puede reabrir una comprobación
+
+Una checklist describe el material que revisaste. Si cambias después la imagen, el enlace o la cuenta, vuelve a comprobar las partes afectadas. La revisión del archivo anterior no demuestra que la nueva versión esté lista.
+
+Por ejemplo, si sustituyes una captura, revisa otra vez que corresponda a la función disponible, que no muestre datos privados y que el recorte sea legible. Si cambias la URL, ábrela sin tu sesión y recorre el siguiente paso prometido.
+
+Al pedir ayuda a una IA, especifica qué puede evaluar con el material que le das: claridad, ambigüedades o afirmaciones sin respaldo. Si no has proporcionado el archivo ni acceso al destino, su aprobación del texto no prueba esas partes. El [flujo de publicación en Facebook e Instagram](/blog/publicar-facebook-instagram-antrapost-sin-duplicados) desarrolla la revisión de resultados por cuenta.
+
 ## Preguntas frecuentes
 
 ### ¿La herramienta valida automáticamente los archivos y enlaces?
@@ -76,6 +85,14 @@ La checklist funciona sin registro. Para usar un prompt en otro asistente, neces
 ### ¿El checklist guarda mi progreso?
 
 No después de salir o recargar. Guarda el resumen y conserva las notas que necesites para continuar.
+
+### ¿Qué reviso otra vez si cambio el enlace al final?
+
+Abre el nuevo destino, comprueba que coincide con la promesa y verifica cómo lo ve alguien sin tu sesión. Revisa también cualquier texto o imagen que mencione el destino anterior.
+
+### ¿Qué información debo darle a la IA para una revisión útil?
+
+Objetivo, audiencia, borrador y condiciones que deben conservarse. Pide que señale dudas y afirmaciones que necesitan fuente; no incluyas credenciales ni información privada innecesaria.
 
 ## Publica con una revisión que puedas explicar
 

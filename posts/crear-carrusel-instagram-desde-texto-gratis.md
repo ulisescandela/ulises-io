@@ -2,6 +2,7 @@
 title: "Cómo crear un carrusel de Instagram desde texto gratis y sin marca de agua"
 category: "Herramientas"
 date: "2026-10-10"
+updated: "2026-10-21"
 excerpt: "Organiza una explicación en láminas, diseña un carrusel con Antrapost y descarga PNG o ZIP sin registro. Con estructura de ejemplo y revisión final."
 published: true
 tags: ["Antrapost", "Carruseles", "Instagram", "Contenido"]
@@ -61,6 +62,14 @@ Los archivos salen como PNG sin marca de agua de Antrapost. Puedes añadir tu pr
 
 Si el carrusel nace de un proyecto de software, guarda también su explicación larga. Esta [guía para convertir un README en contenido](/blog/convertir-readme-proyecto-contenido-redes) te ayuda a reutilizar el material sin vaciarlo de contexto.
 
+## Revisa la secuencia con las imágenes descargadas
+
+Un carrusel necesita continuidad: cada lámina aporta algo y prepara la siguiente. Antes de publicarlo, revisa los archivos exportados en su orden final; una vista previa correcta en el editor no evita cargarlos después en una secuencia equivocada.
+
+Lee únicamente los títulos. ¿Permiten seguir el argumento? Después mira cada imagen sola: evita referencias como «esto» o «lo anterior» si no queda claro qué señalan. Conserva contexto suficiente sin repetir todo el caption.
+
+En un ejemplo técnico, la secuencia puede ser problema, condición que lo provoca, decisión y comprobación. La [guía para convertir un README en contenido](/blog/convertir-readme-proyecto-contenido-redes) ayuda a extraer una historia del proyecto. Cuando cargues las imágenes, comprueba orden y recortes otra vez en el destino.
+
 ## Preguntas frecuentes
 
 ### ¿Necesito una cuenta para descargar?
@@ -74,6 +83,14 @@ No. Convierte el texto que tú escribes en láminas. Tú revisas hechos, ejemplo
 ### ¿Puedo publicar el ZIP tal cual?
 
 Debes extraer las imágenes y cargarlas en el orden adecuado en el editor del destino. Comprueba sus requisitos de formato y número de archivos.
+
+### ¿Puedo usar una sola lámina?
+
+El editor descrito permite una, pero entonces el resultado es una imagen individual. Elige varias solo si necesitas desarrollar una secuencia, no para llenar un número de espacios.
+
+### ¿Cómo evito texto demasiado pequeño en el carrusel?
+
+Divide la idea o recorta palabras antes de reducir la tipografía. Abre cada imagen al tamaño de uso y revisa también datos, notas y condiciones, no solo el título.
 
 ## Convierte una explicación en una secuencia
 
