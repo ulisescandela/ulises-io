@@ -13,7 +13,7 @@ node scripts/check-node-version.mjs
 node --test scripts/check-node-version.test.mjs
 ```
 
-Instalar las dependencias con el lockfile del proyecto y ejecutar sus pruebas y compilación. Los hooks `predev`, `prebuild` y `prestart` comprueban la versión antes de ejecutar los comandos habituales. En proyectos con `vercel-build` también se comprueba ese comando. Una invocación directa a `next` o un comando que omita scripts no ejecuta esos hooks. Por eso `instrumentation.register` también comprueba la versión en cada nueva instancia del servidor Node de Next.js, incluidas Functions, y detiene su inicio si no cumple. No aplica a Edge, que no ejecuta Node. Un proceso ya encendido requiere reinicio para ejecutar el código nuevo.
+Instalar las dependencias con el lockfile del proyecto y ejecutar sus pruebas y compilación. Los hooks `predev`, `prebuild` y `prestart` comprueban la versión antes de ejecutar los comandos habituales. En proyectos con `vercel-build` también se comprueba ese comando. Una invocación directa a `next` o un comando que omita scripts no ejecuta esos hooks. Por eso `instrumentation.register` también comprueba la versión en cada nueva instancia del servidor Node de Next.js, incluidas Functions, y registra un error si no cumple. El endpoint operativo /api/health/node responde 503 si la Function no está parcheada, sin interrumpir las páginas del sitio. No aplica a Edge, que no ejecuta Node. Un proceso ya encendido requiere reinicio para ejecutar el código nuevo.
 
 En un VPS, contenedor, worker, cron o backend externo: actualizar el binario/base de Node, reconstruir y reiniciar **todos** los procesos. Cambiar este archivo o `engines.node` no reemplaza el binario de un servidor. Los servicios PostgreSQL y pgAdmin de Docker Compose no son runtimes Node y no se modifican por este aviso.
 
@@ -30,3 +30,7 @@ No se ejecutan exploits, no se escriben datos de negocio y no se aplican migraci
 Compilación completa con Next 15.5.14 (391 rutas de compilación); lint del build pasa con una advertencia previa de img.
 
 Las pruebas de la política pasan en este repositorio. La función register acepta Node 24.22.1, rechaza el runtime local anterior 24.19.0 y no ejecuta el control en Edge. Se usa el binario oficial de Node 24.22.1 para Linux, con SHA-256 comparado con SHASUMS256.txt de nodejs.org. No se ejecutan migraciones ni operaciones de negocio. El estado de producción debe verificarse después del despliegue; estos resultados locales no lo sustituyen.
+
+## Runtime gestionado
+
+La política reconoce las tres ramas parcheadas del aviso (22.23.4, 24.22.1 y 26.12.1). El control de build permanece obligatorio. `/api/health/node` informa conformidad y rama mayor, sin caché y con noindex; no revela secretos ni la versión de parche completa. Un 503 con patched=false identifica un runtime gestionado que aún requiere el parche del proveedor. El estado del build no sustituye esa comprobación.
