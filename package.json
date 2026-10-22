@@ -7,7 +7,12 @@
     "dev": "next dev --turbopack",
     "build": "next build && node scripts/generate-sitemap.js",
     "start": "next start -p 3003",
-    "lint": "next lint"
+    "lint": "next lint",
+    "check:node": "node scripts/check-node-version.mjs",
+    "test:node-security": "node --test scripts/check-node-version.test.mjs",
+    "predev": "node scripts/check-node-version.mjs",
+    "prebuild": "node scripts/check-node-version.mjs",
+    "prestart": "node scripts/check-node-version.mjs"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.16",
@@ -25,5 +30,8 @@
     "eslint": "^9",
     "eslint-config-next": "^15.4.0",
     "tailwindcss": "^4"
+  },
+  "engines": {
+    "node": ">=24.22.1 <25"
   }
 }
