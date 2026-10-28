@@ -16,9 +16,8 @@ export default function PostCard({ post, language = "es" }) {
     return null;
   }
 
-  const { title, category, date, excerpt, readTime, tags } = post.frontMatter;
+  const { title, category, date, excerpt, readTime } = post.frontMatter;
   const meta = getCategoryMeta(category || "", language);
-  const Icon = meta.icon;
   const accent = ACCENTS[meta.key] || undefined;
   const formattedDate = date
     ? language === "en"
@@ -32,47 +31,22 @@ export default function PostCard({ post, language = "es" }) {
       style={accent ? { "--card-accent": accent } : undefined}
     >
       <Link href={`${language === "en" ? "/en" : "/blog"}/${post.slug}`} className="flex h-full flex-col p-6 sm:p-7 pt-7 sm:pt-8">
-        <div className="flex items-center justify-between gap-3 mb-4">
-          {category && (
-            <span className={`inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider pr-3 rounded-full ${meta.iconClass.replace(/bg-\S+/, "")}`}>
-              <span className={`grid place-items-center h-7 w-7 rounded-lg text-sm ${meta.iconClass}`} aria-hidden>
-                <Icon />
-              </span>
-              {category}
-            </span>
-          )}
-          {readTime && (
-            <span className="text-xs font-medium text-slate-500 bg-slate-100 px-2.5 py-1 rounded-full whitespace-nowrap">
-              {readTime} {language === "en" ? "read" : "de lectura"}
-            </span>
-          )}
-        </div>
+        {category && (
+          <span className="mb-3 text-xs font-semibold uppercase tracking-wider text-blue-700">{category}</span>
+        )}
 
-        <h3 className="text-2xl lg:text-[1.65rem] font-bold leading-snug tracking-tight mb-3 line-clamp-3 text-slate-900 group-hover:text-blue-700 transition-colors">
+        <h3 className="text-xl sm:text-2xl font-bold leading-snug tracking-tight mb-3 line-clamp-3 text-slate-900 group-hover:text-blue-700 transition-colors">
           {title}
         </h3>
 
         {excerpt && (
-          <p className="mb-5 text-slate-600 line-clamp-3 leading-relaxed">{excerpt}</p>
+          <p className="mb-5 text-slate-600 line-clamp-2 leading-relaxed">{excerpt}</p>
         )}
 
-        {tags && tags.length > 0 && (
-          <div className="flex flex-wrap gap-2 mb-5 items-center">
-            {tags.slice(0, 3).map((tag) => (
-              <span key={tag} className="text-xs text-blue-800 bg-blue-50 border border-blue-100 px-2 py-1 rounded-md">
-                #{tag}
-              </span>
-            ))}
-          </div>
-        )}
-
-        <div className="mt-auto flex items-center justify-between pt-4 border-t border-dashed border-slate-200">
-          {formattedDate && <time className="text-xs text-slate-500">{formattedDate}</time>}
-          <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-blue-600 group-hover:gap-2.5 transition-all">
-            {language === "en" ? "Read article" : "Leer artículo"}
-            <span aria-hidden>→</span>
-          </span>
-        </div>
+        <p className="mt-auto text-xs text-slate-500">
+          {formattedDate}
+          {readTime && <> · {readTime} {language === "en" ? "read" : "de lectura"}</>}
+        </p>
       </Link>
     </article>
   );

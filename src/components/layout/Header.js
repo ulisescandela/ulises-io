@@ -4,6 +4,7 @@ import Link from "next/link";
 import translationMap from "../../../lib/translation-map.json";
 import { pagePaths, translateCategory, sourceCategory, translateTag, tagTranslations } from "../../../lib/locales";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
 
 const LINKS = [
   { label: 'Home', english: 'Home', page: 'home' },
@@ -44,7 +45,7 @@ function GlassBackground({ children }) {
       {/* Brillo superior tipo reflejo de cristal */}
       <div className="absolute inset-x-0 top-0 -z-10 h-px bg-gradient-to-r from-transparent via-blue-400/40 to-transparent" />
 
-      <div className="max-w-6xl mx-auto flex flex-wrap gap-3 justify-between items-center px-4 sm:px-6 lg:px-8 py-3.5">
+      <div className="max-w-6xl mx-auto flex gap-3 justify-between items-center px-4 sm:px-6 lg:px-8 py-3.5">
         {children}
       </div>
     </div>
@@ -76,28 +77,46 @@ function NavLinks({ language }) {
     return pathname.startsWith(href);
   };
 
+  const [open, setOpen] = useState(false);
+  const label = language === "en" ? "Main navigation" : "Navegación principal";
+
   return (
-    <nav
-      aria-label={language === "en" ? "Main navigation" : "Navegación principal"}
-      className="flex items-center flex-wrap gap-3 sm:gap-5 text-xs sm:text-sm"
-    >
-      {links.map((link) => {
-        const active = isActive(link.href);
-        return (
-          <Link
-            key={link.href}
-            href={link.href}
-            aria-current={active ? "page" : undefined}
-            className={`transition-colors relative after:absolute after:left-0 after:-bottom-1 after:h-px after:bg-blue-600 after:transition-all ${
-              active
-                ? "text-blue-700 font-medium after:w-full"
-                : "text-slate-700 hover:text-blue-700 after:w-0 hover:after:w-full"
-            }`}
-          >
-            {link.label}
-          </Link>
-        );
-      })}
-    </nav>
+    <>
+      <button
+        type="button"
+        onClick={() => setOpen((v) => !v)}
+        aria-expanded={open}
+        aria-controls="mobile-menu"
+        aria-label={open ? (language === "en" ? "Close menu" : "Cerrar menú") : (language === "en" ? "Open menu" : "Abrir menú")}
+        className="md:hidden grid h-10 w-10 place-items-center rounded-lg border border-slate-200 bg-white text-slate-800"
+      >
+        <span aria-hidden className="text-xl leading-none">{open ? "✕" : "☰"}</span>
+      </button>
+
+      <nav
+        id="mobile-menu"
+        aria-label={label}
+        className={`${open ? "flex" : "hidden"} md:flex absolute md:static top-full inset-x-0 flex-col md:flex-row md:items-center gap-1 md:gap-5 bg-white md:bg-transparent border-b border-slate-200 md:border-0 shadow-lg md:shadow-none px-4 py-3 md:p-0 text-base md:text-sm`}
+      >
+        {links.map((link) => {
+          const active = isActive(link.href);
+          return (
+            <Link
+              key={link.href}
+              href={link.href}
+              onClick={() => setOpen(false)}
+              aria-current={active ? "page" : undefined}
+              className={`transition-colors rounded-lg px-3 py-3 md:p-0 md:rounded-none md:relative md:after:absolute md:after:left-0 md:after:-bottom-1 md:after:h-px md:after:bg-blue-600 md:after:transition-all ${
+                active
+                  ? "text-blue-700 font-medium bg-blue-50 md:bg-transparent md:after:w-full"
+                  : "text-slate-700 hover:text-blue-700 hover:bg-slate-50 md:hover:bg-transparent md:after:w-0 md:hover:after:w-full"
+              }`}
+            >
+              {link.label}
+            </Link>
+          );
+        })}
+      </nav>
+    </>
   );
 }
