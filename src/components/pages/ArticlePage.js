@@ -44,14 +44,14 @@ export default function ArticlePage({ post, language = 'es' }) {
     {translation && <LanguageSwitch sourceSlug={sourceSlug} englishSlug={translation.slug} language={language} />}
     <ScrollToTop language={language} />
     {[schema, breadcrumb].map((data, i) => <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data).replace(/</g, '\\u003c') }} />)}
-    <nav className="text-sm text-zinc-400 mb-8 flex items-center gap-2 flex-wrap">
-      <Link href={blog} className="hover:text-zinc-200 transition-colors">Blog</Link>
-      {fm.category && <><span className="text-zinc-600">/</span><Link href={category} className="hover:text-zinc-200 transition-colors">{fm.category}</Link></>}
+    <nav className="text-sm text-slate-600 mb-8 flex items-center gap-2 flex-wrap">
+      <Link href={blog} className="hover:text-slate-900 transition-colors">Blog</Link>
+      {fm.category && <><span className="text-slate-400">/</span><Link href={category} className="hover:text-slate-900 transition-colors">{fm.category}</Link></>}
     </nav>
     <PostHeader {...fm} language={language} />
     <TableOfContents headings={extractHeadings(post.content)} language={language} />
     <PostContent content={post.content} />
-    <div className="mt-12"><Link href={blog} className="inline-flex items-center gap-2 text-sm font-medium text-blue-400 hover:text-blue-300 transition-colors"><span aria-hidden>←</span>{en ? 'Back to the blog' : 'Volver al blog'}</Link></div>
+    <div className="mt-12"><Link href={blog} className="inline-flex items-center gap-2 text-sm font-medium text-blue-600 hover:text-blue-800 transition-colors"><span aria-hidden>←</span>{en ? 'Back to the blog' : 'Volver al blog'}</Link></div>
 
     <RelatedPosts posts={related} language={language} />
   </article>;

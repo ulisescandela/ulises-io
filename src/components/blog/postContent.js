@@ -19,7 +19,7 @@ function Heading({ as: Tag, className, children }) {
         {children}
         <span
           aria-hidden
-          className="ml-2 align-middle text-blue-400/70 opacity-0 group-hover:opacity-100 transition-opacity text-[0.7em]"
+          className="ml-2 align-middle text-blue-600/70 opacity-0 group-hover:opacity-100 transition-opacity text-[0.7em]"
         >
           #
         </span>
@@ -30,43 +30,43 @@ function Heading({ as: Tag, className, children }) {
 
 const customComponents = {
   h1: ({ children }) => (
-    <h1 className="text-4xl font-bold text-zinc-200 mb-6 mt-8 pb-3">
+    <h1 className="text-4xl font-bold text-slate-900 mb-6 mt-8 pb-3">
       {children}
     </h1>
   ),
   h2: ({ children }) => (
-    <Heading as="h2" className="text-3xl font-semibold text-zinc-200 mb-4 mt-8">
+    <Heading as="h2" className="text-3xl font-semibold text-slate-900 mb-4 mt-8">
       {children}
     </Heading>
   ),
   h3: ({ children }) => (
-    <Heading as="h3" className="text-xl font-semibold text-zinc-200 mb-3 mt-6">
+    <Heading as="h3" className="text-xl font-semibold text-slate-900 mb-3 mt-6">
       {children}
     </Heading>
   ),
   p: ({ children }) => (
-    <p className="text-zinc-200 leading-relaxed mb-6 text-lg">
+    <p className="text-slate-900 leading-relaxed mb-6 text-lg">
       {children}
     </p>
   ),
   blockquote: ({ children }) => (
-    <blockquote className="border-l-4 border-blue-500 pl-6 py-2 my-6 bg-zinc-800/50 italic text-zinc-300">
+    <blockquote className="border-l-4 border-blue-500 pl-6 py-2 my-6 bg-blue-50 rounded-r-lg italic text-slate-700">
       {children}
     </blockquote>
   ),
   code: ({ children }) => (
-    <code className="bg-zinc-800 px-1.5 py-0.5 rounded-md text-sm font-mono text-emerald-400 border border-zinc-700">
+    <code className="bg-blue-50 px-1.5 py-0.5 rounded-md text-sm font-mono text-blue-800 border border-blue-100">
       {children}
     </code>
   ),
   pre: ({ children }) => <CodeBlock>{children}</CodeBlock>,
   ul: ({ children }) => (
-    <ul className="list-disc list-inside mb-6 text-zinc-200 space-y-2">
+    <ul className="list-disc list-inside mb-6 text-slate-900 space-y-2">
       {children}
     </ul>
   ),
   ol: ({ children }) => (
-    <ol className="list-decimal list-inside mb-6 text-zinc-200 space-y-2">
+    <ol className="list-decimal list-inside mb-6 text-slate-900 space-y-2">
       {children}
     </ol>
   ),
@@ -78,7 +78,7 @@ const customComponents = {
   a: ({ children, href }) => {
     const isInternal = href && (href.startsWith('/') || href.startsWith('#'));
     const className =
-      'text-blue-400 hover:text-blue-300 underline underline-offset-2 transition-colors';
+      'text-blue-600 hover:text-blue-800 underline underline-offset-2 transition-colors';
     if (isInternal) {
       return (
         <Link href={href} className={className}>
@@ -93,44 +93,44 @@ const customComponents = {
     );
   },
   strong: ({ children }) => (
-    <strong className="font-bold text-zinc-200">
+    <strong className="font-bold text-slate-900">
       {children}
     </strong>
   ),
   em: ({ children }) => (
-    <em className="italic text-zinc-200">
+    <em className="italic text-slate-900">
       {children}
     </em>
   ),
   table: ({ children }) => (
     <div className="overflow-x-auto my-6">
-      <table className="min-w-full border-collapse border border-zinc-700 rounded-lg overflow-hidden">
+      <table className="min-w-full border-collapse border border-slate-200 rounded-lg overflow-hidden">
         {children}
       </table>
     </div>
   ),
   thead: ({ children }) => (
-    <thead className="bg-zinc-800">
+    <thead className="bg-slate-100">
       {children}
     </thead>
   ),
   tbody: ({ children }) => (
-    <tbody className="divide-y divide-zinc-700">
+    <tbody className="divide-y divide-slate-200">
       {children}
     </tbody>
   ),
   tr: ({ children }) => (
-    <tr className="hover:bg-zinc-800/50 transition-colors">
+    <tr className="hover:bg-blue-50/60 transition-colors">
       {children}
     </tr>
   ),
   th: ({ children }) => (
-    <th className="px-4 py-3 text-left text-sm font-semibold text-zinc-200 border-b border-zinc-700">
+    <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900 border-b border-slate-200">
       {children}
     </th>
   ),
   td: ({ children }) => (
-    <td className="px-4 py-3 text-sm text-zinc-300 border-b border-zinc-800">
+    <td className="px-4 py-3 text-sm text-slate-700 border-b border-slate-100">
       {children}
     </td>
   ),
@@ -138,7 +138,7 @@ const customComponents = {
     <img
       src={src}
       alt={alt}
-      className="max-w-full h-auto rounded-sm my-6 border-1 border-gray-200 shadow-sm"
+      className="max-w-full h-auto rounded-sm my-6 border-1 border-slate-200 shadow-md"
       style={{ width: width || '100%', height: height || 'auto' }}
     />
   ),

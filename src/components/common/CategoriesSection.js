@@ -19,7 +19,7 @@ export default function CategoriesSection({ posts = [], language = "es" }) {
 
   return (
     <div className="w-full py-10 text-left">
-      <h2 className="text-2xl sm:text-3xl font-bold text-zinc-100 mb-8 flex items-center gap-3">
+      <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-8 flex items-center gap-3">
         <span className="h-6 w-1.5 rounded-full bg-gradient-to-b from-blue-400 to-purple-500" />
         {language === "en" ? "Explore by category" : "Explora por categoría"}
       </h2>
@@ -44,14 +44,14 @@ export default function CategoriesSection({ posts = [], language = "es" }) {
 
               <div className="min-w-0">
                 <div className="flex items-center gap-2">
-                  <span className="text-lg font-semibold text-zinc-100 group-hover:text-white transition-colors">
+                  <span className="text-lg font-semibold text-slate-900 group-hover:text-blue-700 transition-colors">
                     {cat}
                   </span>
-                  <span className="text-xs text-zinc-400 bg-white/5 px-2 py-0.5 rounded-full">
+                  <span className="text-xs text-slate-600 bg-slate-100 px-2 py-0.5 rounded-full">
                     {counts[cat]}
                   </span>
                 </div>
-                <p className="text-sm text-zinc-400 mt-1 leading-snug">{meta.desc}</p>
+                <p className="text-sm text-slate-600 mt-1 leading-snug">{meta.desc}</p>
               </div>
             </Link>
           );

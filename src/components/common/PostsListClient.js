@@ -25,7 +25,7 @@ export default function PostsListClient({
   if (!initialPosts || initialPosts.length === 0) {
     return (
       <div className="text-center py-12">
-        <p className="text-zinc-400 text-base sm:text-lg">{language === "en" ? "No articles published yet." : "No hay posts publicados aún."}</p>
+        <p className="text-slate-600 text-base sm:text-lg">{language === "en" ? "No articles published yet." : "No hay posts publicados aún."}</p>
       </div>
     );
   }
@@ -34,7 +34,7 @@ export default function PostsListClient({
     <div>
       {sortable && initialPosts.length > 1 && (
         <div className="flex items-center justify-end mb-5">
-          <div className="inline-flex p-1 rounded-full bg-white/5 border border-white/10 text-sm">
+          <div className="inline-flex p-1 rounded-full bg-slate-100 border border-slate-200 text-sm">
             <SortButton active={order === "recent"} onClick={() => setOrder("recent")}>
               {language === "en" ? "Newest" : "Recientes"}
             </SortButton>
@@ -71,7 +71,7 @@ function SortButton({ active, onClick, children }) {
       className={`px-4 py-1.5 rounded-full transition-colors ${
         active
           ? "bg-blue-600 text-white"
-          : "text-zinc-300 hover:text-white"
+          : "text-slate-700 hover:text-blue-700"
       }`}
     >
       {children}

@@ -19,7 +19,7 @@ export default function RootDocument({ children, lang = "es" }) {
     <html lang={lang}>
 
       <body
-        className={`bg-[#020617] ${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`bg-white text-slate-900 ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {gaId && (
           <>

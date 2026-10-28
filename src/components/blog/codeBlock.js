@@ -23,11 +23,11 @@ export default function CodeBlock({ children }) {
     <div className="relative group my-6">
       <button
         onClick={handleCopy}
-        className="absolute right-3 top-3 px-2 py-1 text-xs rounded bg-zinc-700 hover:bg-zinc-600 text-zinc-300 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10"
+        className="absolute right-3 top-3 px-2 py-1 text-xs rounded bg-white/10 hover:bg-white/20 text-slate-200 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10"
       >
         {copied ? '✓ Copiado' : 'Copiar'}
       </button>
-      <pre className="bg-zinc-900 text-zinc-100 p-4 pt-10 rounded-lg overflow-x-auto border border-zinc-700 text-sm font-mono leading-relaxed [&>code]:bg-transparent [&>code]:border-0 [&>code]:p-0 [&>code]:text-inherit">
+      <pre className="bg-[#0b1530] text-slate-100 shadow-lg shadow-blue-900/10 p-4 pt-10 rounded-lg overflow-x-auto border border-slate-800 text-sm font-mono leading-relaxed [&>code]:bg-transparent [&>code]:border-0 [&>code]:p-0 [&>code]:text-inherit">
         {children}
       </pre>
     </div>

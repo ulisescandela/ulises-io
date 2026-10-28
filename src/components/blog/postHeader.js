@@ -13,23 +13,23 @@ export function formatDate(dateString) {
 
 export default function PostHeader({ title, category, date, readTime, tags, language = "es" }) {
   return (
-    <header className="mb-8 pb-8 border-b border-white/15">
+    <header className="mb-8 pb-8 border-b border-slate-200">
       {category && (
         <Link
           href={`${language === "en" ? "/en/category" : "/blog/categoria"}/${encodeURIComponent(category)}`}
-          className="inline-block mb-4 text-sm font-semibold text-blue-300 bg-blue-600/20 px-3 py-1 rounded-full hover:bg-blue-600/30 transition"
+          className="inline-block mb-4 text-sm font-semibold text-blue-700 bg-blue-600/20 px-3 py-1 rounded-full hover:bg-blue-600/30 transition"
         >
           {category}
         </Link>
       )}
 
-      <p className="text-sm text-zinc-400 mb-4">{language === "en" ? "By" : "Por"} <Link href={language === "en" ? "/en/about" : "/about"} rel="author" className="text-blue-300 hover:text-white">Ulises Rodríguez Candela</Link></p>
+      <p className="text-sm text-slate-600 mb-4">{language === "en" ? "By" : "Por"} <Link href={language === "en" ? "/en/about" : "/about"} rel="author" className="text-blue-700 hover:text-blue-700">Ulises Rodríguez Candela</Link></p>
 
-      <h1 className="text-4xl md:text-5xl font-bold text-zinc-200 mb-4 leading-tight">
+      <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4 leading-tight">
         {title}
       </h1>
 
-      <div className="flex flex-wrap items-center gap-2 text-zinc-200">
+      <div className="flex flex-wrap items-center gap-2 text-slate-900">
         {date && (
           <time className="text-sm font-medium">
             {language === "en" ? new Date(`${date}T00:00:00Z`).toLocaleDateString("en", { dateStyle: "long", timeZone: "UTC" }) : formatDate(date)}
@@ -40,8 +40,8 @@ export default function PostHeader({ title, category, date, readTime, tags, lang
 
         {readTime && (
           <>
-          <span className="text-zinc-400">•</span>
-          <span className="text-sm italic bg-zinc-700 px-2 py-1 rounded-full">{readTime} {language === "en" ? "read" : "de lectura"}</span>
+          <span className="text-slate-600">•</span>
+          <span className="text-sm italic bg-blue-50 text-blue-800 border border-blue-100 px-2 py-1 rounded-full">{readTime} {language === "en" ? "read" : "de lectura"}</span>
           </>
         )}
 
@@ -71,7 +71,7 @@ function PostTags({ tags }) {
   return (
     <div className="flex flex-wrap gap-2 items-center">
       {tags.map((tag) => (
-        <span key={tag} className="text-xs bg-blue-600/50 text-white px-2 py-1 rounded-full">
+        <span key={tag} className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">
           {tag}
         </span>
       ))}

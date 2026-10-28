@@ -6,7 +6,7 @@ export default function Hero({ language = "es" }) {
       {/* Glow central detrás del titular */}
       <div
         aria-hidden
-        className="pointer-events-none absolute left-1/2 top-24 -translate-x-1/2 h-72 w-72 md:h-96 md:w-96 rounded-full bg-blue-600/8 blur-[48px]"
+        className="pointer-events-none absolute left-1/2 top-24 -translate-x-1/2 h-72 w-72 md:h-96 md:w-96 rounded-full bg-blue-500/15 blur-[64px]"
       />
 
       <div className="relative max-w-4xl mx-auto flex flex-col items-center">
@@ -15,7 +15,7 @@ export default function Hero({ language = "es" }) {
           <span className="text-gradient">{language === "en" ? "grow as a developer" : "avanza como desarrollador"}</span>
         </h1>
 
-        <p className="text-lg md:text-2xl py-6 text-zinc-400 max-w-[42ch] text-center">
+        <p className="text-lg md:text-2xl py-6 text-slate-600 max-w-[42ch] text-center">
           {language === "en" ? "Practical guides to learn programming, build your portfolio and use AI thoughtfully." : "Guías prácticas para aprender a programar, preparar tu portafolio y usar la IA con criterio."}
         </p>
 

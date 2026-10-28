@@ -4,8 +4,8 @@ export default function PrivacyPage({ language = "es" }) {
   return (
     <>
       <Header language={language} />
-      <main className="pt-16 w-screen text-center text-white font-sans min-h-screen">
-        <section className="mb-16 px-4 sm:px-6 max-w-5xl mx-auto py-12 text-white">
+      <main className="pt-16 w-screen text-center text-slate-900 font-sans min-h-screen">
+        <section className="mb-16 px-4 sm:px-6 max-w-5xl mx-auto py-12 text-slate-900">
           <h1 className="text-5xl font-bold mb-8">{language === "en" ? "Privacy Policy" : "Política de Privacidad"}</h1>
           <div className="max-w-4xl mx-auto text-left text-lg">
             <p className="mb-4">

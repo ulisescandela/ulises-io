@@ -71,12 +71,12 @@ export default function TableOfContents({ headings = [], language = "es" }) {
         aria-expanded={open}
         className="flex w-full items-center justify-between gap-3 text-left"
       >
-        <span className="flex items-center gap-2.5 text-sm font-semibold uppercase tracking-wide text-zinc-200">
+        <span className="flex items-center gap-2.5 text-sm font-semibold uppercase tracking-wide text-slate-900">
           <span className="h-4 w-1 rounded-full bg-gradient-to-b from-blue-400 to-purple-500" />
           {language === "en" ? "In this article" : "En este artículo"}
         </span>
         <span
-          className={`text-zinc-400 text-xs transition-transform duration-200 ${
+          className={`text-slate-600 text-xs transition-transform duration-200 ${
             open ? "rotate-180" : ""
           }`}
           aria-hidden
@@ -96,8 +96,8 @@ export default function TableOfContents({ headings = [], language = "es" }) {
                   onClick={(e) => handleClick(e, h.id)}
                   className={`block border-l-2 py-1 pl-3 transition-colors ${
                     active
-                      ? "border-blue-400 text-white font-medium"
-                      : "border-transparent text-zinc-400 hover:text-zinc-200 hover:border-zinc-600"
+                      ? "border-blue-600 text-blue-700 font-medium"
+                      : "border-transparent text-slate-600 hover:text-slate-900 hover:border-blue-300"
                   }`}
                 >
                   {h.text}

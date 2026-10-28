@@ -8,7 +8,7 @@ export default function LatestPosts({ language = "es" }) {
 
   return (
     <section id="posts" className="w-full py-12 text-left">
-      <h2 className="text-3xl sm:text-4xl font-bold text-zinc-100 mb-8 flex items-center gap-3">
+      <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-8 flex items-center gap-3">
         <span className="h-7 w-1.5 rounded-full bg-gradient-to-b from-blue-400 to-purple-500" />
         {language === "en" ? "Latest articles" : "Últimos posts"}
       </h2>
