@@ -170,5 +170,17 @@
   "migrar-agenda-excel-sistema-citas-antrapro": {
     "slug": "move-spreadsheet-calendar-appointment-software-antrapro",
     "title": "From Spreadsheets to Appointment Software: How to Migrate Without Losing Control"
+  },
+  "seguridad-software-ia-vulnerabilidades-2026": {
+    "slug": "ai-and-software-security-vulnerabilities-2026",
+    "title": "AI and Software Security: How Vulnerabilities Accelerated (and What to Do About It)"
+  },
+  "mercado-laboral-programadores-ia-2026": {
+    "slug": "developer-job-market-ai-2026",
+    "title": "The Tech Job Market in the Age of AI: Why I Think Every Job Will Change (and Mine Already Did)"
+  },
+  "tips-claude-code-codex-seguridad-arquitectura-flujo-trabajo": {
+    "slug": "claude-code-and-codex-tips-security-architecture-workflow",
+    "title": "Claude Code and Codex Tips That Matter: Security, Architecture, Development and Workflow"
   }
 }
