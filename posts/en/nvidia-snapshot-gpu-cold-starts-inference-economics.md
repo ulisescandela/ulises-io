@@ -24,7 +24,7 @@ NVIDIA describes Kubernetes resources called `PodSnapshot` and `SnapshotJob`, al
 
 In NVIDIA's published tests on B200 GPUs with VAST NFS storage, restores took **3.6 to 42.7 seconds**, representing **8x to 36x** speedups over the measured cold starts. The tested configurations included multi-GPU models with checkpoint artifacts approaching or exceeding one terabyte.
 
-Those are vendor-reported benchmarks, not a universal guarantee. NVIDIA explicitly excludes infrastructure provisioning and container-image loading from the measured restore path. Restoring also requires compatible hardware and drivers; a checkpoint is not a magical portable image that runs on any GPU.
+Those are vendor-reported benchmarks, not a universal guarantee. The project's README also warns that its APIs may change and does not yet recommend it for production-critical workloads. NVIDIA explicitly excludes infrastructure provisioning and container-image loading from the measured restore path. Restoring also requires compatible hardware and drivers; a checkpoint is not a magical portable image that runs on any GPU.
 
 ## The business implication is bigger than a benchmark
 
@@ -63,4 +63,4 @@ For builders, the question is not whether every new NVIDIA project belongs in ou
 ### Primary sources
 
 - [NVIDIA technical announcement and benchmark methodology (November 10, 2026)](https://developer.nvidia.com/blog/start-and-restore-gpu-workloads-in-seconds-with-nvidia-snapshot/)
-- [NVIDIA Snapshot source code and documentation](https://github.com/NVIDIA/snapshot)
+- [NVIDIA Snapshot source code and documentation](https://github.com/ai-dynamo/snapshot)
