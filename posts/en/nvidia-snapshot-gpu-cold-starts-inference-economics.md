@@ -4,6 +4,7 @@ category: AI
 date: '2026-11-15'
 excerpt: "NVIDIA's new open-source Snapshot system cuts measured GPU inference restarts from minutes to seconds. The bigger story is capacity, reliability, and the economics of serving AI."
 published: true
+sourceSlug: nvidia-snapshot-arranque-gpu-economia-inferencia
 ---
 
 NVIDIA published a technical look at **Snapshot** on November 10, 2026, describing an open-source system that can restore initialized GPU inference workloads in seconds rather than repeating a full cold start. The headline numbers are impressive. The more interesting question is what happens when GPU capacity can become useful capacity much faster.
