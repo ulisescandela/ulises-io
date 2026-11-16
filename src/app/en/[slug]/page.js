@@ -15,7 +15,7 @@ export async function generateMetadata({ params }) {
   const fm = post.frontMatter;
   return {
     title: fm.title, description: fm.excerpt,
-    alternates: { canonical: url, languages: languageAlternates(post.sourceSlug, slug) },
+    alternates: { canonical: url, ...(post.sourceSlug ? { languages: languageAlternates(post.sourceSlug, slug) } : {}) },
     openGraph: { type: 'article', locale: 'en_US', title: fm.title, description: fm.excerpt, url,
       publishedTime: fm.date, authors: ['Ulises Rodríguez Candela'],
       images: [`${url}/opengraph-image`] },
