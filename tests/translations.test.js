@@ -8,7 +8,7 @@ const codeBlocks = (content) => [...content.matchAll(/^```[^\n]*\n[\s\S]*?^```\s
 
 test('every published Spanish article has one complete English counterpart', () => {
   const spanish = getAllPostsData();
-  const english = getEnglishPosts();
+  const english = getEnglishPosts().filter(post => post.sourceSlug);
   assert.equal(english.length, spanish.length);
   assert.equal(new Set(english.map((post) => post.sourceSlug)).size, spanish.length);
   for (const source of spanish) {
@@ -43,10 +43,21 @@ test('missing translations and duplicate leading titles are handled safely', () 
 
 test('translated catalog keeps source order, categories and every tag', () => {
   const source = getAllPostsData();
-  const translated = getEnglishPosts();
-  assert.deepEqual(translated.map(post => post.sourceSlug), source.map(post => post.slug));
+  const translated = getEnglishPosts().filter(post => post.sourceSlug);
+  assert.deepEqual(new Set(translated.map(post => post.sourceSlug)), new Set(source.map(post => post.slug)));
   for (let i = 0; i < source.length; i++) {
-    assert.equal(translated[i].frontMatter.category, translateCategory(source[i].frontMatter.category));
-    assert.deepEqual(translated[i].frontMatter.tags, source[i].frontMatter.tags.map(translateTag));
+    const match = translated.find(post => post.sourceSlug === source[i].slug);
+    assert.equal(match.frontMatter.category, translateCategory(source[i].frontMatter.category));
+    assert.deepEqual(match.frontMatter.tags, source[i].frontMatter.tags.map(translateTag));
   }
+});
+
+
+test('standalone English posts are published without a Spanish source', () => {
+  const slug = 'nvidia-after-jensen-huang-ai-infrastructure';
+  const post = getEnglishPost(slug);
+  assert.ok(post, 'original English article should be visible');
+  assert.equal(post.sourceSlug, undefined);
+  assert.equal(post.frontMatter.date, '2026-11-16');
+  assert.ok(getEnglishPosts().some(item => item.slug === slug));
 });
