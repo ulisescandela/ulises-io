@@ -53,11 +53,11 @@ test('translated catalog keeps source order, categories and every tag', () => {
 });
 
 
-test('standalone English posts are published without a Spanish source', () => {
+test('recent bilingual articles are linked to their Spanish sources', () => {
   const slug = 'nvidia-after-jensen-huang-ai-infrastructure';
   const post = getEnglishPost(slug);
   assert.ok(post, 'original English article should be visible');
-  assert.equal(post.sourceSlug, undefined);
+  assert.equal(post.sourceSlug, 'nvidia-tras-jensen-huang-transicion-liderazgo-ia');
   assert.equal(post.frontMatter.date, '2026-11-16');
   assert.ok(getEnglishPosts().some(item => item.slug === slug));
 });
