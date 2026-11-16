@@ -13,14 +13,14 @@ import ArticleAnalytics from '@/components/blog/ArticleAnalytics';
 
 export default function ArticlePage({ post, language = 'es' }) {
   const en = language === 'en';
-  const sourceSlug = en ? post.sourceSlug : post.slug;
+  const sourceSlug = en ? (post.sourceSlug || post.slug) : post.slug;
   const translation = en ? post : getEnglishTranslation(sourceSlug);
   const fm = post.frontMatter;
   const blog = en ? '/en/blog' : '/blog';
   const category = `${en ? '/en/category' : '/blog/categoria'}/${encodeURIComponent(fm.category)}`;
   const url = `https://ulises.io/${en ? 'en' : 'blog'}/${post.slug}`;
   const image = fm.coverImage || `${url}/opengraph-image`;
-  const translations = en ? new Map(getEnglishPosts().map(item => [item.sourceSlug, item])) : null;
+  const translations = en ? new Map(getEnglishPosts().filter(item => item.sourceSlug).map(item => [item.sourceSlug, item])) : null;
   const related = getRelatedPosts(sourceSlug, 3).map(item => en ? translations.get(item.slug) : item).filter(Boolean);
   const schema = {
     '@context': 'https://schema.org', '@type': 'BlogPosting', headline: fm.title, description: fm.excerpt,
@@ -29,7 +29,7 @@ export default function ArticlePage({ post, language = 'es' }) {
     author: { '@type': 'Person', name: 'Ulises Rodriguez Candela', url: `https://ulises.io${en ? '/en/about' : '/about'}` },
     publisher: { '@type': 'Person', name: 'Ulises Rodriguez Candela' },
     mainEntityOfPage: { '@type': 'WebPage', '@id': url },
-    ...(en && { translationOfWork: { '@type': 'BlogPosting', '@id': `https://ulises.io/blog/${sourceSlug}` } }),
+    ...(en && post.sourceSlug && { translationOfWork: { '@type': 'BlogPosting', '@id': `https://ulises.io/blog/${sourceSlug}` } }),
   };
   const breadcrumb = {
     '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
