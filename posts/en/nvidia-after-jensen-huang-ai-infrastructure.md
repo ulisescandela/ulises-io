@@ -4,6 +4,7 @@ category: AI
 date: '2026-11-16'
 excerpt: "Jensen Huang's resignation puts NVIDIA's leadership in transition. What is confirmed, what remains uncertain, and what AI builders should actually watch."
 published: true
+sourceSlug: nvidia-tras-jensen-huang-transicion-liderazgo-ia
 ---
 
 On November 12, NVIDIA announced that Jensen Huang had resigned as president, CEO, and a board member, effective immediately. Colette Kress, its longtime CFO, became interim CEO while the board began searching for a permanent successor. For a company whose hardware and software underpin so much of the AI industry, this is significant news. It is not, however, evidence that its technology roadmap has suddenly collapsed.
