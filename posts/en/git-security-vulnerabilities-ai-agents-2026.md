@@ -1,9 +1,10 @@
 ---
 title: "Six Git Vulnerabilities Show Why Developer Tools Are Part of Your Attack Surface"
-category: Cybersecurity
+category: Tools
 date: '2026-11-15'
 excerpt: "Six Git security fixes reveal why CI pipelines, developer tooling, and AI coding agents need the same scrutiny as production software."
 published: true
+sourceSlug: seis-vulnerabilidades-git-seguridad-herramientas-desarrollo
 ---
 
 Git is one of those tools developers trust almost automatically. But six security vulnerabilities disclosed on November 10 show why even familiar development tools deserve scrutiny. For indie builders and engineering teams, the lesson goes beyond installing another patch: the tools we use to build software are themselves part of the security perimeter.
