@@ -186,5 +186,17 @@
   "negocios-de-un-solo-fundador-con-ia-de-10k-a-100m": {
     "slug": "one-person-ai-businesses-10k-to-100m-per-month",
     "title": "One-Person AI Businesses: What $10k to $100M a Month Looks Like (and What Separates Each Level)"
+  },
+  "nvidia-tras-jensen-huang-transicion-liderazgo-ia": {
+    "slug": "nvidia-after-jensen-huang-ai-infrastructure",
+    "title": "NVIDIA After Jensen Huang: What the CEO Transition Means for AI Infrastructure"
+  },
+  "seis-vulnerabilidades-git-seguridad-herramientas-desarrollo": {
+    "slug": "git-security-vulnerabilities-ai-agents-2026",
+    "title": "Six Git Vulnerabilities Show Why Developer Tools Are Part of Your Attack Surface"
+  },
+  "nvidia-snapshot-arranque-gpu-economia-inferencia": {
+    "slug": "nvidia-snapshot-gpu-cold-starts-inference-economics",
+    "title": "NVIDIA Snapshot Makes GPU Cold Starts an Infrastructure Problem Worth Solving"
   }
 }
