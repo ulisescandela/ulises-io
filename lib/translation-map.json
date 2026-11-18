@@ -202,5 +202,9 @@
   "vscode-retira-harness-local-agentes-copilot-2027": {
     "slug": "vscode-local-harness-retirement-copilot-agents",
     "title": "VS Code Is Retiring Its Old Agent Harness: The Runtime Matters More Than the Model"
+  },
+  "gpt-62-astra-sol-costo-real-agentes-saas": {
+    "slug": "gpt-62-astra-sol-real-cost-ai-agents-saas",
+    "title": "GPT-6.2 Astra and Sol: The Real Cost of an AI Agent Isn't Its Token Price"
   }
 }
