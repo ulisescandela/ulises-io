@@ -206,5 +206,9 @@
   "gpt-62-astra-sol-costo-real-agentes-saas": {
     "slug": "gpt-62-astra-sol-real-cost-ai-agents-saas",
     "title": "GPT-6.2 Astra and Sol: The Real Cost of an AI Agent Isn't Its Token Price"
+  },
+  "fallo-java-base64-avx512-riesgo-saas": {
+    "slug": "java-base64-avx512-vulnerability-saas-risk",
+    "title": "A Java Base64 Bug Shows How CPU Optimizations Can Become SaaS Security Risks"
   }
 }
