@@ -210,5 +210,9 @@
   "fallo-java-base64-avx512-riesgo-saas": {
     "slug": "java-base64-avx512-vulnerability-saas-risk",
     "title": "A Java Base64 Bug Shows How CPU Optimizations Can Become SaaS Security Risks"
+  },
+  "aws-lambda-gpu-inferencia-serverless-costos-saas": {
+    "slug": "aws-lambda-gpu-serverless-inference-saas-economics",
+    "title": "AWS Brings GPUs to Lambda: Less Infrastructure Doesn't Mean a Smaller Bill"
   }
 }
