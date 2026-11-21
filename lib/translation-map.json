@@ -214,5 +214,9 @@
   "aws-lambda-gpu-inferencia-serverless-costos-saas": {
     "slug": "aws-lambda-gpu-serverless-inference-saas-economics",
     "title": "AWS Brings GPUs to Lambda: Less Infrastructure Doesn't Mean a Smaller Bill"
+  },
+  "rtx-spark-pc-ia-local-memoria-costos-saas": {
+    "slug": "rtx-spark-local-ai-pcs-memory-costs-saas",
+    "title": "RTX Spark Desktops Make Local AI More Practical. The Economics Still Matter."
   }
 }
