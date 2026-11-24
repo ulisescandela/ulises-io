@@ -218,5 +218,17 @@
   "rtx-spark-pc-ia-local-memoria-costos-saas": {
     "slug": "rtx-spark-local-ai-pcs-memory-costs-saas",
     "title": "RTX Spark Desktops Make Local AI More Practical. The Economics Still Matter."
+  },
+  "agente-ia-memoria-usuarios-python-sqlite": {
+    "slug": "build-ai-agent-memory-python-sqlite-tutorial",
+    "title": "Build an AI Agent That Remembers Users: A Complete Python and SQLite Tutorial"
+  },
+  "primera-api-rest-nodejs-26-principiantes": {
+    "slug": "build-rest-api-nodejs-26-beginners-tutorial",
+    "title": "Build Your First REST API with Node.js 26: A Complete Beginner’s Tutorial"
+  },
+  "api-rest-persistente-nodejs-sqlite-tutorial": {
+    "slug": "nodejs-sqlite-rest-api-complete-tutorial",
+    "title": "Build a Persistent REST API with Node.js and SQLite: A Complete Tutorial"
   }
 }
