@@ -230,5 +230,9 @@
   "api-rest-persistente-nodejs-sqlite-tutorial": {
     "slug": "nodejs-sqlite-rest-api-complete-tutorial",
     "title": "Build a Persistent REST API with Node.js and SQLite: A Complete Tutorial"
+  },
+  "pruebas-api-rest-nodejs-sqlite": {
+    "slug": "test-rest-api-nodejs-sqlite",
+    "title": "How to Test a REST API with Node.js and SQLite Without External Libraries"
   }
 }
